@@ -1,7 +1,6 @@
 /* Override some defaults */
 html, body {
   background-color: #eee;
-  font-family: 'Raleway', sans-serif;
 }
 body {
   padding-top: 40px; /* 40px to make the container go all the way to the bottom of the topbar */
@@ -32,25 +31,11 @@ body {
   padding: 20px 20px 10px;
   margin: -20px -20px 20px;
 }
-.page-header h1{
-	font-size: 3em;
-}
-.topbar .fill{
-	height: 60px;
-}
-.topbar .brand{
-	font-size: 2em;
-	padding: 18px 20px 18px;
-}
+
 .topbar .btn {
   border: 0;
 }
-.topbar div>ul, .nav{
-	margin: 12px 5px 0 0;
-}
-.topbar div>ul>li, .nav>li{
-	font-size: 1.3em;
-}
+
 
 /* tag_box ======================================================== */
 
@@ -73,7 +58,6 @@ body {
 	color:#005F6B;
 	border-radius: 3px;
 	text-decoration:none;
-	font-size: 1.2em;
 }
 .tag_box a span{
 	vertical-align:super;
@@ -84,21 +68,4 @@ body {
 	border:1px solid #4C964D;
 	color:#FFF;
 }
-/* content ======================================================*/
-.content{
-	margin-top: 20px;
-}
-/* tags and word =============================================*/
-.row .span14 h2{
-	font-size: 2em;
-}
-.row .span14 h3{
-	font-size: 1.8em;
-}
-.row .span14 ul li{
-	font-size: 1.3em;
-}
-
-#dsq-app5{
-	display: none;
-}
+	
