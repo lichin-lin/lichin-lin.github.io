@@ -8,14 +8,12 @@ highlighter: pygments
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Jekyll Bootstrap
+title : lichin-lin,front-end
 tagline: Site Tagline
 author :
-  name : Name Lastname
-  email : blah@email.test
-  github : username
-  twitter : username
-  feedburner : feedname
+  name : lichin-lin
+  email : vic20087cjimlin@gmail.com
+  github : lichin-lin
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
@@ -25,7 +23,7 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://username.github.io
+production_url : http://lichin-lin.github.io
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
@@ -59,9 +57,8 @@ JB :
   # By default, the asset_path is automatically defined relative to BASE_PATH plus the enabled theme.
   # ex: [BASE_PATH]/assets/themes/[THEME-NAME]
   #
-  # Override this by defining an absolute path to assets here.
-  # ex: 
-  #   http://s3.amazonaws.com/yoursite/themes/watermelon
+  # Override this by defiing an absolute path to assets here.
+  # ex:   #   http://s3.amazonaws.com/yoursite/themes/watermelon
   #   /assets
   #
   ASSET_PATH : false
