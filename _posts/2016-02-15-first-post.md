@@ -2,8 +2,8 @@
 layout: post
 title: "第一次寫Blog"
 description: "try somthing new"
-category: lesson
-tags: [tutorial,jekyll]
+category: Blog
+tags: [jekyll]
 ---
 
 ## 本站使用GitHub Pages 以及 Jekyll 打造而成，<br>我也在此分享一些製作的過程。  
