@@ -17,7 +17,7 @@ body {
 .content {
   background-color: #fff;
   padding: 20px;
-  margin: 50px 0;/* negative indent the amount of the padding to maintain the grid system */
+  margin: 25px -20px 0 -20px;/* negative indent the amount of the padding to maintain the grid system */
   -webkit-border-radius: 6px 6px 6px 6px;
      -moz-border-radius: 6px 6px 6px 6px;`
           border-radius: 6px 6px 6px 6px;
@@ -34,7 +34,7 @@ body {
 
 }
 .page-header h1{
-	font-size: 3em;
+	font-size: 2.5em;
 }
 .topbar .fill{
 	height: 60px;
@@ -45,7 +45,7 @@ body {
 .topbar .brand{
 	font-size: 2em;
 	color: #373836;
-	padding: 18px 20px 18px;
+	padding: 22px 20px 14px;
 	margin-left: 0;
 	box-shadow: 0;
 }
@@ -64,6 +64,7 @@ body {
 }
 .topbar div>ul>li, .nav>li{
 	font-size: 1.3em;
+	margin-top: 5px;
 
 }
 
@@ -100,24 +101,27 @@ body {
 }
 /* tags and word =============================================*/
 .row{
-	margin-left: -20px;
-	margin-right: 20px;
+	margin-left: -15px;
+	margin-right: 25px;
 }
-.row .span14 h2{
-	font-size: 2em;
-}
-.row .span14 h3{
+.row .span14 h2,.row .span10 h2{
 	font-size: 1.8em;
 }
-.row .span14 ul li{
-	font-size: 1.3em;
+
+.row .span14 h3,.row .span10 h3{
+	font-size: 1.5em;
 }
-.row pre{
-	width: 90%;
-}
+
 .row li{
 	font-size: 1.2em;
+	padding: 3px 0 3px 0;
+	line-height: 150%;
 }
+
+.row pre{
+	//width: 90%;
+}
+
 
 #disqus_thread{
 	padding-left: 5px;
