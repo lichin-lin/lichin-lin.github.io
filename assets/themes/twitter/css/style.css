@@ -52,9 +52,13 @@ body {
 .topbar .brand{
 	font-size: 2em;
 	color: #373836;
-	padding: 25px 20px 17px;
+	padding: 7px 20px 5px;
 	margin-left: 0;
 	box-shadow: 0;
+}
+.topbar .brand span{
+	line-height: 70px;
+	padding-left: 5px;
 }
 .topbar .btn {
   border: 0;
@@ -71,10 +75,21 @@ body {
 }
 .topbar div>ul>li, .nav>li{
 	font-size: 1.3em;
-	margin-top: 8px;
-
+	margin-top: 10px;
+	padding-left: 5px;
 }
+.topbar div>ul .active>a, .nav .active>a, a:hover,.nav a:hover{
+	border-radius: 5px;
+}
+.topbar div>ul a:hover,.nav a:hover{
+	background-color: rgba(80,81,79,.4);
+}
+.topbar div>ul .active>a{
+	background-color: #50514F;
+}
+
 .topbar img{
+	display: inline-block;
 	width: 60px;
 	height: 60px;
 	float:left;
