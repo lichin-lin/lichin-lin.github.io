@@ -3,10 +3,10 @@ layout: post
 title: "第一次寫Blog"
 description: "try somthing new"
 category: Blog
-tags: [jekyll]
+tags: [Jekyll]
 ---
 
-## 本站使用GitHub Pages 以及 Jekyll 打造而成，<br>我也在此分享一些製作的過程。  
+## 本站使用GitHub Pages 以及 Jekyll 打造而成，我也在此分享一些製作的過程。  
 ---
 > ### 基本需求
 > 1.    擁有[github](https://github.com "Title")帳號
@@ -23,7 +23,7 @@ tags: [jekyll]
 >>  標榜三分鐘架好(0 to Blog in 3 Minutes)，不過實際上還是花了不少時間，利用簡單的Markdown編寫。
 
 >### 參考
-> 1.    [aShare-Jekyll教學](http://wcc723.github.io/jekyll/2014/01/04/what-is-jekyll/ "Title")
+> 1.    [aShare-Jekyll教學](http://wcc723.github.io/jekyll/2014/01/04/what-is-jekyll "Title")
 >> 這位作者也是利用相同的方式架設
 > 2.    [Markdown介紹](http://markdown.tw "Title")
 >
