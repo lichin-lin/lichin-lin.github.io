@@ -1,7 +1,10 @@
 /* Override some defaults */
 html, body {
   background-color: #eee;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'raleway', sans-serif;
+}
+h1,h3,span{
+  font-family: 'Fenton-Medium', sans-serif;
 }
 body {
   padding-top: 40px; /* 40px to make the container go all the way to the bottom of the topbar */
@@ -19,7 +22,7 @@ body {
   padding: 20px;
   margin: 25px -20px 0 -20px;/* negative indent the amount of the padding to maintain the grid system */
   -webkit-border-radius: 6px 6px 6px 6px;
-     -moz-border-radius: 6px 6px 6px 6px;`
+     -moz-border-radius: 6px 6px 6px 6px;
           border-radius: 6px 6px 6px 6px;
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
      -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
@@ -179,7 +182,7 @@ body {
 		font-size: 2.3em;
 	}
 	.topbar .brand{
-		font-size: 1.8em;
+		font-size: 1.5em;
 	}
 	.topbar img{
 		padding-left: 10px;
