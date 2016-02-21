@@ -1,6 +1,6 @@
 $(window).scroll(function() {
 
-  if ($(document).scrollTop() > 80) {
+  if ($(document).scrollTop() > 70) {
     $('.fill').addClass('shrink');
 	$('.nav').css('display', 'none');
     if ($(window).width() > 768) {
