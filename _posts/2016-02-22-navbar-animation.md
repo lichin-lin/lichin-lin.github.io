@@ -14,8 +14,8 @@ tags: [Animation]
 >2.    利用jquery的 `.scroll()` Browser Events，於一定條件之下對navbar增減class (此範例增減的class name為 `color-change`)。
 >3.    利用 `transition` 即可以對 `background-color` `height` 做出圓滑動畫。
 >
-><p data-height="300" data-theme-id="0" data-slug-hash="Goapqy" data-default-tab="result" data-user="lichin-lin" class='codepen'>See the Pen <a href='http://codepen.io/lichin-lin/pen/Goapqy/'>navbar scroll animation</a> by lichin-lin (<a href='http://codepen.io/lichin-lin'>@lichin-lin</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+><p data-height="300" data-theme-id="0" data-slug-hash="Goapqy" data-default-tab="result" data-user="lichin-lin" class='codepen'>See the Pen <a href='http://codepen.io/lichin-lin/pen/Goapqy/'>navbar scroll animation</a> by lichin-lin (<a href='http://codepen.io/lichin-lin'>@lichin-lin</a>) on <a href='http://codepen.io'>CodePen</a>.</p><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+>
 
 
 >### Transiton 介紹
