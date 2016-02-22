@@ -8,14 +8,14 @@ tags: [Animation]
 ## 這是我在製作本網站navbar時，所運用到的css技巧。利用transition這項元素，可以完成很多簡單的動畫。
 ---
 
-###步驟
+>###步驟
 >1.    產生一個 `div` 元素 (此範例class name為 `navbar`)，在CSS給予 `position:fixed` 的元素，以其來製作動畫。
 >2.    利用jquery的 `.scroll()` Browser Events，於一定條件之下對navbar增減class (此範例增減的class name為 `color-change`)。
 >3.    利用 `transition` 即可以對 `background-color` `height` 做出圓滑動畫。
 >
 
 
-###Transiton 介紹
+>###Transiton 介紹
 >CSS Syntax
 >
 >
@@ -27,7 +27,7 @@ tags: [Animation]
 >*	timing-function(變換函式):動畫的形式，這裡可以瞭解更多[transition-timing-function](http://cubic-bezier.com/ "Title")。
 >*	delay(延遲時間): 可以控制動畫多久之後才開始。
 
-###參考
+>###參考
 >1.    [css-trick transition](https://css-tricks.com/almanac/properties/t/transition/, "Title")
 >2.    [jquery .scroll()](https://api.jquery.com/scroll/, "Title")
 >3.    [30+ Scroll animation](http://ninodezign.com/30-jquery-plugins-for-scrolling-effects-with-css-animation/, "Title")
