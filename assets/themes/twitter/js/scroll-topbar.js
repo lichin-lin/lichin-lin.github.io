@@ -22,3 +22,11 @@ $(window).scroll(function() {
   }
 
 });
+
+if ($(window).width() > 1200){
+	$('.posts').removeClass('span14');
+	//$('.posts').addClass('span16');
+}else{
+	$('.posts').removeClass('span14');
+	//$('.posts').addClass('span14');	
+}

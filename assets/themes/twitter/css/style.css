@@ -171,7 +171,25 @@ code{
 .row pre{
 	//width: 90%;
 }
-
+.row div{
+	width: 95%
+}
+.posts{
+	list-style: none;
+	padding-bottom: 50px;
+}
+.posts li{
+	margin-top: 20px;
+	min-height: 80px;
+	border-bottom:1px solid #E3E3E3;
+}
+.posts li section{
+	padding-top: 25px;
+}
+.posts li a{
+	color:;
+	font-size: 1.4em;
+}
 
 #disqus_thread{
 
@@ -192,5 +210,8 @@ code{
 	}
 	.topbar .nav{
 		display: none;
+	}
+	ul{
+		margin: 0 0 10px 0;
 	}
 }

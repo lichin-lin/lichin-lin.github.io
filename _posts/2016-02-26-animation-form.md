@@ -5,7 +5,7 @@ description: "sign-in form with slide effect."
 category: CSS
 tags: [Animation]
 ---
-##學校近日在寫NCTU online-judge的平台，我有幸能參與其中的前端設計。以下是我製作的 sign-in form，以及幾個小技巧分享。
+## 學校近日在寫NCTU online-judge的平台，我有幸能參與其中的前端設計。以下是我製作的 sign-in form，以及幾個小技巧分享。
 ---
 
 >### # form上使用的技巧
