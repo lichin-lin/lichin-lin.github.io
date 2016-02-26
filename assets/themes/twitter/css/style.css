@@ -152,7 +152,7 @@ code{
 /* tags and word =============================================*/
 .row{
 	margin-left: -15px;
-	margin-right: 25px;
+	//margin-right: 25px;
 }
 .row .span14 h2,.row .span10 h2{
 	font-size: 1.65em;
