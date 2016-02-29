@@ -2,6 +2,7 @@
 html, body {
   background-color: #eee;
   font-family: 'raleway', sans-serif;
+  margin:0;
 }
 h1,h3,span{
   font-family: 'Fenton-Medium', sans-serif;
@@ -11,6 +12,9 @@ body {
 }
 code{
 	font-size: 14px;
+}
+.row>[class*="span"]{
+	margin-left: 10px;
 }
 .container > footer p {
   text-align: center; /* center align it with the container */
@@ -194,7 +198,7 @@ code{
 }
 .posts .tags{
 	margin-left: 0;
-	padding-bottom: 10px;
+	padding-bottom: 5px;
 }
 .posts .tags li{
 	margin-right: 10px;
@@ -242,6 +246,9 @@ code{
 }
 
 @media(max-width:768px){
+	ul{
+
+	}
 	.page-header h1{
 		font-size: 2.3em;
 	}
@@ -254,7 +261,11 @@ code{
 	.topbar .nav{
 		display: none;
 	}
-	ul{
-		margin: 0 0 10px 0;
+	.row ul{
+		margin: 0 0 10px 25px;
 	}
+	.row .post-info{
+		margin: 0 0 20px 0;
+	}
+
 }
