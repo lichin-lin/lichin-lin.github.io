@@ -4,6 +4,12 @@ html, body {
   font-family: 'raleway', sans-serif;
   margin:0;
 }
+@font-face {
+  font-family: 'Fenton-Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Fenton-Medium'), url('/asset/font/Fenton-Medium.otf') format('truetype');
+}
 h1,h3,span{
   font-family: 'Fenton-Medium', sans-serif;
 }
@@ -225,7 +231,7 @@ code{
 	color: #50514f;
 }
 .post-info{
-	margin: 0;
+	margin: 0 0 20px 0;
 }
 .post-info a{
 	color:#50514f;
@@ -246,9 +252,6 @@ code{
 }
 
 @media(max-width:768px){
-	ul{
-
-	}
 	.page-header h1{
 		font-size: 2.3em;
 	}
@@ -267,5 +270,4 @@ code{
 	.row .post-info{
 		margin: 0 0 20px 0;
 	}
-
 }
