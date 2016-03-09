@@ -1,7 +1,8 @@
 /* Override some defaults */
 @import url(/assets/font/Fenton-Medium.otf);
 html, body {
-  background-color: #eee;
+  //background-color: #eee;
+  background: linear-gradient(to right,#06AED5 0%, #FFF1D0 50%, rgba(255, 128, 128, 0.65) 80%);
   font-family: 'raleway', sans-serif;
   margin:0;
 }
@@ -30,6 +31,8 @@ code{
   text-align: center; /* center align it with the container */
 }
 .container {
+	position: relative;
+	top:50px;
   //width: 820px; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
 }
 
