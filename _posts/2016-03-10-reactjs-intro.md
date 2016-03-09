@@ -25,9 +25,10 @@ tags: [css,react]
 >
 
 >### # 參考
->1.    [React.js](https://facebook.github.io/react/)
->2.    [REACT FOR DESIGNERS](http://reactfordesigners.com/labs/reactjs-introduction-for-people-who-know-just-enough-jquery-to-get-by/)
->3.    [CSS Form design](http://collectui.com/challenges/form, title)
+>1.    [React.js](https://facebook.github.io/react "Title")
+>2.    [REACT FOR DESIGNERS](http://reactfordesigners.com/labs/reactjs-introduction-for-people-who-know-just-enough-jquery-to-get-by/ "Title")
+>3.    [Flux-單向資料流介紹](https://exma-square.gitbooks.io/mobious-cookbook/content/Front-End/Flux/Data-flow.html/ "Title")
+>
 >
 
 
