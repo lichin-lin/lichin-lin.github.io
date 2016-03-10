@@ -154,6 +154,7 @@ code {
   height: 60px;
   float: left;
   margin-top: 5px;
+  transition: all 0.25s ease;
 }
 .topbar div>ul,
 .nav {
@@ -239,9 +240,6 @@ blockquote p {
   align-items: center;
   padding-top: 25px;
 }
-.posts li span {
-  font-style: italic;
-}
 .posts .tags {
   margin-left: 0;
   padding-bottom: 5px;
@@ -258,7 +256,11 @@ blockquote p {
 .posts .tags li a {
   color: #50514f;
 }
-.tag:after {
+.posts .tags span {
+  font-size: 0.9em;
+  font-style: italic;
+}
+.posts .tags .tag:after {
   content: " ";
   display: block;
   width: 0;
@@ -308,5 +310,12 @@ blockquote p {
   }
   blockquote p {
     width: 100%;
+  }
+  .posts a {
+    font-size: 1.2em;
+    text-decoration: none;
+  }
+  .posts .tags span {
+    font-size: 0.8em;
   }
 }
