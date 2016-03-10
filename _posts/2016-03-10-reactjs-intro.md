@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "React.js-intro"
+title: "React.js intro"
 description: "Javascript library with totally new view"
 category: React
 tags: [css,react]
