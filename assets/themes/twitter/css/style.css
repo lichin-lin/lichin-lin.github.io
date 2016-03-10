@@ -229,7 +229,14 @@ blockquote p {
 .posts a {
   text-decoration: none;
 }
+.posts li {
+  display: flex;
+  justify-content: center;
+}
 .posts li section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-top: 25px;
 }
 .posts li span {
