@@ -189,7 +189,12 @@ code{
 	padding: 3px 0 3px 0;
 	line-height: 150%;
 }
-
+.content p{
+	font-size: 1.2em;
+}
+blockquote p{
+	width: 80%;
+}
 .row pre{
 	//width: 90%;
 }
@@ -269,6 +274,7 @@ code{
 	}
 	.topbar .brand{
 		font-size: 1.5em;
+		margin-left: 20px;
 	}
 	.topbar img{
 		padding-left: 10px;
@@ -281,5 +287,8 @@ code{
 	}
 	.row .post-info{
 		margin: 0 0 20px 0;
+	}
+	blockquote p{
+		width: 100%;
 	}
 }
