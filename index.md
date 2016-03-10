@@ -4,7 +4,6 @@ title: Home Page
 tagline: Supporting tagline
 ---
 {% include JB/setup %}
-{% include JB/setup %}
 <!--div>
 {% assign posts_collate = site.posts %}
 {% include JB/posts_collate %}
