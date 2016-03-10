@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "第一次寫Blog"
+title: "第一次寫Blog-Github Pages"
 description: "try somthing new"
 category: Blog
 tags: [Jekyll]
@@ -21,7 +21,7 @@ tags: [Jekyll]
 >>  github 所提供架設靜態網站的方式，好處是容量無限制，只要熟悉github相關指令，就能上手。
 > * 學會使用[Jekyll Bootstrap](http://jekyllbootstrap.com "Title")
 >>  標榜三分鐘架好(0 to Blog in 3 Minutes)，不過實際上還是花了不少時間，利用簡單的Markdown編寫。
-
+<div class="paragraph-seperate"></div>
 >### #參考
 > 1.    [aShare-Jekyll教學](http://wcc723.github.io/jekyll/2014/01/04/what-is-jekyll "Title")
 >> 這位作者也是利用相同的方式架設

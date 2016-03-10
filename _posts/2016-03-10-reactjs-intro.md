@@ -13,6 +13,7 @@ tags: [css,react]
 >2.    [React.js](http://tutorialzine.com/2014/07/5-practical-examples-for-learning-facebooks-react-framework/ "Title")的應用小範例。
 >
 >
+<div class="paragraph-seperate"></div>
 
 >### # 心得分享
 >
@@ -32,7 +33,8 @@ React.js 則開創了新的想法， 開發者僅僅需要維護好每個組件�
 >
 > <br>
 >
-> #### 練習
+<div class="paragraph-seperate"></div>
+>### # 練習
 >	藉由兩個按鈕以及一個顯示分數說明 React.js 的特性，定義好每個組件的事件以及呈現，就能實作出功能簡單的分數版。
 >	更多 React.js 的學習心得會在下次與大家分享喔～
 ><p data-height="301" data-theme-id="0" data-slug-hash="MKMezg" data-default-tab="result" data-user="lichin-lin" class="codepen">See the Pen <a href="http://codepen.io/lichin-lin/pen/MKMezg/">Plus Minus button with React</a> by lichin-lin (<a href="http://codepen.io/lichin-lin">@lichin-lin</a>) on <a href="http://codepen.io">CodePen</a>.</p>

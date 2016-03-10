@@ -14,9 +14,7 @@ tags: [Animation]
 >2.    利用jquery的 `.scroll()` Browser Events，於一定條件之下對navbar增減class (此範例增減的class name為 `color-change`)。
 >3.    利用 `transition` 即可以對 `background-color` `height` 做出圓滑動畫。
 >
-><p data-height="300" data-theme-id="0" data-slug-hash="Goapqy" data-default-tab="result" data-user="lichin-lin" class='codepen'>See the Pen <a href='http://codepen.io/lichin-lin/pen/Goapqy/'>navbar scroll animation</a> by lichin-lin (<a href='http://codepen.io/lichin-lin'>@lichin-lin</a>) on <a href='http://codepen.io'>CodePen</a>.</p><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 >
-
 
 >### #Transiton 介紹
 >CSS Syntax
@@ -29,7 +27,9 @@ tags: [Animation]
 >*	duration(動畫持續時間): 指動畫會持續幾秒鐘，0為default value。
 >*	timing-function(變換函式):動畫的形式，這裡可以瞭解更多[transition-timing-function](http://cubic-bezier.com/ "Title")。
 >*	delay(延遲時間): 可以控制動畫多久之後才開始。
-
+<p data-height="300" data-theme-id="0" data-slug-hash="Goapqy" data-default-tab="result" data-user="lichin-lin" class='codepen'>See the Pen <a href='http://codepen.io/lichin-lin/pen/Goapqy/'>navbar scroll animation</a> by lichin-lin (<a href='http://codepen.io/lichin-lin'>@lichin-lin</a>) on <a href='http://codepen.io'>CodePen</a>.</p><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+>
+<div class="paragraph-seperate"></div>
 >### #參考
 >1.    [css-trick transition](https://css-tricks.com/almanac/properties/t/transition/, "Title")
 >2.    [jquery .scroll()](https://api.jquery.com/scroll/, "Title")
