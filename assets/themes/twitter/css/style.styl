@@ -1,3 +1,14 @@
+light-yellow = #FFE682
+
+light-orange = #FC7358
+ghost-orange = #FCCCC2
+
+light-green = #13aa7f
+tea-grean = #A1B585
+ghost-green = #e4f7f2
+
+sky-blue = #3e94ec;
+
 @import url(/assets/font/Fenton-Medium.otf);
 html, body
   //background-color #eee
@@ -24,7 +35,7 @@ code
   font-size 14px
 
 .row
-  margin-left -15px
+  margin 0 auto
   & > [class*="span"]
     margin-left 10px
   li
@@ -33,7 +44,7 @@ code
     line-height 150%
   pre
     //width 90%
-  div
+  .span14
     width 95%
     .paragraph-seperate
       position relative
@@ -97,7 +108,7 @@ code
   .fill
     width 100%
     height 70px
-    background-color #FFE066
+    background-color light-yellow
     background-image none
     -webkit-transition all 0.4s ease
     transition all 0.4s ease
@@ -224,7 +235,7 @@ blockquote
       position relative
       border-radius 5px
       display inline-block
-      background-color #FFE066
+      background-color light-yellow
       a
         color #50514f
     span
@@ -238,7 +249,7 @@ blockquote
         height 0
         border-top 7px solid transparent
         border-bottom 7px solid transparent
-        border-left 8px solid #FFE066
+        border-left 8px solid light-yellow
         position absolute
         right -7px
         top 6.5px
@@ -257,6 +268,92 @@ blockquote
 
 #dsq-app5
   display none
+
+
+.about-tabs
+  width 95%
+  text-align center
+  font-weight 300
+  font-style normal
+  label
+    text-align center
+  .tabs-state
+    display none
+  .flex-tabs
+    display -webkit-box
+    display -ms-flexbox
+    display -webkit-flex
+    display flex
+    -webkit-box-pack justify
+    -webkit-justify-content space-between
+    -ms-flex-pack justify
+    justify-content space-between
+    .about-tab
+      -webkit-box-flex 1
+      -webkit-flex-grow 1
+      -ms-flex-positive 1
+      flex-grow 1
+  .about-tab
+    padding 20px 10px
+    background-color white
+    color #999cab
+    font-size 16px
+    cursor pointer
+    border-bottom 1px solid #e5e6ea
+    font-weight 400
+    z-index 1
+
+.panel-content
+  .panel
+    margin-top -6px
+    padding-top 20px
+    padding-left 20px
+    border 1px solid #e5e6ea
+    display none
+
+.panel
+  &:first-of-type
+    padding-left 0
+  &:last-of-type
+    padding-bottom 20px
+
+table
+  font-family 'Lato', sans-serif
+  color #999cab
+  width 100%
+  th
+    letter-spacing 1px
+    white-space normal
+    font-size .7em
+    text-transform uppercase
+    background #FFF
+    line-height 1.125rem
+    vertical-align middle
+    padding 0.5rem 0.625rem 0.625rem
+  tbody
+    tr
+      &:nth-child(odd)
+        background-color #FCD6CF
+  tr
+    td
+      font-size .8rem
+      display table-cell
+      line-height 1.125rem
+      vertical-align middle
+      padding 0.7rem 0.625rem 0.625rem
+
+.tab-notce
+  color #13aa7f
+  cursor default
+  border-top 1px solid #e5e6ea
+  border-right 1px solid #e5e6ea
+  border-bottom 1px solid #fff
+  border-left 1px solid #e5e6ea
+
+.tab-active
+  display block
+
+
 
 @media(max-width:768px)
   .page-header
