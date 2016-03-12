@@ -290,6 +290,7 @@ blockquote p {
   display: none;
 }
 .about-tabs {
+  font-family: 'Lato', sans-serif;
   margin: 0 auto;
   font-family: "Lato";
   width: 95%;
