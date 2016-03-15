@@ -21,6 +21,9 @@ body {
 code {
   font-size: 14px;
 }
+ul{
+	margin:0 0 10px 0;
+}
 .row {
   margin: 0 auto;
 }
@@ -399,7 +402,7 @@ td:nth-child(4){
     display: none;
   }
   .row ul {
-    margin: 0 0 10px 25px;
+    margin: 0 0 10px 0px;
   }
   .row .post-info {
     margin: 0 0 20px 0;
