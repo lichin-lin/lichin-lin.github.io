@@ -1,7 +1,7 @@
 @import url("/assets/font/Fenton-Medium.otf");
 html,
 body {
-  background: linear-gradient(to right, #06aed5 0%, #fff1d0 50%, rgba(255,128,128,0.65) 80%);
+  background: linear-gradient(to bottom right, #54B0FD 0%, #81D0FD 25%,#ADE8FD 50%,#DBECFA 75%, #F1F4FB 80%);
   font-family: 'raleway', sans-serif;
   margin: 0;
 }
