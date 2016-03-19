@@ -575,10 +575,16 @@ td:nth-child(4){
   td:nth-child(4){
     width: 95%;
   }
+
 }
 
-@media (max-width: 38px) {
+@media (max-width: 384px) {
   .info-content .mention {
     font-size: 0.95em;
+  }
+  .info-content .intro-box .demo-effect {
+    min-width: 240px;
+    max-width: 300px;
+    max-height: 210px;
   }
 }
