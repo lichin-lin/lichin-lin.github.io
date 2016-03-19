@@ -2,8 +2,8 @@
 layout: post
 title: "navbar animation-漸變效果transition"
 description: "navbar animation while scrolling"
-category: CSS
-tags: [Animation]
+category: css
+tags: [css,Animation]
 ---
 ## 這是我在製作本網站navbar時，所運用到的css技巧。利用transition這項元素，可以完成很多簡單的動畫。
 ---
