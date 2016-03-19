@@ -292,6 +292,129 @@ blockquote p {
 #dsq-app5 {
   display: none;
 }
+
+/* ===== about me ===== */
+.info-content {
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+  width: 80%;
+  height: auto;
+}
+.info-content .intro-box {
+  font-family: Lato;
+  text-align: center;
+  width: 100%;
+  min-height: 250px;
+}
+.info-content .intro-box:nth-child(2n) {
+  background-color: #e5e5e5;
+}
+.info-content .intro-box .title {
+  margin: 20px 0 0 0;
+  padding: 0;
+  position: relative;
+  font-family: bad script;
+  font-size: 24px;
+}
+.info-content .intro-box .title:after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: calc(50% - 10px);
+  width: 20px;
+  height: 3px;
+  background-color: #6b6b6b;
+}
+.info-content .intro-box .job-time {
+  font-size: 0.8em;
+  font-family: Raleway;
+  letter-spacing: 3px;
+}
+.info-content .intro-box .mention {
+  margin-top: 30px;
+  color: #50514f;
+}
+.info-content .intro-box .demo-effect {
+  margin: 0 auto 30px auto;
+  position: relative;
+  overflow: hidden;
+  min-width: 320px;
+  max-width: 480px;
+  max-height: 360px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.info-content .intro-box .demo-effect:after {
+  opacity: 0;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s ease;
+  background-color: rgba(0,0,0,0.5);
+}
+.info-content .intro-box .demo-effect:hover:after {
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+.info-content .intro-box .demo-effect:hover > button {
+  opacity: 1;
+  margin-top: 0px;
+  transition: all 0.5s ease;
+}
+.info-content .intro-box .demo-effect button {
+  position: absolute;
+  z-index: 999;
+  opacity: 0;
+  top: calc(50% - 20px);
+  left: calc(50% - 40px);
+  margin-top: 30px;
+  padding: 15px 30px 15px 30px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  background-color: transparent;
+  font-size: 15px;
+  font-weight: 400;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+.info-content .intro-box .demo-effect button:after {
+  position: absolute;
+  transition: 0.25s;
+  content: '';
+  width: 0;
+  left: -10%;
+  height: 125%;
+  bottom: 0;
+  transform: skewX(15deg);
+  z-index: -1;
+  background: #FFDD59;
+}
+.info-content .intro-box .demo-effect button:hover:after {
+  width: 120%;
+  left: -10px;
+  transition: all 0.25s ease;
+}
+.info-content .intro-box .demo-effect img {
+  position: relative;
+  min-width: 100%;
+  min-height: 100%;
+  display: block;
+  opacity: 0.8;
+}
+
+
+
+/* ===== about tab ===== */
 .about-tabs {
   font-family: 'Lato', sans-serif;
   margin: 0 auto;
@@ -418,6 +541,11 @@ td:nth-child(4){
     font-size: 0.8em;
   }
 
+
+  .info-content {
+    width: 100%;
+  }
+
   thead tr th {
       display: none;
   }
@@ -441,5 +569,11 @@ td:nth-child(4){
   }
   td:nth-child(4){
     width: 95%;
+  }
+}
+
+@media (max-width: 38px) {
+  .info-content .mention {
+    font-size: 0.95em;
   }
 }
