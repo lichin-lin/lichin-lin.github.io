@@ -5,6 +5,7 @@ description: "customized for better alert"
 category: css
 tags: [css,jquery,template]
 ---
+
 >### # 起因
 >   有鑒於每一次寫好一份css檔，都無法沿用到下一次開發，或是整個架構需要大修改，
 >	我竟然在腦中浮現出 “不然做成模組化吧” 的想法。另外，也在看過 [sweetalert](http://t4t5.github.io/sweetalert/ "title")
@@ -30,18 +31,19 @@ tags: [css,jquery,template]
 >
 > #### animation-keyframe介紹
 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```animation```用來描述一段動畫的起始、結束、還有運行時間函式等等。其中```@keyframe```是更仔細敘述動畫的呈現方式，以下是基本樣式：
->``` css
->	animation: [name] [duration] [timing-function] [delay];
->	animation: mymove 5s infinite;
->	
->	@keyframes mymove {
->       0%   { /*init the animation */ };
->       50%  { /*runing the animation*/ };
->       100% { /*end of the animation*/ };
->	}
->```
+
+```css
+	animation: [name] [duration] [timing-function] [delay];
+	animation: mymove 5s infinite;
+	@keyframes mymove {
+       0%   { /*init the animation */ };
+       50%  { /*runing the animation*/ };
+       100% { /*end of the animation*/ };
+    }
+```
 <p data-height="268" data-theme-id="0" data-slug-hash="mPWROZ" data-default-tab="result" data-user="lichin-lin" class="codepen">See the Pen <a href="http://codepen.io/lichin-lin/pen/mPWROZ/">Animations Keyframes</a> by lichin-lin (<a href="http://codepen.io/lichin-lin">@lichin-lin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
 >
 >	
 > #### stop the scrolling
