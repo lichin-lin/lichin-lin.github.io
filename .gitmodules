@@ -1,3 +1,6 @@
 [submodule "Juliealert"]
 	path = Juliealert
 	url = https://github.com/lichin-lin/Juliealert.git
+[submodule "Davidmenu"]
+	path = Davidmenu
+	url = https://github.com/lichin-lin/Davidmenu.git

@@ -30,15 +30,8 @@ tags: [css,jquery,template]
 >
 > #### animation-keyframe介紹
 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```animation```用來描述一段動畫的起始、結束、還有運行時間函式等等。其中```@keyframe```是更仔細敘述動畫的呈現方式，以下是基本樣式：
->
->	animation: [name] [duration] [timing-function] [delay];
->	animation: mymove 5s infinite;
->	
->	@keyframes mymove {
->       0%   { /*init the animation */ }
->       50%  { /*runing the animation*/ }
->       100% { /*end of the animation*/ }
->	}
+><script src="https://gist.github.com/lichin-lin/03507294bfcf3028395f.js"></script>
+
 <p data-height="268" data-theme-id="0" data-slug-hash="mPWROZ" data-default-tab="result" data-user="lichin-lin" class="codepen">See the Pen <a href="http://codepen.io/lichin-lin/pen/mPWROZ/">Animations Keyframes</a> by lichin-lin (<a href="http://codepen.io/lichin-lin">@lichin-lin</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 >
