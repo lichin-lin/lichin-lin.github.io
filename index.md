@@ -17,6 +17,7 @@ tagline: Supporting tagline
   			{% for tag in post.tags %}
   			  <li><a href="/tags#{{ tag }}" class="tag">{{ tag }}</a></li>
   			{% endfor %}
+        <br>
         <span>{{ post.date | date_to_string }}</span>
   			</ul>
         <ul class="post-info">

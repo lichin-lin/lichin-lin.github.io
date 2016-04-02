@@ -260,8 +260,10 @@ blockquote p {
 .posts .tags {
   margin-left: 0;
   padding-bottom: 5px;
+  text-align: center;
 }
 .posts .tags li {
+  margin-bottom: 10px;
   margin-right: 10px;
   padding: 3px 7px 3px 7px;
   font-size: 0.8em;
