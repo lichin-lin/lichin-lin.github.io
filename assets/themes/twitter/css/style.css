@@ -518,8 +518,8 @@ blockquote p {
     text-decoration: none;
   }
   .posts img{
-    max-width:300px;
-    max-height:150px;
+    max-width:400px;
+    max-height:200px;
     margin: 0 auto;
   }
   .posts .tags span {
@@ -535,6 +535,11 @@ blockquote p {
 @media (max-width: 384px) {
   .info-content .mention {
     font-size: 0.95em;
+  }
+ .posts img{
+    max-width:280px;
+    max-height:140px;
+    margin: 0 auto;
   }
   .info-content .intro-box .demo-effect {
     min-width: 240px;
