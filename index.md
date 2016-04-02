@@ -11,6 +11,7 @@ tagline: Supporting tagline
 <ul class="posts">
   {% for post in site.posts %}
     <li>
+      <img src="{{ post.img }}">
     	<section>
   			<ul class="tags">
   			{% for tag in post.tags %}

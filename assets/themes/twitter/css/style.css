@@ -15,6 +15,10 @@ h3,
 span {
   font-family: 'Fenton-Medium', sans-serif;
 }
+p {
+  line-height: 25px;
+  letter-spacing: 0.3px;
+}
 body {
   padding-top: 40px;
 }
@@ -222,10 +226,17 @@ a:hover,
 }
 blockquote p {
   width: 80%;
+  line-height: 30px;
+  letter-spacing: 0.3px;
 }
 .posts {
   list-style: none;
   padding-bottom: 50px;
+}
+.posts img{
+  max-width:500px;
+  max-height:250px;
+  margin: 0 auto;
 }
 .posts > li {
   margin-top: 20px;
@@ -238,6 +249,7 @@ blockquote p {
 .posts li {
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 .posts li section {
   display: flex;
@@ -502,6 +514,11 @@ blockquote p {
   .posts a {
     font-size: 1.2em;
     text-decoration: none;
+  }
+  .posts img{
+    max-width:300px;
+    max-height:150px;
+    margin: 0 auto;
   }
   .posts .tags span {
     font-size: 0.8em;

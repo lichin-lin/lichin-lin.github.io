@@ -4,6 +4,7 @@ title: "開發css套件-JulieAlert"
 description: "customized for better alert"
 category: css
 tags: [css,jquery,template]
+img: "img/juliealert.png"
 ---
 
 >### # 起因
