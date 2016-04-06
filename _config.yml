@@ -25,6 +25,11 @@ author :
 #
 production_url : http://lichin-lin.github.io
 
+# Gems
+paginate:    5
+paginate_path: "page:num"
+gems: [jekyll-paginate]
+
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
 JB :

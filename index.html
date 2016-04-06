@@ -1,0 +1,44 @@
+---
+layout: page
+title: Home Page
+tagline: Supporting tagline
+---
+{% include JB/setup %}
+<!-- This loops through the paginated posts -->
+<ul class="posts">
+  {% for post in paginator.posts %}
+    <li>
+      {% if paginator.page > 1 %}
+        <img src="/../{{ post.img }}">
+      {% else %}
+        <img src="{{ post.img }}">
+      {% endif %}
+      <section>
+        <ul class="tags">
+        {% for tag in post.tags %}
+          <li><a href="/tags#{{ tag }}" class="tag">{{ tag }}</a></li>
+        {% endfor %}
+        <br>
+        <span>{{ post.date | date_to_string }}</span>
+        </ul>
+        <ul class="post-info">
+          <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+        </ul>
+      </section>
+    </li>
+  {% endfor %}
+</ul>
+<!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+  {% else %}
+    <span class="previous">Previous</span>
+  {% endif %}
+  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+  {% else %}
+    <span class="next ">Next</span>
+  {% endif %}
+</div>
