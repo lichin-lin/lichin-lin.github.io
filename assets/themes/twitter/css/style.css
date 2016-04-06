@@ -518,7 +518,7 @@ blockquote p {
     text-decoration: none;
   }
   .posts img{
-    max-width:400px;
+    max-width: 360px;
     max-height:200px;
     margin: 0 auto;
   }
