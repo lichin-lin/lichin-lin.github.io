@@ -1,9 +1,16 @@
 @import url("/assets/font/Fenton-Medium.otf");
+@font-face {
+  font-family: Lobster;
+  src: url("/assets/font/Lobster.otf");
+}
+
 html,
 body {
+  box-sizing: border-box;
   background: linear-gradient(to bottom right, #54B0FD 0%, #81D0FD 25%,#ADE8FD 50%,#DBECFA 75%, #F1F4FB 80%);
   font-family: 'raleway', sans-serif;
   margin: 0;
+  margin: 0px;
 }
 @font-face {
   font-family: 'Fenton-Medium';
@@ -91,6 +98,77 @@ ul{
 .content p {
   font-size: 1.2em;
 }
+.logo-header{
+  position: absolute;
+  display: flex;
+  width: 95%;
+  top:0;
+  background-color: transparent;
+  flex-direction: row;
+}
+.logo-container{
+  padding:1rem 0px 1rem 0px;
+  width:100%;
+  display: flex;
+  justify-content:flex-end;
+}
+.logo-header .nav{
+  position:relative;
+  margin:0px 30px 0px 0px;
+}
+.logo-header .nav a{
+  color:#50514f;
+  border:3px solid transparent;
+  padding:5px;
+  position: relative;
+  font-family:"Lobster";
+}
+.logo-header .nav a:after{
+  position: absolute;
+  content: "";
+  height: 5px;
+  width: 0%;
+  background: white;
+  bottom: 0;
+  left: 0;
+  transition: all .5s ease;
+}
+.logo-header .nav a:hover:after{
+  background: #ffe682;
+  width: 100%;
+  transition: all .35s ease;
+}
+.logo-header div>ul a:hover,
+.nav a:hover{
+  background: transparent;
+}
+.logo-header div>ul .active>a, .nav .active>a{
+  background-color:transparent;
+}
+.back-img{
+  z-index: -2;
+  //background: url(https://images.unsplash.com/photo-1458324124043-7803d4fec380?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=bcabf46696fabe19abe4992477e11c4f) no-repeat center center fixed;
+  height: 50vh;
+  background-size: cover;
+  color: #50514f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family:"Lobster";
+}
+.back-img h1{
+  font-size: 64px;
+  font-family:"Lobster";
+}
+.back-img p{
+  font-size: 24px;
+}
+.back-img img{
+  width: 200px;
+  height: 200px;
+  padding-bottom: 20px;
+}
 .page-header {
   background-color: #f5f5f5;
   padding: 20px 20px 10px;
@@ -104,6 +182,7 @@ ul{
   font-size: 1.2em;
 }
 .topbar {
+  display: none;
   width: 100%;
   height: 70px;
   background-color: transparent;
@@ -111,26 +190,80 @@ ul{
 .topbar .fill {
   width: 100%;
   height: 70px;
-  background-color: #ffe682;
+  background-color: transparent;
   background-image: none;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: height 0.4s ease;
+  transition: height 0.4s ease;
+  display: flex;
+  -webkit-box-shadow:none;
+  box-shadow: none;
+  display:none;
+  animation: navbarHide .3s ease;
 }
+.topbar .bar-container{
+  display: flex;
+  justify-content: flex-start;
+}
+.topbar .topbar-topic h1{
+  display: inline-block;
+  position: relative;
+  font-family: "Lobster";
+  color: #e45d5a;
+  font-size: 24px;
+  text-align: center;
+  margin:6px;
+}
+.topbar .topbar-topic span{
+  vertical-align: middle;  
+}
+
+@keyframes navbarHide{
+  0%{
+    display: block;
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    height: 50px;
+  } 
+}
+
 .topbar .fill.shrink {
-  background-color: rgba(255,254,255,0.6);
+  background-color: rgba(255,230,130,1);
   height: 50px;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: height 0.4s ease;
+  transition: height 0.4s ease;
+  display: block;
+  opacity: 1;
+  animation: navbarShow .5s ease;
 }
+@keyframes navbarShow{
+  0%{
+    display: block;
+    height: 10px;
+  }
+  1%{
+    opacity: 0;
+  }
+  50%{
+    opacity: .5;
+  }
+  100%{
+    opacity: 1;
+    height: 50px;
+  } 
+}
+
 .topbar .fill.shrink img {
   width: 40px;
   height: 40px;
 }
 .topbar .brand {
+  width: 200px;
   font-size: 2em;
   color: #373836;
   padding: 0px 0px 5px;
-  margin-left: 50px;
+  margin-left: 30px;
   box-shadow: 0;
   transition: all 0.3s ease;
 }
@@ -152,7 +285,7 @@ ul{
   text-shadow: none;
 }
 .topbar ul li a {
-  color: #6b6b6b;
+  color: #50514f;
 }
 .topbar div > ul .active > a {
   background-color: #50514f;
@@ -167,7 +300,8 @@ ul{
 }
 .topbar div>ul,
 .nav {
-  margin: 10px 0px 0px 5px;
+  float:right;
+  margin: 10px 30px 0px 0px;
 }
 .topbar div>ul>li,
 .nav>li {
@@ -175,7 +309,7 @@ ul{
   margin-top: 10px;
   padding-left: 5px;
 }
-.topbar div>ul .active>a,
+/*.topbar div>ul .active>a,
 .nav .active>a,
 a:hover,
 .nav a:hover {
@@ -185,7 +319,7 @@ a:hover,
 .nav a:hover {
   background-color: rgba(80,81,79,0.4);
   transition: all 0.3s ease;
-}
+}*/
 .tag_box {
   list-style: none;
   margin: 0;
@@ -491,6 +625,13 @@ blockquote p {
 }
 
 @media (max-width: 768px) {
+  .back-img img{
+    width: 150px;
+    height: 150px;
+  }
+  .logo-header .nav{
+    //margin: 0 auto;
+  }
   .page-header h1 {
     font-size: 2.3em;
   }
@@ -533,6 +674,10 @@ blockquote p {
 }
 
 @media (max-width: 384px) {
+  .back-img img{
+    width: 120px;
+    height: 120px;
+  }
   .info-content .mention {
     font-size: 0.95em;
   }

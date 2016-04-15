@@ -40,19 +40,38 @@
 
   <body>
 
+
+    <div class="back-img">
+      <div class="logo-header">
+        <div class="logo-container">
+          <ul class="nav">
+            {% assign pages_list = site.pages %}
+            {% assign group = 'navigation' %}
+            {% include JB/pages_list %}
+          </ul>         
+        </div>
+      </div>
+      <div class="grad"></div>
+      <img src="/img/dog.png" >
+      <h1>Lichin</h1>
+      <p>Frontend-Developor</p>
+    </div>
+
     <div class="topbar">
       <div class="fill">
        <!--div class="fill-bg"-->
         <div class="bar-container">
           <a class="brand" href="{{ HOME_PATH }}">
             <img src="/img/dog.png" >
-            <span>{{ site.title }}</span>
+            <!--span>{{ site.title }}</span-->
+            <div class="topbar-topic"><h1>Lichin</h1></div>
           </a>
-          <ul class="nav">
+          <!--div class="topbar-topic"><h1>Lichin</h1></div-->
+          <!--ul class="nav">
             {% assign pages_list = site.pages %}
             {% assign group = 'navigation' %}
             {% include JB/pages_list %}
-          </ul>
+          </ul-->
         </div>
        <!--/div-->
       </div>
