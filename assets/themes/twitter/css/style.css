@@ -156,6 +156,7 @@ ul{
   align-items: center;
   justify-content: center;
   font-family:"Fenton-Medium";
+  min-height: 350px;
 }
 .back-img h1{
   font-size: 64px;

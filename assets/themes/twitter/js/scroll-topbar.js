@@ -60,7 +60,12 @@ $('#changing-word').typeIt({
 $('.about-me').click(function(){
   Julie({
     title: "info!",
-    text: "<h3> Thank for watching! </h3> <h3>I am still working on this page.</h3>",
+    text: "<h3> Thank for watching! </h3> <h4>still building this page.</h4>" + 
+    "--" +
+    "<h4>skilled for HTML/CSS Customization.<h4>" + 
+    "<h4>like to Design by AI/Sketch.</h4>" + 
+    "<h4>now try my best to learn JS</h4>" +
+    "<h4>know some backEnd tech: Rails,python,mySQL.<h4>" ,
     confirmText:"Got It",
     errorText:"",
     Pop:false,
