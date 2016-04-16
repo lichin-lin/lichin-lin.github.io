@@ -48,7 +48,7 @@ $( ".about-tab" ).click(function() {
 });
 
 $('#changing-word').typeIt({
-     strings: ["&nbsp;Student From NCTU", "&nbsp;Frontend-Developor", "&nbsp;Looking For Intern"],
+     strings: ["&nbsp;a Student From NCTU", "&nbsp;a Frontend-Developor", "&nbsp;i'm looking for Internship"],
      speed: 100,
      breakLines: false,
      loop:true,

@@ -40,6 +40,15 @@ img: "img/mysql.jpg"
 
 <br>
 
+>### # 如何替換NA字體
+>
+>這一步我也還不確定，每台電腦可能狀況不一樣，有很多做法可以達到，也有可能不需要做就能完成作業，提出來大家參考。不知道怎麼確定對錯的時候，可以先自己新增一個小檔案，裡頭自己隨便嘗試幾個狀況，看看結果，對了再更改```csv file```。
+>
+><script src="https://gist.github.com/lichin-lin/cdff63dc646ae8f357e5025e419bdb63.js"></script>
+>這裡也提供一些替換字元正規表示法:[link](http://cpc.richliu.com/Day3/4.grep%20and%20regular%20expression.pdf "Title")
+
+<br>
+
 >### # Import data from CSV file
 >
 >進入一個database之後，首先要create table，助教也有給上table範例，所以也可以參考:[here](http://stat-computing.org/dataexpo/2009/sqlite.html "Title")，在Import data 時要注意```input type```，例如已經宣告```int```形式了，就沒辦法吃"NA"這樣的input，但是這些飛機航班資料裡面，只要資料沒給齊全就會在那個欄位記上"NA"，因此在import前一定要把資料整理過，不然開始query一定會發生悲劇，慘不忍睹，筆者深受其害。
