@@ -46,3 +46,23 @@ $( ".about-tab" ).click(function() {
   $(".panel-content").children().eq(index).css("display","block");
 
 });
+
+$('#changing-word').typeIt({
+     strings: ["&nbsp;Student From NCTU", "&nbsp;Frontend-Developor", "&nbsp;Looking For Intern"],
+     speed: 100,
+     breakLines: false,
+     loop:true,
+     breakDelay:2500,
+     startDelay:300,
+     loopDelay:2500
+});
+
+$('.about-me').click(function(){
+  Julie({
+    title: "info!",
+    text: "<h3> Thank for watching! </h3> <h3>I am still working on this page.</h3>",
+    confirmText:"Got It",
+    errorText:"",
+    Pop:false,
+  });
+});
