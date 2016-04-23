@@ -48,7 +48,7 @@ $( ".about-tab" ).click(function() {
 });
 
 $('#changing-word').typeIt({
-     strings: ["&nbsp;a Student From NCTU", "&nbsp;a Frontend-Developor", "&nbsp;i'm looking for Internship"],
+     strings: ["&nbsp;a Student From NCTU", "&nbsp;a Frontend-developer", "&nbsp;looking for Internship"],
      speed: 100,
      breakLines: false,
      loop:true,
@@ -63,8 +63,8 @@ $('.about-me').click(function(){
     text: "<h3> Thank for watching! </h3> <h4>still building this page.</h4>" + 
     "--" +
     "<h4>skilled for HTML/CSS Customization.<h4>" + 
-    "<h4>like to Design by AI/Sketch.</h4>" + 
-    "<h4>now try my best to learn JS</h4>" +
+    "<h4>Design UI by AI/Sketch.</h4>" + 
+    "<h4>try my best to learn JS</h4>" +
     "<h4>know some backEnd tech: Rails,python,mySQL.<h4>" ,
     confirmText:"Got It",
     errorText:"",
