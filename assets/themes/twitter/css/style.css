@@ -115,6 +115,13 @@ ul{
   display: flex;
   justify-content:flex-end;
 }
+.logo-container .nav .fa{
+  color:#50514f;
+  cursor: pointer;
+}
+.logo-container .nav .fa-logo{
+  padding: 0px !important;
+}
 .logo-header .nav{
   position:relative;
   margin:0px 30px 0px 0px;
@@ -177,7 +184,7 @@ ul{
   font-size: 20px;
   display: flex;
   flex-direction: row;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 .Typing span{
   font-family: "Fenton-Medium";
