@@ -1,0 +1,309 @@
+/*
+* Custom variables
+*/
+$main-font: 'Lato', sans-serif;
+$sub-font: 'Montserrat', sans-serif;
+$fancy-font: 'Kaushan Script', cursive;
+$cool-font: 'Lobster',cursive;
+$font-size: 16px;
+ 
+$black: #50514f;
+$white: #FFF;
+$grey: #585c65;
+$mediumgrey: #9b9b9b;
+$lightgrey: #eeeeee;
+$blue: #3466a1;
+$red: #DC493A;
+$yellow: #FFE066;
+$lakegreen: #70C1B3;
+$pink: #FE938C;
+
+$padding: 10px;
+$margin: 10px;
+ 
+/*
+* Override Bootstrap variables
+*/
+$font-family-sans-serif: $main-font;
+ 
+@import 'bootstrap';
+
+* {
+	position: relative;
+	box-sizing: border-box;
+}
+
+body {
+	color: $grey;
+	font-size: $font-size;
+}
+
+header {
+	max-height: 600px;
+	height: 600px;
+	overflow: hidden;
+
+	img {
+		position: fixed;
+		top: -20%;
+		left: 50%;
+		margin-left: -600px;
+		width: 1200px;
+
+		-webkit-mask: url(http://tympanus.net/codrops-playground/assets/images/cssref/properties/mask/mask-image.png) 50% 50% / 350px 350px no-repeat;
+  		mask: url(http://tympanus.net/codrops-playground/assets/images/cssref/properties/mask/mask-image.png) center center / 350px 350px no-repeat;
+
+		@media screen and(min-width: $screen-lg){
+			top: auto;
+			left: auto;
+			margin: 0;
+			top: -25%;
+			width: 100%;
+		}
+	}
+
+	.name {
+		font-size: 21px;
+		position: absolute;
+		top: 50px;
+		left: 50px;
+		color: $black;
+		cursor: pointer;
+		transition: all .35s ease;
+
+		&:hover{
+			transition: all .35s ease;
+			color: $pink;
+		}
+	}
+
+	.title-info {
+		position: absolute;
+		top: 70%;
+		width: 100%;
+		text-align: center;
+		@media screen and (min-width: $screen-lg) {
+			top: 80%;
+		}
+	}
+
+	h1, h2 {
+		width: 100%;
+		color: $black;
+		margin: 0;
+	}
+
+	h1 {
+		//text-transform: uppercase;
+		font-weight: 700;
+		font-size: 30px;
+		letter-spacing: 0.1em;
+		margin-bottom: $margin;
+
+		span {
+			display: block;
+			letter-spacing: 0em;
+			@media screen and(min-width: $screen-md){
+				display: inline;
+			}
+		}
+	}
+
+	h2 {
+		font-size: 16px;
+		width: 70%;
+		margin: 0 auto;
+
+		@media screen and(min-width: $screen-lg){
+			width: 100%;
+			margin: 0;
+		}
+	}
+
+	.social {
+		position: absolute;
+		top: 55px;
+		right: 50px;
+		overflow: hidden;
+
+		a {
+			float: left;
+			width: 30px;
+			height: 30px;
+			margin: 0 5px;
+			opacity: 1.0;
+			text-indent: -9999px;
+			transition: all .35s ease;
+
+			&:hover{
+				transition: all .35s ease;
+				opacity: .6;
+			}
+		}
+		.title-email{
+			background: url(../images/email.png) no-repeat;
+			background-size: 30px 30px;
+		}
+		.title-github{
+			background: url(../images/github.png) no-repeat;
+			background-size: 30px 30px;
+		}
+		.title-codepen{
+			background: url(../images/codepen.png) no-repeat;
+			background-size: 30px 30px;
+		}
+	}
+}
+
+.instagram-wrap {
+	background: $lightgrey;
+}
+.instagram-content {
+
+	text-align: center;
+
+	h3 {
+		text-transform: uppercase;
+		letter-spacing: 0.5em;
+		font-size: 12px;
+		font-weight: 700;
+		text-align: center;
+		padding: $padding*5.0;
+		color: darken($lightgrey,30%);
+	}
+
+	.photo-box {
+		margin: 0 0 $margin*3.0;
+
+		.image-wrap {
+			img{
+				width: 100%;
+			}
+			.likes {
+				position: absolute;
+				bottom: 5px;
+				left: 15px;
+				padding: $padding/2;
+				background: rgba($black,0.75);
+				color: $white;
+			}
+		}
+
+		.description{
+			font-family: $sub-font;
+			font-size: 12px;
+			background: $white;
+			color: $mediumgrey;
+			letter-spacing: 1px;
+			padding: $padding*1.5;
+			height: 75px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+	}
+	.moreButton{
+		width: 70%;
+		height: 50px;
+		padding: $padding*1 $padding*1;
+		margin: 50px 0 50px 0;
+
+		background: transparent;
+		border: 2px solid $pink;
+		border-radius: 3px;
+		color: $pink;
+		text-align: center;
+		text-decoration: none;
+
+		display: inline-block;
+		cursor: pointer;
+
+		@media screen and(min-width: $screen-md){
+			width: 20%;
+		}
+
+	}
+}
+
+footer {
+	background: $white;
+	padding: $padding*3.0;
+	text-align: center;
+
+	@media screen and(min-width: $screen-lg){
+		padding: $padding*10 0;
+	}
+
+	h4 {
+		font-size: 36px;
+		text-align: center;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+
+	.about-text {
+		padding: 0 $padding*3.0;
+
+		@media screen and(min-width: $screen-lg){
+			width: 650px;
+			margin: 0 auto;
+		}
+	}
+
+	.contact-now-btn {
+		display: inline-block;
+		width: 70%;
+		padding: $padding*2 $padding*5;
+		margin-top: $margin*2;
+		color: $white;
+		background: $grey;
+		font-size: 13px;
+		letter-spacing: 1px;
+		text-decoration: none;
+		text-transform: uppercase;
+		border: 1px solid transparent;
+		transition:all .35s ease;
+		-webkit-transition:all .35s ease;
+
+		@media screen and(min-width: $screen-md) {
+			width: 60%;
+		}
+		@media screen and(min-width: $screen-lg) {
+			width: 20%;
+			margin-top: $margin*5.0;
+		}
+
+		&:hover {
+			transition:all .35s ease;
+			-webkit-transition:all .35s ease;
+			background: transparent;
+			border: 1px solid $grey;
+			color: $grey;
+		}
+	}
+
+}
+
+.footer-bottom {
+	background: $white;
+	padding: $padding $padding*6;
+	border-top: 2px solid $lightgrey;
+	letter-spacing: 2px;
+	text-align: center;
+	color: $mediumgrey;
+	text-transform: uppercase;
+
+	@media screen and(min-width: $screen-md) {
+		padding: $padding*4.0;
+	}	
+}
+
+
+
+.fancy-font {
+    font-family: $fancy-font;
+}
+.cool-font {
+    font-family: $cool-font;
+}
