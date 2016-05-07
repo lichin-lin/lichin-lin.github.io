@@ -25,6 +25,10 @@ author :
 #
 production_url : http://lichin-lin.github.io
 
+#HTTPS from cloudflare
+url: https://lichin.me   # with the https protocol
+enforce_ssl: lichin.me   # without any protocol
+
 # Gems
 paginate:    5
 paginate_path: "page:num"
