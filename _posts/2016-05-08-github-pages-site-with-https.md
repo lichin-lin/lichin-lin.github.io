@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "github pages-site with HTTPS"
-description: ""
+description: "make your site more safety"
 category: Blog
 tags: [web-tech]
-img: "img/HTTPS.jpg"
+img: "img/HTTPS.png"
 ---
 >### # HTTPS intro
 > HTTPS是超文字傳輸安全協定（英語：Hypertext Transfer Protocol Secure)，利用SSL/TLS來對封包進行加密，比起 HTTP 更安全。

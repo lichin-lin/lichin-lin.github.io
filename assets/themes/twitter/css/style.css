@@ -486,7 +486,18 @@ blockquote p {
 #dsq-app5 {
   display: none;
 }
+.pagination {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
 
+
+}
+.pagination span{
+    align-self: center;
+    margin-left: 10px;
+    margin-top: 3px;
+  }
 /* ===== about me ===== */
 .info-content {
   display: flex;
