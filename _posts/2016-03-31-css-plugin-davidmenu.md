@@ -3,7 +3,7 @@ layout: post
 title: "開發css套件-Davidmenu"
 description: "full-screen animation menu"
 category: css
-tags: [css,jquery,template]
+tags: [CSS,jquery,template]
 img: "img/davidmenu.png"
 ---
 

@@ -41,9 +41,16 @@ ul{
 }
 .row {
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .row > [class*="span"] {
   margin-left: 10px;
+}
+.row .span4{
+  align-self: baseline;
+  margin-left: 10%;
 }
 .row li {
   font-size: 1.3em;
@@ -397,7 +404,7 @@ a:hover,
   font-size: 1.5em;
 }
 blockquote p {
-  width: 80%;
+  width: 100%;
   line-height: 30px;
   letter-spacing: 0.3px;
 }
@@ -697,6 +704,10 @@ blockquote p {
   }
   .row .post-info {
     margin: 0 0 20px 0;
+  }
+  blockquote{
+    padding: 0 0 0 10px;
+    border-width: 3px;
   }
   blockquote p {
     width: 100%;

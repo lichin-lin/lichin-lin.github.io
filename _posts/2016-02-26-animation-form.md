@@ -3,7 +3,7 @@ layout: post
 title: "form animation-NCTUOJ登入UI"
 description: "sign-in form with slide effect."
 category: css
-tags: [css,Animation]
+tags: [CSS,Animation]
 img: "img/nctuform.png"
 ---
 ## 學校近日在寫NCTU online-judge的平台，我有幸能參與其中的前端設計。以下是我製作的 sign-in form，以及幾個小技巧分享。
