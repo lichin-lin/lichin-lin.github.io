@@ -18,7 +18,6 @@ img: "img/VENUS/Venus-bg.png"
 
 >### # 流程
 >
->
 > #### 文字
 >  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一開始選擇title時費了一番工夫，眾人投票的結果是 ```VENUS``` ，
 >我想這個名字能讓人好記得之外，意思裡也帶有一種典雅的含義，沒有想太多就趕快進入字體挑選的步驟。在這裡[fontsquirrel](https://www.fontsquirrel.com ,"Title")
@@ -53,12 +52,22 @@ img: "img/VENUS/Venus-bg.png"
 > 或是加入背景漸層色之後:
 > <br><br><img src="/img/VENUS/Venus-bg.png"/><br><br>
 
-> #### 其他想法 & 參賽心得
+> #### 其他想法 & 實際使用
+> 這裡附上整個製作過程中，沒用上以及淘汰的想法，有的過於複雜模糊了基本理念，有的是意義不明在跟組員討論完之後就拿掉了，不過也是因為多番嘗試之後，才能做出一個簡潔的logo:
+> <br><br><img src="/img/VENUS/Venus-workflow.png"/><br><br>
+> 這邊是實際比賽時，出現在程式登入時的截圖，簡單的表格配上logo就是一個login form：
+> <br><br><img src="/img/VENUS/Venus-login.png"/><br><br>
+> 另外，我們也提供 chrome 插件，所以這裡把logo濃縮成一張小卡片並去掉拖曳尾巴，保留鮮豔的三條磁條，是logo的一種延伸:
+> <br><br><img src="/img/VENUS/Venus-chrome.png"/><br><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;這次的黑客松，是為期將近一個月的長期比賽，我除了在負責前端之餘，也負責了這次logo的製作。我很滿意我們的成品，
+> 畢竟比賽規模很大，我們也相對應提出一個很完整的架構來解決、改善對於信用卡盜刷的問題。
 >
-> <br><br><img src="/img/VENUS/Venus-workflow"/><br><br>
-
-
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;雖然結果不盡理想，但是我也從中發現台灣對於黑客松的定義跟國外單純coding分享技術仍有很大的不同，
+> 往往一個簡報就能夠奪得評審的目光。但我想這也是我們自己該努力的地方，好的作品也需要好的行銷包裝，
+> 只有這樣才能在比賽中脫穎而出又能維持自己作品的水準，不流於形式。恩!還有很多可以磨練。
+>
+>
 >### # 參考
 >1.    [品牌癮](http://www.brandinlabs.com "Title")
 >2.    [logo 大集](http://www.logoed.co.uk "Title")
->3.    []
+>3.    [my Behance](https://www.behance.net/lichin-lin, "Title")
