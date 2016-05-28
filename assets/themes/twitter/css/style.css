@@ -27,7 +27,7 @@ p {
   letter-spacing: 0.3px;
 }
 body {
-  padding-top: 40px;
+  padding: 50px;
 }
 code {
   font-size: 14px;
@@ -91,6 +91,9 @@ ul{
   position: relative;
   top: 50px;
 }
+footer{
+  margin-bottom: 30px;
+}
 .container > footer p {
   text-align: center;
 }
@@ -110,15 +113,17 @@ ul{
 }
 .logo-header{
   position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: flex-end;
   display: flex;
-  width: 95%;
-  top:0;
+  width: 100%;
   background-color: transparent;
   flex-direction: row;
 }
 .logo-container{
   padding:1rem 0px 1rem 0px;
-  width:100%;
+  width:auto;
   display: flex;
   justify-content:flex-end;
 }
@@ -259,7 +264,7 @@ ul{
   margin:6px;
 }
 .topbar .topbar-topic span{
-  vertical-align: middle;  
+  vertical-align: middle;
 }
 
 @keyframes navbarHide{
@@ -270,7 +275,7 @@ ul{
   100%{
     opacity: 0;
     height: 50px;
-  } 
+  }
 }
 
 .topbar .fill.shrink {
@@ -296,7 +301,7 @@ ul{
   100%{
     opacity: 1;
     height: 50px;
-  } 
+  }
 }
 
 .topbar .fill.shrink img {
