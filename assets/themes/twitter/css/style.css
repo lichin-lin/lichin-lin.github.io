@@ -733,8 +733,8 @@ blockquote p {
     text-decoration: none;
   }
   .posts img{
-    max-width: 360px;
-    max-height:200px;
+    max-width: 320px;
+    max-height:180px;
     margin: 0 auto;
   }
   .posts .tags span {
