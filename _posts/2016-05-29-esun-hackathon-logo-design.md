@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "E.SUN Hackathon-logo design"
-description: "Venus paymeny plugin!"
+description: "Venus payment plugin!"
 category: Blog
 tags: [design]
 img: "img/VENUS/Venus-bg.png"
