@@ -70,4 +70,4 @@ img: "img/VENUS/Venus-bg.png"
 >### # 參考
 >1.    [品牌癮](http://www.brandinlabs.com "Title")
 >2.    [logo 大集](http://www.logoed.co.uk "Title")
->3.    [my Behance](https://www.behance.net/lichin-lin, "Title")
+>3.    [my Behance](https://www.behance.net/lichin-lin "Title")
