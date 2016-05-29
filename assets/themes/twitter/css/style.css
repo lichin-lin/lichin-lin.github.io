@@ -50,7 +50,7 @@ ul{
 }
 .row .span4{
   align-self: baseline;
-  margin-left: 10%;
+  margin-left: 10px;
 }
 .row li {
   font-size: 1.3em;
