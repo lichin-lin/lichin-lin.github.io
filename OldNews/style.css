@@ -1,0 +1,57 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+* {
+  font-family: 'Raleway';
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+#OldNews {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  background: #50514f;
+}
+.post_container {
+  background: #E9E9E9;
+  position: relative;
+  //border: 1px solid pink;
+  box-shadow: 0px 0px 10px 2px #50514f;
+  margin: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.post_title {
+  display: flex;
+  justify-content: center;
+}
+.post_title p{
+  width: 80%;
+}
+.post_content {
+  margin-bottom: 20px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  transform: rotate(180deg);
+}
+.post_content p{
+  transform: rotate(180deg);
+  width:1.2em;
+  font-size: 1em;
+  word-wrap: break-word;
+  font-family: monospace; /* this is just for good looks */
+  white-space: pre-wrap;
+}
+
+
+.post_img {
+  width: 480px;
+  height: 100%;
+}
+.post_img img{
+  width: 100%;
+  height: auto;
+}
