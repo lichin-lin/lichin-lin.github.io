@@ -103,6 +103,7 @@
     });
 
 		FB.api('/me/posts?fields=full_picture,message,created_time,story&limit=5', function(response){
+			console.log(response);
 			for(var i = 0; i < 5; i++){
 				//console.log(JSON.stringify(response.data[i]));
 				time = response.data[i];
