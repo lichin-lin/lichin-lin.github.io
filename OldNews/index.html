@@ -6,7 +6,9 @@
 </head>
 <body>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/noisy/1.2/jquery.noisy.min.js"></script>
 	<link href="style.css" rel="stylesheet" type="text/css"/>
+
 <script>
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
@@ -85,31 +87,63 @@
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!' + "<br><br>";
 		  $('#OldNews').empty();
+			$('#OldNews').append('<div class="📅📅📅"><span>日曜日</span><span>平成二十八年</span></div><div class="News_title"><div></div><p>オールドニュース</p></div><div id="News_content"></div>');
+			// $('#OldNews').noisy({
+			// 	intensity: 0.482,
+		  //   size: 1500,
+		  //   opacity: 0.15,
+			// 	'monochrome' : true
+			// });
+			$('.yo').noisy({
+				intensity: 0.182,
+				size: 100,
+				opacity: 0.1,
+				'monochrome' : true
+			});
     });
 
-		FB.api('/me/posts?fields=full_picture,message,created_time,story&limit=3', function(response){
-			//console.log(JSON.stringify(response));
-			for(var i = 0; i < 3; i++){
-				//$('#status').append(new_photo);
-				post_content = "<div class='post_title'><p>" + parseTime(response.data[i].created_time) + "/" +
-												response.data[i].story + "</p></div>" +
-												parseString(response.data[i].message);
-				post = "<div class='post_container'><div class='post_img'><img src=' " +
-								response.data[i].full_picture + " ' /></div> " +
-							  post_content + "</div>";
-				$('#OldNews').append(post);
+		FB.api('/me/posts?fields=full_picture,message,created_time,story&limit=5', function(response){
+			for(var i = 0; i < 5; i++){
+				//console.log(JSON.stringify(response.data[i]));
+				time = response.data[i];
+				if(time !== undefined){
+					post_content = "<div class='post_title'><p>'" + parseTime(response.data[i].created_time) + "/" +
+													response.data[i].story + "'</p></div></div>" +
+													parseString(response.data[i].message);
+					post = "<div class='post_container'><div class='img_title'><div class='post_img'><img src=' " +
+									response.data[i].full_picture + " ' /></div>" +
+								  post_content + "</div>";
+
+						$('#News_content').append(post);
+
+					$('.post_container').noisy({
+						intensity: 0.182,
+				    size: 100,
+				    opacity: 0.1,
+						'monochrome' : true
+					});
+				}
 			}
+			NewsPaperResize();
 		});
   }
 	function parseTime(string){
-		return string.substring(0, 9);
+		return string.substring(0, 10);
 	}
 	function parseString(string){
-		var content;
-		var str = string.replace(/(\n)/g, "</p><p>");
-		content = "<div class='post_content'><p>" + str + "</p></div>";
+		var content = "";
+		if(string!=null && string.length > 0){
+			var str = string.replace(/(\n)/g, "</p><p>");
+			content = "<div class='post_content'><p>" + str + "</p></div>";
+		}
 		return content;
 	};
+	function NewsPaperResize(){
+		var h = $('#OldNews').height() - 40;
+		var w = $('#OldNews').width() + 20;
+		$('.yo').css('height', h);
+		$('.yo').css('width', w);
+	}
 </script>
 
 <!--
@@ -123,7 +157,11 @@
 
 <div id="status">
 </div>
-<div id='OldNews'>
+
+<div class="OldNews_container">
+	<div class="yo"></div>
+	<div id='OldNews'></div>
 </div>
+
 </body>
 </html>
