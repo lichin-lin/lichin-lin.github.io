@@ -210,10 +210,8 @@ body {
     align-items: center;
     width: 350px;
   }
-  .post_content p{
-
-  }
   .post_title, .other_post_title {
+    width: 350px;
     max-width: 350px;
   }
   .post_img {
