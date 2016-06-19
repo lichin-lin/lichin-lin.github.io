@@ -146,6 +146,7 @@
 			});
 			$("#News_content").randomize("div.post_container");
 			NewsPaperResize();
+			NewsPaperResize();
 		});
   }
 	function parseTime(string){
@@ -169,7 +170,6 @@
 			// var n = (($(document).width()-350)/3) > 420? 420: 400;
 			// console.log(n);
 			$('div.post_container').width =  (($(document).width()-350)/3) + "px";
-			console.log($('#News_content .post_container').last().width());
 			$('#News_content').masonry({
 				// options...
 				itemSelector: '.post_container',
