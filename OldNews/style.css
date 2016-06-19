@@ -98,7 +98,7 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
-  max-width: 360px;
+  max-width: 320px;
 }
 .post_title p, .other_post_title p{
   width: 97.5%;
@@ -111,7 +111,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 360px;
+  max-width: 320px;
 }
 .other_post_title span{
   width: 90%;
@@ -130,7 +130,7 @@ body {
 .post_content {
   padding: 10px;
   height: auto;
-  width: 360px;
+  width: 320px;
   min-width: 200px;
   display: flex;
   flex-direction: column;
@@ -176,7 +176,7 @@ body {
 }*/
 
 .post_img {
-  width: 360px;
+  width: 320px;
   height: 100%;
 }
 .post_img img{
@@ -188,6 +188,9 @@ body {
 /*🎉🎉🎉---- NEWS CONTAINER -----🎉🎉🎉*/
 
 @media (max-width: 576px){
+  body {
+    padding: 10px;
+  }
   #OldNews {
     display: flex;
     flex-direction: column;
