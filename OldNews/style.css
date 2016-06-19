@@ -191,6 +191,9 @@ body {
   body {
     padding: 10px;
   }
+  .News_title p{
+    font-size: 3.5em;
+  }
   #OldNews {
     display: flex;
     flex-direction: column;
@@ -208,14 +211,14 @@ body {
   }
   .post_content {
     align-items: center;
-    width: 350px;
+    width: 320px;
   }
   .post_title, .other_post_title {
-    width: 350px;
-    max-width: 350px;
+    width: 320px;
+    max-width: 320px;
   }
   .post_img {
-    width: 350px;
+    width: 320px;
     height: 100%;
   }
 }
