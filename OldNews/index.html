@@ -46,7 +46,7 @@
 
   window.fbAsyncInit = function() {
   FB.init({
-    appId      : '1147149562041730',
+    appId      : '1147161518707201',
     cookie     : true,  // enable cookies to allow the server to access
                         // the session
     xfbml      : true,  // parse social plugins on this page
@@ -88,19 +88,19 @@
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!' + "<br><br>";
 		  $('#OldNews').empty();
-			$('#OldNews').append('<div class="📅📅📅"><span>日曜日</span><span>平成二十八年</span></div><div class="News_title"><div></div><p>オールドニュース</p></div><div id="News_content"></div>');
-			$('#OldNews').noisy({
-				intensity: 0.482,
-		    size: 1500,
-		    opacity: 0.15,
-				'monochrome' : true
-			});
-			$('.yo').noisy({
-				intensity: 0.182,
-				size: 100,
-				opacity: 0.1,
-				'monochrome' : true
-			});
+			$('#OldNews').append('<div class="📅📅📅"><span>' + pickDay() + '</span><span>平成二十八年</span></div><div class="News_title"><div></div><p>オールドニュース</p></div><div id="News_content"></div>');
+			// $('#OldNews').noisy({
+			// 	intensity: 0.482,
+		  //   size: 1500,
+		  //   opacity: 0.15,
+			// 	'monochrome' : true
+			// });
+			// $('.yo').noisy({
+			// 	intensity: 0.182,
+			// 	size: 100,
+			// 	opacity: 0.1,
+			// 	'monochrome' : true
+			// });
     });
 
 		FB.api('/me/posts?fields=full_picture,message,created_time,story&limit=5', function(response){
@@ -109,7 +109,7 @@
 				//console.log(JSON.stringify(response.data[i]));
 				time = response.data[i];
 				if(time !== undefined){
-					$('#News_content').append("<div class='post_container'></div>");
+					$('#News_content').append("<div class='post_container post_border'></div>");
 
 					if(response.data[i].full_picture !== undefined){
 						$('#News_content .post_container').last().append("<div class='img_title'><div class='post_img'><img src=' " +
@@ -121,62 +121,112 @@
 						$('.post_title').last().append(post_time);
 					}
 					if(response.data[i].message !== undefined){
-						$('#News_content .post_container').last().append(parseString(response.data[i].message));
+						$('#News_content .post_container').last().append(parseString(response.data[i].message, 0));
 					}
-					$('#News_content .post_container').noisy({
-						intensity: 0.182,
-				    size: 100,
-				    opacity: 0.1,
-						'monochrome' : true
-					});
 				}
 			}
-			if($(document).width() > 576){
-				$('#News_content').masonry({
-				  // options...
-				  itemSelector: '.post_container',
-				  columnWidth: 425
-				});
-			} else {
-				$('#News_content').masonry({
-				  // options...
-				  itemSelector: '.post_container',
-				  columnWidth: 300
-				});
-			}
-			NewsPaperResize();
+			while($("#News_content").children().length < 15){
+				AddNewPost($("#News_content").children().length);
+			};
+		  //$('#News_content').randomize('div.post_container');
+			$.fn.randomize = function(selector){
+			    (selector ? this.find(selector) : this).parent().each(function(){
+			        $(this).children(selector).sort(function(){
+			            return Math.random() - 0.5;
+			        }).detach().appendTo(this);
+			    });
+
+			    return this;
+			};
+			$('#News_content .post_container').noisy({
+				intensity: 0.182,
+				size: 100,
+				opacity: 0.1,
+				'monochrome' : true
+			});
+			$("#News_content").randomize("div.post_container");
 			NewsPaperResize();
 		});
   }
 	function parseTime(string){
 		return string.substring(0, 10);
 	}
-	function parseString(string){
+	function parseString(string, flag){
 		var content = "";
 		if(string!=null && string.length > 0){
 			var str = string.replace(/(\n)/g, "</p><p>");
-			content = "<div class='post_content'><p>" + str + "</p></div>";
+			if(flag == 0){
+				content = "<div class='post_content'><p>" + str + "</p></div>";
+			} else {
+				content = "<div class='other_post_title'><p>" + str + "</p><span></span></div>";
+			}
+
 		}
 		return content;
 	};
 	function NewsPaperResize(){
+		if($(document).width() > 768){
+			// var n = (($(document).width()-350)/3) > 420? 420: 400;
+			// console.log(n);
+			$('div.post_container').width =  (($(document).width()-350)/3) + "px";
+			console.log($('#News_content .post_container').last().width());
+			$('#News_content').masonry({
+				// options...
+				itemSelector: '.post_container',
+				columnWidth: 420
+			});
+		} else {
+			$('#News_content').masonry({
+				// options...
+				itemSelector: '.post_container',
+				columnWidth: 300
+			});
+		}
 		var h = $('#OldNews').height() + 20;
 		var w = $('#OldNews').width() + 20;
 		$('.yo').css('height', h);
 		$('.yo').css('width', w);
 	}
+	function AddNewPost(i){
+		var num = i%8;
+		post = "<div class='post_container'>" +  parseString(Fake_post_title[num], 1) + parseString(Fake_post_content[num], 0) + "</div>";
+		//post_detail = "<div class='post_content'>" + "</div>"
+		$('#News_content').append(post);
+	}
 	$(window).resize(function() {
   //resize just happened, pixels changed
-	NewsPaperResize();
-});
+		NewsPaperResize();
+	});
+	function pickDay(){
+		var Days = ["日曜日","月曜日","火曜日","水曜日","木曜日","金曜日","土曜日","日曜日"];
+		today=new Date();
+		thisDay=today.getDay();
+		return Days[thisDay];
+	}
+	Fake_post_title   = [ "",
+												"",
+												"",
+												"ロッテ、交流戦で捕手田村急成長\nタカ追い上げへ手応え",
+												"手軽にヘルシーに生の根菜が楽しめる！\n新食感を生み出す新型ピーラー",
+												"流れる大粒、すくい取れ\nさくらんぼ祭り始まる　山形",
+												"藤山直美さん、\n「団地」で最優秀女優賞　上海国際映画祭",
+												"車内をペタペタ　三重・近鉄志摩線で「ペンギン列車」"
+											];
+	Fake_post_content = ["生活与人生的不同生活と人生はちがいます。生活でものを言うのは社会に同調するためのマスクです。また社会的な道徳です。しかし人生ではこのマスクで抑えつけたものが中心となるのです。",
+											 "我々は、無意識について隅々まで知ることはできない。\nもし隅々まであまねく知悉できたとしたら、\n無意識は無意識ではなくなるわけですから。\n",
+											 "悦びと悲しみの中間の感情だって存在する筈です。\n人生や人間は二分法では割りきれず、その中間か、\nもしくは対立した二つのものを併合している状態だってあるのです。\n",
+											 "ロッテは連勝が７で止まり、交流戦最高勝率を逃した。制球が乱れた唐川を一回で見切り、小刻みな継投に切り替えたが、打線が１点止まり。伊東監督は「初回の３失点が重かった」。\n\n交流戦の収穫は多い。２カード目でＤｅＮＡに３連敗。相手の４番筒香に痛打を浴び続け、捕手の田村は「監督にカツを入れられ、リードを見直した」。その後、相手の嫌がる配球を徹底し、指揮官から「最近は安心できる」と言われるまでに成長した。以降の４カードは１０勝２敗だった。",
+											 "先週発表されたこの夏の気象予報は、猛暑。今の時期から栄養バランスのいい、おいしくヘルシーな食事をとって、ひと足早い体調管理対策を始めたいもの。そんなとき、毎日の食卓に不足してしまいがちな野菜がとても重要に。レパートリーを増やすべく、新しいキッチンツールを取り入れてみるのも一案だ。",
+											 "山形特産のサクランボをテーマにした「日本一さくらんぼ祭り」が１８日、山形市の文翔館前広場や七日町大通りで始まった。１９日まで。\n\n今年で５回目。サクランボの種飛ばし、ダンスショーなどのイベントがあり、竹で作った長さ約３０メートルの水路にサクランボを流す「巨大さくらんぼ流し」は、親子連れでにぎわった。山形市は正午過ぎに２８・８度を記録し、７月中旬並みの暑さに。福島県いわき市から家族で訪れた佐藤暖歌（ほのか）さん（９）は大粒のサクランボに大はしゃぎで「お箸ですくったらうまく取れた。もっと食べたかった」と笑顔で話していた。\n\n巨大さくらんぼ流しは１９日もあり、２日間で約９千粒の佐藤錦を流す。（井上潜）",
+											 "第１９回上海国際映画祭で１９日、阪本順治監督の「団地」に主演した藤山直美さん（５７）が最優秀女優賞を受賞した。\n\n藤山さんは「この賞は監督の手腕によるところが大きいと思っています。共演者の皆さまにも、心から感謝申し上げます」などとコメントした。（上海＝竹端直樹）",
+											 "ペンギンと一緒に貸し切り電車に乗れる企画「ペンギン列車」が１９日、三重県の鳥羽～賢島駅間の近鉄志摩線であった。４羽のフンボルトペンギンが、家族連れなど約５０人の参加者の間をペタペタと歩き、車内のあちこちで歓声があがった。名古屋市中区から参加した川端花歩（かほ）さん（７）は「目がかわいくて、すごく楽しかった」と笑顔で話した。..."
+											];
 </script>
-
 <!--
   Below we include the Login Button social plugin. This button uses
   the JavaScript SDK to present a graphical Login button that triggers
   the FB.login() function when clicked.
 -->
-
 <fb:login-button scope="public_profile,user_posts,user_photos,email" onlogin="checkLoginState();">
 </fb:login-button>
 

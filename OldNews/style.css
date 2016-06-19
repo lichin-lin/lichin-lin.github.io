@@ -11,7 +11,7 @@ body {
   padding: 50px;
   background: url("book.jpeg");
   background-repeat: repeat;
-  background-size: 800px 600px;
+  background-size: 1600px 1200px;
 }
 #status {
   font-family: 'Raleway';
@@ -83,27 +83,52 @@ body {
 
 /*🎉🎉🎉---- NEWS CONTAINER -----🎉🎉🎉*/
 .post_container {
-  background: #FCFCFC;
+  //background: #FCFCFC;
   position: relative;
-  margin: 10px 5px;
-  padding-bottom: 20px;
+  margin: 2.5px 0px;
+  padding: 5px;
   text-align: center;
   display: flex;
   flex-direction: column;
 }
-.post_title {
+.post_border {
+  //border: 1px solid #50514f;
+}
+.post_title, .other_post_title {
   display: flex;
   justify-content: center;
   width: 100%;
   max-width: 400px;
 }
-.post_title p{
-  width: 80%;
+.post_title p, .other_post_title p{
+  width: 97.5%;
   font-size: .85em;
   color: #50514f;
 }
+.other_post_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+}
+.other_post_title span{
+  width: 90%;
+  color: #50514f;
+  background: #50514f;
+  height: 3px;
+  margin: 3px 0;
+}
+.other_post_title p {
+  font-size: 1.5em;
+  font-weight: 700;
+  width: 80%;
+  padding: 0;
+  margin: 0;
+}
 .post_content {
-  padding: 30px;
+  padding: 10px;
   height: auto;
   width: 400px;
   min-width: 200px;
@@ -126,6 +151,7 @@ body {
   font-family: 'cwTeXFangSong';
   text-align: left;
   text-align: -webkit-left;
+  line-height: 1.15;
 }
 /*.post_content {
   padding: 30px;
@@ -173,8 +199,15 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
+    width: 100%;
+  }
+  .post_content {
+    align-items: center;
+  }
+  .post_content p{
+
   }
   .post_title {
     max-width: 320px;
