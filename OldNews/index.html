@@ -7,6 +7,7 @@
 <body>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/noisy/1.2/jquery.noisy.min.js"></script>
+	<script src="https://npmcdn.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
 	<link href="style.css" rel="stylesheet" type="text/css"/>
 
 <script>
@@ -45,7 +46,7 @@
 
   window.fbAsyncInit = function() {
   FB.init({
-    appId      : '1147149562041730',
+    appId      : '1147161518707201',
     cookie     : true,  // enable cookies to allow the server to access
                         // the session
     xfbml      : true,  // parse social plugins on this page
@@ -88,12 +89,12 @@
         'Thanks for logging in, ' + response.name + '!' + "<br><br>";
 		  $('#OldNews').empty();
 			$('#OldNews').append('<div class="📅📅📅"><span>日曜日</span><span>平成二十八年</span></div><div class="News_title"><div></div><p>オールドニュース</p></div><div id="News_content"></div>');
-			// $('#OldNews').noisy({
-			// 	intensity: 0.482,
-		  //   size: 1500,
-		  //   opacity: 0.15,
-			// 	'monochrome' : true
-			// });
+			$('#OldNews').noisy({
+				intensity: 0.482,
+		    size: 1500,
+		    opacity: 0.15,
+				'monochrome' : true
+			});
 			$('.yo').noisy({
 				intensity: 0.182,
 				size: 100,
@@ -108,16 +109,21 @@
 				//console.log(JSON.stringify(response.data[i]));
 				time = response.data[i];
 				if(time !== undefined){
-					post_content = "<div class='post_title'><p>'" + parseTime(response.data[i].created_time) + "/" +
-													response.data[i].story + "'</p></div></div>" +
-													parseString(response.data[i].message);
-					post = "<div class='post_container'><div class='img_title'><div class='post_img'><img src=' " +
-									response.data[i].full_picture + " ' /></div>" +
-								  post_content + "</div>";
+					$('#News_content').append("<div class='post_container'></div>");
 
-						$('#News_content').append(post);
-
-					$('.post_container').noisy({
+					if(response.data[i].full_picture !== undefined){
+						$('#News_content .post_container').last().append("<div class='img_title'><div class='post_img'><img src=' " +
+										response.data[i].full_picture + " ' /></div>")
+					}
+					if(response.data[i].created_time !== undefined && response.data[i].story !== undefined){
+						$('#News_content .post_container').last().append("<div class='post_title'></div>");
+						post_time = "<p>" + parseTime(response.data[i].created_time) + "/" + response.data[i].story + "</p>"
+						$('.post_title').last().append(post_time);
+					}
+					if(response.data[i].message !== undefined){
+						$('#News_content .post_container').last().append(parseString(response.data[i].message));
+					}
+					$('#News_content .post_container').noisy({
 						intensity: 0.182,
 				    size: 100,
 				    opacity: 0.1,
@@ -125,6 +131,20 @@
 					});
 				}
 			}
+			if($(document).width() > 576){
+				$('#News_content').masonry({
+				  // options...
+				  itemSelector: '.post_container',
+				  columnWidth: 425
+				});
+			} else {
+				$('#News_content').masonry({
+				  // options...
+				  itemSelector: '.post_container',
+				  columnWidth: 300
+				});
+			}
+			NewsPaperResize();
 			NewsPaperResize();
 		});
   }
@@ -140,11 +160,15 @@
 		return content;
 	};
 	function NewsPaperResize(){
-		var h = $('#OldNews').height() - 40;
+		var h = $('#OldNews').height() + 20;
 		var w = $('#OldNews').width() + 20;
 		$('.yo').css('height', h);
 		$('.yo').css('width', w);
 	}
+	$(window).resize(function() {
+  //resize just happened, pixels changed
+	NewsPaperResize();
+});
 </script>
 
 <!--
