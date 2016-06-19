@@ -89,18 +89,18 @@
         'Thanks for logging in, ' + response.name + '!' + "<br><br>";
 		  $('#OldNews').empty();
 			$('#OldNews').append('<div class="📅📅📅"><span>' + pickDay() + '</span><span>平成二十八年</span></div><div class="News_title"><div></div><p>オールドニュース</p></div><div id="News_content"></div>');
-			// $('#OldNews').noisy({
-			// 	intensity: 0.482,
-		  //   size: 1500,
-		  //   opacity: 0.15,
-			// 	'monochrome' : true
-			// });
-			// $('.yo').noisy({
-			// 	intensity: 0.182,
-			// 	size: 100,
-			// 	opacity: 0.1,
-			// 	'monochrome' : true
-			// });
+			$('#OldNews').noisy({
+				intensity: 0.482,
+		    size: 1500,
+		    opacity: 0.15,
+				'monochrome' : true
+			});
+			$('.yo').noisy({
+				intensity: 0.182,
+				size: 100,
+				opacity: 0.1,
+				'monochrome' : true
+			});
     });
 
 		FB.api('/me/posts?fields=full_picture,message,created_time,story&limit=5', function(response){
