@@ -25,9 +25,9 @@ body {
   font-family: 'cwTeXFangSong';
   background: #E5DFDA;
   padding: 10px;
-  background: url("natural_paper.png");
+  background: url("ricepaper.png");
   background-repeat: repeat;
-  background-size: 1200px, 1600px;
+  background-size: 1500px, 1500px;
 }
 #News_content {
   display: flex;
@@ -45,7 +45,7 @@ body {
   //top: 0;
   //left: 0;
   //z-index: 3;
-  background: rgba(240,240,240,0.25);
+  background: rgba(255,255,255,0.25);
 }
 .News_title {
   width: 100%;
