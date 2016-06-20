@@ -177,22 +177,28 @@
 		return content;
 	};
 	function NewsPaperResize(){
-		if($(document).width() > 768){
-			// var n = (($(document).width()-350)/3) > 420? 420: 400;
-			// console.log(n);
-			$('div.post_container').width =  (($(document).width()-350)/3) + "px";
-			$('#News_content').masonry({
-				// options...
-				itemSelector: '.post_container',
-				columnWidth: 330
-			});
+		var d_flag = 1;
+		if($(document).width() > 1400){
+			d_flag = 4;
+		} else if($(document).width() > 1024){
+			d_flag = 3;
+		} else if($(document).width() > 768){
+			d_flag = 2;
 		} else {
-			$('#News_content').masonry({
-				// options...
-				itemSelector: '.post_container',
-				columnWidth: 340
-			});
+			d_flag = 1;
 		}
+		var post_width = (($('#News_content').width()-60)/d_flag);
+		post_width = post_width < 280 ? 280 : post_width > 400 ? 400 : post_width;
+		console.log(post_width);
+		$('.post_container').each(function () {
+				var self = $(this);
+				self.width(post_width);
+		});
+		$('#News_content').masonry({
+			// options...
+			itemSelector: '.post_container',
+			columnWidth: post_width+15
+		});
 		var h = $('#OldNews').height() + 20;
 		var w = $('#OldNews').width() + 20;
 		$('.yo').css('height', h);
