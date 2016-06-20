@@ -9,9 +9,9 @@ body {
   display: flex;
   flex-direction: column;
   padding: 50px;
-  background: url("book.jpeg");
+  background: url("dark.png");
   background-repeat: repeat;
-  background-size: 1600px 1200px;
+  background-size: 100px, 50px;
 }
 #status {
   font-family: 'Raleway';
@@ -25,6 +25,9 @@ body {
   font-family: 'cwTeXFangSong';
   background: #E5DFDA;
   padding: 10px;
+  background: url("natural_paper.png");
+  background-repeat: repeat;
+  background-size: 1200px, 1600px;
 }
 #News_content {
   display: flex;
