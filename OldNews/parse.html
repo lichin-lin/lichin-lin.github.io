@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Facebook Login JavaScript Example</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/noisy/1.2/jquery.noisy.min.js"></script>
+<script src="https://npmcdn.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74093364-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+
+
+<!--
+  Below we include the Login Button social plugin. This button uses
+  the JavaScript SDK to present a graphical Login button that triggers
+  the FB.login() function when clicked.
+-->
+<button id="test">test</button>
+<ul id="feed">
+</ul>
+</body>
+<script>
+var testXML = '<?xml version="1.0" encoding="ISO-8859-1" standalone="no" ?> <rss version="2.0" xmlns:admin="http://webns.net/mvcb/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/"  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">  <channel>	<title>FlatpanelsDK - Nyheder</title>   	<link>http://www.flatpanels.dk/nyhedsarkiv.php</link>  	<description>Nyheder fra FlatpanelsDK</description>   	<managingEditor>rasmus@flatpanels.dk (Rasmus Larsen)</managingEditor>   	<webMaster>rasmus@flatpanels.dk (Rasmus Larsen)</webMaster>   	<language>da</language> 	<copyright>Copyright 2005-2015, Flatpanels.dk</copyright>	<item> 	<title><![CDATA[Svenske Plejmo lanceres som filmtjeneste i Danmark]]></title>   	<pubDate>Thu, 23 Apr 2015 12:31:01 +0400</pubDate>   	<link>http://www.flatpanels.dk/nyhed.php?subaction=showfull&amp;id=1429777596&amp;rss</link>	<guid isPermaLink="true">http://www.flatpanels.dk/nyhed.php?subaction=showfull&amp;id=1429777596&amp;rss</guid>	<description><![CDATA[ Plejmo er en online filmbutik, hvor man lejer film enkeltvis fra et katalog p� 8000 titler. Tjenesten lanceres nu i Danmark med priser fra 3 kroner og op. Det er en tidligere Spotify-direkt�r, der st�r i spidsen.	<br><img src="http://www.flatpanels.dk/billeder/plejmo-1.jpp" />]]></description> 	<author>rasmus@flatpanels.dk (Rasmus Larsen)</author>     </item> 	<item> 	<title><![CDATA[YouTube fjernet p� �ldre Smart TV og Apple TV]]></title>   	<pubDate>Wed, 22 Apr 2015 11:37:01 +0400</pubDate>   	<link>http://www.flatpanels.dk/nyhed.php?subaction=showfull&id=1429687929&rss</link>	<guid isPermaLink="true">http://www.flatpanels.dk/nyhed.php?subaction=showfull&amp;id=1429687929&amp;rss</guid>	<description><![CDATA[ For et par m�neder siden begyndte Google at informere brugerne om, at YouTube-app\'en ville blive fjernet den 20. april. App\'en forsvinder ogs� p� 2. generation Apple TV, �ldre spilkonsoller, mobile enheder og Google TV-enheder i starten af maj.	<br><img src="http://www.flatpanels.dk/billeder/oldyoutubeui.jpg" />]]></description> 	<author>rasmus@flatpanels.dk (Rasmus Larsen)</author>     </item>     </channel>    </rss>';
+
+$("button").click(function(){
+    alert("s");
+    $.get("/echo/xml", function(data) {
+        var $xml = $(testXML);
+        $xml.find("item").each(function() {
+            var $this = $(this),
+                item = {
+                    title: $this.find("title").text(),
+                    link: $this.find("link").text(),
+                    description: $this.find("description").text(),
+                    pubDate: $this.find("pubDate").text(),
+                    author: $this.find("author").text(),
+                    guid: $this.find("guid").text()
+            };
+            item.title = item.title.replace("<![CDATA[", "").replace("]]>", "");
+            $('#feed').append($('<li><a href="' +item.guid +'">' +item.title +'</a></li>'));
+        });
+    });
+});
+</script>
+</html>
