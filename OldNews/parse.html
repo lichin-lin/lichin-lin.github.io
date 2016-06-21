@@ -19,6 +19,7 @@
 </script>
 <script type="text/javascript">
 Fake_post_title   = [];
+Fake_post_href    = [];
 Fake_post_content = [];
 $( document ).ready(function(){
     $.get("https://news.google.co.jp/news/section?cf=all&pz=1&ned=jp&topic=s&siidp=77ad9ebf026f605399c828825d14c8f3029c&ar=1466494229", function(data,status) {
@@ -28,6 +29,8 @@ $( document ).ready(function(){
             $(titles).each(function () {
                 var this_post = $(this).find(".esc-lead-article-title a span").html();//.attr('href') + "\n" + $(this.a);
                 var this_content = $(this).find('.esc-lead-snippet-wrapper').html();
+                var this_href = $(this).find(".esc-lead-article-title a").attr('href');
+                Fake_post_href.push(this_href);
                 Fake_post_title.push(this_post);
                 Fake_post_content.push(this_content);
                 // $( "#feed").append( "<br><div>***** post title *****</div>" );
@@ -36,6 +39,7 @@ $( document ).ready(function(){
                 // $( "#feed").append( this_content );
                 // $( "#feed").append( "<div>********** end post **********</div>" );
             });
+            console.log(Fake_post_href);
             console.log(Fake_post_title);
             console.log(Fake_post_content);
         }
