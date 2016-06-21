@@ -1,9 +1,28 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 @import url(https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css);
 @import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
-@import url("/OldNews/hkgokukaikk");
+//@import url('/OldNews/hkgokukaikk');
+@font-face {
+    font-family: "hkgokukaikk";
+    src: url('/OldNews/webfont/hkgokukaikk.eot'),
+         url('/OldNews/webfont/hkgokukaikk.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'linesregular';
+    src: url('/OldNews/webfont/lines-regular-webfont.eot');
+    src: url('/OldNews/webfont/lines-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/OldNews/webfont/lines-regular-webfont.woff2') format('woff2'),
+         url('/OldNews/webfont/lines-regular-webfont.woff') format('woff'),
+         url('/OldNews/webfont/lines-regular-webfont.ttf') format('truetype'),
+         url('/OldNews/webfont/lines-regular-webfont.svg#linesregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 * {
   box-sizing: border-box;
+  font-family: "LINES-Regular";
 }
 body {
   display: flex;
@@ -16,8 +35,47 @@ body {
 #status {
   font-family: 'Raleway';
 }
+.OldNews_title {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.OldNews_title div {
+  font-size: 10em;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 10px;
+}
+.OldNews_title span {
+  font-size: 1.85em;
+  letter-spacing: 1px;
+  margin-top: -20px;
+}
+.pseudo-scroller {
+  height: 4000px;
+  pointer-events:none;
+}
+.scroll {
+  transform-style: preserve-3d;
+  transform: translateX(-15vw) translateY(275px) rotateX(45deg) rotateZ(45deg);
+  width: 70vw;
+  max-height: 900px;
+  height: calc(100vh - 280px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+}
 .OldNews_container {
   overflow: hidden;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translate3d(0px, -599px, 0px);
 }
 #OldNews {
   display: flex;
@@ -210,10 +268,27 @@ body {
     filter: grayscale(0.75) sepia(0.2);
 }
 /*🎉🎉🎉---- NEWS CONTAINER -----🎉🎉🎉*/
-
+@media (max-width:768px){
+  .OldNews_title div{
+    transform: scale(.65);
+    transition: all .35s ease;
+  }
+  .OldNews_title span {
+    font-size: 1.25em;
+    margin-top: -50px;
+  }
+}
 @media (max-width: 576px){
   body {
     padding: 10px;
+  }
+  .OldNews_title div{
+    transform: scale(.5);
+    transition: all .35s ease;
+  }
+  .OldNews_title span {
+    font-size: 1em;
+    margin-top: -50px;
   }
   .News_title p{
     font-size: 3.5em;
