@@ -58,7 +58,7 @@
 
   window.fbAsyncInit = function() {
   FB.init({
-    appId      : '1147161518707201',
+    appId      : '1147149562041730',
     cookie     : true,  // enable cookies to allow the server to access
                         // the session
     xfbml      : true,  // parse social plugins on this page
@@ -181,16 +181,18 @@
 		var d_flag = 1;
 		if($(document).width() > 1400){
 			d_flag = 4;
+      //alert("4");
 		} else if($(document).width() > 1024){
 			d_flag = 3;
+      //alert("3");
 		} else if($(document).width() > 768){
 			d_flag = 2;
 		} else {
 			d_flag = 1;
 		}
-		var post_width = (($('#News_content').width()-60)/d_flag);
+		var post_width = (($(document).width()-60)/d_flag);
 		var change_post_width = post_width < 280 ? 280 : post_width > 400 ? 400 : post_width;
-		//console.log(post_width);
+		console.log(post_width);
 		$('.post_container').each(function () {
 				var self = $(this);
         if(d_flag == 1){
