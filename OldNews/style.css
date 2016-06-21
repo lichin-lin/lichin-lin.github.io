@@ -272,6 +272,9 @@ body {
 }
 /*🎉🎉🎉---- NEWS CONTAINER -----🎉🎉🎉*/
 @media (max-width:768px){
+  .OldNews_title {
+    left: -15%;
+  }
   .OldNews_title div{
     transform: scale(.65);
     transition: all .35s ease;
@@ -285,12 +288,15 @@ body {
   body {
     padding: 10px;
   }
+  .OldNews_title {
+    left: -40%;
+  }
   .OldNews_title div{
-    transform: scale(.5);
+    transform: scale(.45);
     transition: all .35s ease;
   }
   .OldNews_title span {
-    font-size: 1em;
+    font-size: .75em;
     margin-top: -50px;
   }
   .News_title p{
