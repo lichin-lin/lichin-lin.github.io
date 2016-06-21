@@ -224,27 +224,22 @@
 	Fake_post_title   = [];
 	Fake_post_content = [];
 	$( document ).ready(function(){
-	    $.get("http://www.asahi.com/national/?iref=com_gnavi", function(data,status) {
-	        //alert("data:" + data + "\nstatus:" + status);
-	        if(status == "success"){
-	            var filter = $(data).find('.Section').html();
-	            var links = $(filter).find('li a');
-
-	            $(links).each(function () {
-	                var this_post = "http://www.asahi.com" + $(this).attr('href');
-	          	    console.log(this_post);
-
-	                $.get(this_post, function(data,status) {
-											var postTitle   = $(data).find('h1').html();
-											var postContent = $(data).find('.ArticleText p').html();
-	                    if(status == "success" && postTitle !== undefined && postContent !== undefined){
-												Fake_post_title.push(postTitle);
-												Fake_post_content.push(postContent);
-	                    }
-	                });
-	            });
-	        }
-	    });
+    $.get("https://news.google.co.jp/news/section?cf=all&pz=1&ned=jp&topic=s&siidp=77ad9ebf026f605399c828825d14c8f3029c&ar=1466494229", function(data,status) {
+        //alert("data:" + data + "\nstatus:" + status);
+        if(status == "success"){
+            //alert(data);
+            var titles = $(data).find('.esc-layout-article-cell');
+            //var links = $(titles).find('a');
+            $(titles).each(function () {
+                var this_post = $(this).find(".esc-lead-article-title a span").html();//.attr('href') + "\n" + $(this.a);
+                var this_content = $(this).find('.esc-lead-snippet-wrapper').html();
+          	    //console.log(this_post + "\n" + this_content + "\n----\n");
+                Fake_post_title.push(this_post);
+                Fake_post_content.push(this_content);
+            });
+          }
+      });
+      console.log(Fake_post_title);
 	});
 </script>
 <!--

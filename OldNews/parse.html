@@ -18,43 +18,40 @@
 
 </script>
 <script type="text/javascript">
-Fake_post_title   = [ "",
-                      "車内をペタペタ　三重・近鉄志摩線で「ペンギン列車」"
-                    ];
-Fake_post_content = ["生活与人生的不同生活と人生はちがいます。生活でものを言うのは社会に同調するためのマスクです。また社会的な道徳です。しかし人生ではこのマスクで抑えつけたものが中心となるのです。",
-                     "我々は、無意識について隅々まで知ることはできない。\nもし隅々まであまねく知悉できたとしたら、\n無意識は無意識ではなくなるわけですから。\n",
-                     "悦びと悲しみの中間の感情だって存在する筈です。\n人生や人間は二分法では割りきれず、その中間か、\nもしくは対立した二つのものを併合している状態だってあるのです。\n",
-                     "ロッテは連勝が７で止まり、交流戦最高勝率を逃した。制球が乱れた唐川を一回で見切り、小刻みな継投に切り替えたが、打線が１点止まり。伊東監督は「初回の３失点が重かった」。\n\n交流戦の収穫は多い。２カード目でＤｅＮＡに３連敗。相手の４番筒香に痛打を浴び続け、捕手の田村は「監督にカツを入れられ、リードを見直した」。その後、相手の嫌がる配球を徹底し、指揮官から「最近は安心できる」と言われるまでに成長した。以降の４カードは１０勝２敗だった。",
-                     "先週発表されたこの夏の気象予報は、猛暑。今の時期から栄養バランスのいい、おいしくヘルシーな食事をとって、ひと足早い体調管理対策を始めたいもの。そんなとき、毎日の食卓に不足してしまいがちな野菜がとても重要に。レパートリーを増やすべく、新しいキッチンツールを取り入れてみるのも一案だ。",
-                     "山形特産のサクランボをテーマにした「日本一さくらんぼ祭り」が１８日、山形市の文翔館前広場や七日町大通りで始まった。１９日まで。\n\n今年で５回目。サクランボの種飛ばし、ダンスショーなどのイベントがあり、竹で作った長さ約３０メートルの水路にサクランボを流す「巨大さくらんぼ流し」は、親子連れでにぎわった。山形市は正午過ぎに２８・８度を記録し、７月中旬並みの暑さに。福島県いわき市から家族で訪れた佐藤暖歌（ほのか）さん（９）は大粒のサクランボに大はしゃぎで「お箸ですくったらうまく取れた。もっと食べたかった」と笑顔で話していた。\n\n巨大さくらんぼ流しは１９日もあり、２日間で約９千粒の佐藤錦を流す。（井上潜）",
-                     "第１９回上海国際映画祭で１９日、阪本順治監督の「団地」に主演した藤山直美さん（５７）が最優秀女優賞を受賞した。\n\n藤山さんは「この賞は監督の手腕によるところが大きいと思っています。共演者の皆さまにも、心から感謝申し上げます」などとコメントした。（上海＝竹端直樹）",
-                     "ペンギンと一緒に貸し切り電車に乗れる企画「ペンギン列車」が１９日、三重県の鳥羽～賢島駅間の近鉄志摩線であった。４羽のフンボルトペンギンが、家族連れなど約５０人の参加者の間をペタペタと歩き、車内のあちこちで歓声があがった。名古屋市中区から参加した川端花歩（かほ）さん（７）は「目がかわいくて、すごく楽しかった」と笑顔で話した。..."
-                    ];
+Fake_post_title   = [];
+Fake_post_content = [];
 $( document ).ready(function(){
-    $.get("http://www.asahi.com/tech_science/?iref=comtop_gnavi", function(data,status) {
+    $.get("https://news.google.co.jp/news/section?cf=all&pz=1&ned=jp&topic=s&siidp=77ad9ebf026f605399c828825d14c8f3029c&ar=1466494229", function(data,status) {
         //alert("data:" + data + "\nstatus:" + status);
         if(status == "success"){
-            var filter = $(data).find('.Section').html();
-            var links = $(filter).find('li a');
-
-            $(links).each(function () {
-                var this_post = "http://www.asahi.com" + $(this).attr('href');
-          	    console.log(this_post);
-
-                $.get(this_post, function(data,status) {
-                    if(status == "success"){
-                      var i = $(data).find('h1').html();
-                      console.log(i);
-                      Fake_post_title.push(i);
-                      Fake_post_content.push($(data).find('.ArticleText p').html());
-                      // $( "#feed").append( "<br><div>***** post title *****</div>" );
-                      // $( "#feed").append( $(data).find('h1').html() );
-                      // $( "#feed").append( "<div>***** post title *****</div>" );
-                      // $( "#feed").append( $(data).find('.ArticleText p').html() );
-                      // $( "#feed").append( "<div>********** end post **********</div>" );
-                    }
-                });
+            //alert(data);
+            var titles = $(data).find('.esc-layout-article-cell');
+            //var links = $(titles).find('a');
+            $(titles).each(function () {
+                var this_post = $(this).find(".esc-lead-article-title a span").html();//.attr('href') + "\n" + $(this.a);
+                var this_content = $(this).find('.esc-lead-snippet-wrapper').html();
+          	    //console.log(this_post + "\n" + this_content + "\n----\n");
+                Fake_post_title.push(this_post);
+                Fake_post_content.push(this_content);
             });
+            //console.log(titles);
+            // $(links).each(function () {
+            //     var this_post = "http://www.asahi.com" + $(this).attr('href');
+          	//     console.log(this_post);
+            //
+            //     $.get(this_post, function(data,status) {
+            //         if(status == "success"){
+            //           var i = $(data).find('h1').html();
+            //           console.log(i);
+            //           //
+            //           $( "#feed").append( "<br><div>***** post title *****</div>" );
+            //           $( "#feed").append( $(data).find('h1').html() );
+            //           $( "#feed").append( "<div>***** post title *****</div>" );
+            //           $( "#feed").append( $(data).find('.ArticleText p').html() );
+            //           $( "#feed").append( "<div>********** end post **********</div>" );
+            //         }
+            //     });
+            // });
             console.log(Fake_post_title);
         }
     });
@@ -62,8 +59,8 @@ $( document ).ready(function(){
 </script>
 </head>
 <body>
-
-
+<!-- div "esc-lead-article-title-wrapper" >> h2 "esc-lead-article-title" >> a href , span "titletext" -->
+<!-- div "esc-lead-snippet-wrapper" -->
 <!--
   Below we include the Login Button social plugin. This button uses
   the JavaScript SDK to present a graphical Login button that triggers
