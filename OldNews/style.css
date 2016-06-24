@@ -286,6 +286,9 @@ body {
     font-size: 1.25em;
     margin-top: -50px;
   }
+  .News_title {
+    padding-bottom: 0;
+  }
   .post_container{
     width: 100%;
   }
