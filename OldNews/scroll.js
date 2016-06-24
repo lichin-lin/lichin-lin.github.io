@@ -1,65 +1,47 @@
-// $(window).on("scroll", function(){
-//   //console.log("Scrolled :P");
-// });
-// document.getElementById("enable").onclick = function() {
-//   enableScroll();
-//   document.getElementById("status").innerHTML = "enabled";
-//     document.getElementById("status").className = "enabled";
-// };
-//
-// document.getElementById("disable").onclick = function() {
-//   disableScroll();
-//   document.getElementById("status").innerHTML = "disabled";
-//   document.getElementById("status").className = "disabled";
-// };
+
 var docElem = window.document.documentElement;
+var topPosition = $(window).width() - $( '.OldNews_title' ).width() -50;
+var bottomPosition = 50;
 function scrollY() { return window.pageYOffset || docElem.scrollTop; }
-// // left: 37, up: 38, right: 39, down: 40,
-// // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
-// var keys = {37: 1, 38: 1, 39: 1, 40: 1};
-//
-// function preventDefault(e) {
-//   e = e || window.event;
-//   if (e.preventDefault)
-//       e.preventDefault();
-//   e.returnValue = false;
-// }
-//
-// function preventDefaultForScrollKeys(e) {
-//     if (keys[e.keyCode]) {
-//         preventDefault(e);
-//         return false;
-//     }
-// }
-//
-// function disableScroll() {
-//   if (window.addEventListener) // older FF
-//       window.addEventListener('DOMMouseScroll', preventDefault, false);
-//   window.onwheel = preventDefault; // modern standard
-//   window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
-//   window.ontouchmove  = preventDefault; // mobile
-//   document.onkeydown  = preventDefaultForScrollKeys;
-//   counter++;
-//   console.log(counter);
-// }
-//
-// function enableScroll() {
-//     if (window.removeEventListener)
-//         window.removeEventListener('DOMMouseScroll', preventDefault, false);
-//     window.onmousewheel = document.onmousewheel = null;
-//     window.onwheel = null;
-//     window.ontouchmove = null;
-//     document.onkeydown = null;
-// }
-function myFunc() {
+
+function offset() {
+  //console.log($( window ).height());
+  //console.log($('body').height());
+  //console.log( $('.OldNews_title')[0] );
+  var position = $( '.OldNews_title' ).offset();
+  var offsetAmount = $( window ).width()/$( window ).height();
+  console.log("scrollY:" +  scrollY() + ", body;" +  $('body').height() + ", document:" + $(document).height() + ", screen:" + $(window).height());
+  // console.log("the broswer condition: " + $( window ).width() + "& height: " + $( window ).height() );
+  // console.log("left:" + position.left);
+  if( scrollY() < $( window ).height() ) {
+    //console.log('init pos:' + position.left);
+    position = topPosition - 2*scrollY()*offsetAmount;
+    //console.log('after shift:' + position);
+    $('.OldNews_title').css({
+      "left": position
+    });
+  } else if ( (scrollY() + $(window).height() + 150) > ( $(document).height() ) ){
+    console.log('final:' + position.left);
+    var b = $(window).height()/5;
+    $('.OldNews_title').css({
+      "left": 0,//(scrollY() + $(window).height() + 150 - $(document).height)
+      "bottom": 0,
+    });
+  }
+  else {
+    console.log('while:' + position.left);
+    $('.OldNews_title').css({
+      "left": -3*( $('body').width() )// - $('body').height() - 3* $( '.OldNews_title' ).width() )//- 2* $( '.OldNews_title' ).width())
+    });
+  }
+
   $('.OldNews_container').css({
     "-webkit-transform":"translate3d(0," + -scrollY() + "px,0)",
     "-ms-transform":"translate3d(0," + -scrollY() + "px,0)",
     "transform":"translate3d(0," + -scrollY() + "px,0)"
  });
 }
-var objTable = document.getElementById("test");
 
 document.addEventListener("scroll", function () {
-    myFunc();
+    offset();
 }, false);
