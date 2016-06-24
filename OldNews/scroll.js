@@ -36,3 +36,15 @@ function offset() {
 document.addEventListener("scroll", function () {
     offset();
 }, false);
+
+$( ".fb_btn_costum" ).on( "click", function() {
+  console.log( "$( this ).text()" );
+  alert('c');
+  FB.login(function(response) {
+      if (response.authResponse) {
+          //user just authorized your app
+          console.log(response.authResponse.accessToken);
+          testAPI();
+      }
+  }, {scope: 'public_profile,user_posts,user_photos,email', return_scopes: true});
+});

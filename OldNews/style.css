@@ -58,6 +58,13 @@ body {
   letter-spacing: 1px;
   margin-top: -20px;
 }
+.OldNews_title .FB_btn, .OldNews_title .FB_btn div, #status {
+  font-size: 1em;
+  color: white;
+}
+.OldNews_title .FB_btn div {
+  color: #3B5898;
+}
 .pseudo-scroller {
   //height: 1279px;
   width: 100%;
@@ -79,7 +86,6 @@ body {
   overflow: hidden;
   position: relative;
   transform-style: preserve-3d;
-  transform: translate3d(0px, -599px, 0px);
 }
 #OldNews {
   display: flex;
