@@ -5,23 +5,19 @@ var bottomPosition = 50;
 function scrollY() { return window.pageYOffset || docElem.scrollTop; }
 
 function offset() {
-  //console.log($( window ).height());
-  //console.log($('body').height());
-  //console.log( $('.OldNews_title')[0] );
+
   var position = $( '.OldNews_title' ).offset();
   var offsetAmount = $( window ).width()/$( window ).height();
-  // console.log("the broswer condition: " + $( window ).width() + "& height: " + $( window ).height() );
-  // console.log("left:" + position.left);
+
   if($(window).width() > 768){
     if( scrollY() < $( window ).height() ) {
-      //console.log('init pos:' + position.left);
       position = topPosition - 2*scrollY()*offsetAmount;
       $('.OldNews_title').css({
         "left": position
       });
     } else {
       $('.OldNews_title').css({
-        "left": -3*( $('body').width() )// - $('body').height() - 3* $( '.OldNews_title' ).width() )//- 2* $( '.OldNews_title' ).width())
+        "left": -3*( $('body').width() );
       });
     }
   }

@@ -33,7 +33,7 @@
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
-			console.log(response.authResponse.accessToken);
+			//console.log(response.authResponse.accessToken);
       testAPI();
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
@@ -57,28 +57,28 @@
   }
 
   window.fbAsyncInit = function() {
-  FB.init({
-    appId      : '1147161518707201',
-    cookie     : true,  // enable cookies to allow the server to access
-                        // the session
-    xfbml      : true,  // parse social plugins on this page
-    version    : 'v2.2' // use version 2.2
-  });
+    FB.init({
+      appId      : '1147161518707201',
+      cookie     : true,  // enable cookies to allow the server to access
+                          // the session
+      xfbml      : true,  // parse social plugins on this page
+      version    : 'v2.2' // use version 2.2
+    });
 
-  // Now that we've initialized the JavaScript SDK, we call
-  // FB.getLoginStatus().  This function gets the state of the
-  // person visiting this page and can return one of three states to
-  // the callback you provide.  They can be:
-  //
-  // 1. Logged into your app ('connected')
-  // 2. Logged into Facebook, but not your app ('not_authorized')
-  // 3. Not logged into Facebook and can't tell if they are logged into
-  //    your app or not.
-  //
-  // These three cases are handled in the callback function.
-  FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-  });
+    // Now that we've initialized the JavaScript SDK, we call
+    // FB.getLoginStatus().  This function gets the state of the
+    // person visiting this page and can return one of three states to
+    // the callback you provide.  They can be:
+    //
+    // 1. Logged into your app ('connected')
+    // 2. Logged into Facebook, but not your app ('not_authorized')
+    // 3. Not logged into Facebook and can't tell if they are logged into
+    //    your app or not.
+    //
+    // These three cases are handled in the callback function.
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
 
   };
 
@@ -95,6 +95,7 @@
   // successful.  See statusChangeCallback() for when this call is made.
   function testAPI() {
     console.log('Welcome!  Fetching your information.... ');
+
     FB.api('/me', function(response) {
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!' + "<br><br>";
@@ -105,7 +106,6 @@
 		FB.api('/me/posts?fields=full_picture,message,created_time,story&limit=5', function(response){
 			//console.log(response);
 			for(var i = 0; i < 5; i++){
-				//console.log(JSON.stringify(response.data[i]));
 				time = response.data[i];
 				if(time !== undefined){
 					$('#News_content').append("<div class='post_container post_border'></div>");
@@ -127,14 +127,12 @@
 			while($("#News_content").children().length < 15){
 				AddNewPost($("#News_content").children().length);
 			};
-		  //$('#News_content').randomize('div.post_container');
 			$.fn.randomize = function(selector){
 			    (selector ? this.find(selector) : this).parent().each(function(){
 			        $(this).children(selector).sort(function(){
 			            return Math.random() - 0.5;
 			        }).detach().appendTo(this);
 			    });
-
 			    return this;
 			};
 			$("#News_content").randomize("div.post_container");
@@ -155,7 +153,6 @@
 			} else {
 				content = "<div class='other_post_title'><a href=' " + string_href + " '><p>" + str + "</p></a><span></span></div>";
 			}
-
 		}
 		return content;
 	};
@@ -173,13 +170,9 @@
 		} else if($(document).width() > 768){
 			d_flag = 2;
       dis = 40;
-		} else {
-			//d_flag = 1;
-		}
+		} else {}
     var post_width = ($('.OldNews_container').width()/d_flag - dis);
     var change_post_width = post_width;
-		//var post_width = (($(document).width()-60)/d_flag);
-		//var change_post_width = post_width < 280 ? 280 : post_width > 400 ? 400 : post_width;
 		$('.post_container').each(function () {
 				var self = $(this);
         if(d_flag == 1){
@@ -189,7 +182,6 @@
         }
 		});
 		$('#News_content').masonry({
-			// options...
 			itemSelector: '.post_container',
 			columnWidth: post_width+15,
 		});
@@ -202,11 +194,9 @@
 		var total = Fake_post_title.length;
 		var num = i%total;
 		post = "<div class='post_container fake_post'>" +  parseString(Fake_post_title[num],Fake_post_href[num], 1) + parseString(Fake_post_content[num],"", 0) + "</div>";
-		//post_detail = "<div class='post_content'>" + "</div>"
 		$('#News_content').append(post);
 	}
 	$(window).resize(function() {
-  //resize just happened, pixels changed
 		NewsPaperResize();
 	});
 	function pickDay(){
@@ -227,8 +217,6 @@
             Fake_post_title   = [];
             Fake_post_content = [];
             var titles = $(data).find('.esc-layout-article-cell');
-            //var links = $(titles).find('a');
-            console.log("Fetch news!");
             $(titles).each(function () {
                 var this_post = $(this).find(".esc-lead-article-title a span").html();//.attr('href') + "\n" + $(this.a);
                 var this_content = $(this).find('.esc-lead-snippet-wrapper').html();
@@ -239,7 +227,6 @@
             });
           }
       });
-      //console.log(Fake_post_title);
 	});
 </script>
 <!--
@@ -247,10 +234,6 @@
   the JavaScript SDK to present a graphical Login button that triggers
   the FB.login() function when clicked.
 -->
-<!-- <div class="fb_btn_costum">
-  <div id="status" style="display:none"></div>
-  <div class="fb-login-button" data-max-rows="5" data-size="medium" data-show-faces="true" data-auto-logout-link="true" scope="public_profile,user_posts,user_photos,email" onlogin="checkLoginState();"></div>
-</div> -->
 <div class="OldNews_title">
   <div>OldNews</div>
   <span>connect your FB post with latest news!</span>
@@ -275,7 +258,6 @@
   	<div id='OldNews'></div>
   </div>
 </div>
-
 
 </body>
 <script type="text/javascript">
