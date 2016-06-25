@@ -4,7 +4,7 @@ title: "OldNews design"
 description: "connect your FB post with latest news!"
 category: Blog
 tags: [design]
-img: "img/Oldnews/OldNews-desktop.png"
+img: "img/OldNews/OldNews-desktop.png"
 ---
 >### # Demo page
 > [OldNews](https://lichin.me/OldNews "Title")
