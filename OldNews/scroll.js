@@ -17,7 +17,7 @@ function offset() {
       });
     } else {
       $('.OldNews_title').css({
-        "left": -3*( $('body').width() );
+        "left": -3*( $('body').width() )
       });
     }
   }
