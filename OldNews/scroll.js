@@ -20,7 +20,6 @@ function offset() {
         "left": position
       });
     } else {
-      console.log('while:' + position.left);
       $('.OldNews_title').css({
         "left": -3*( $('body').width() )// - $('body').height() - 3* $( '.OldNews_title' ).width() )//- 2* $( '.OldNews_title' ).width())
       });
@@ -37,9 +36,7 @@ document.addEventListener("scroll", function () {
     offset();
 }, false);
 
-$( ".fb_btn_costum" ).on( "click", function() {
-  console.log( "$( this ).text()" );
-  alert('c');
+$( ".FB_btn" ).on( "click", function() {
   FB.login(function(response) {
       if (response.authResponse) {
           //user just authorized your app

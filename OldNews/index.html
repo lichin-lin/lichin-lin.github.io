@@ -58,7 +58,7 @@
 
   window.fbAsyncInit = function() {
   FB.init({
-    appId      : '1147149562041730',
+    appId      : '1147161518707201',
     cookie     : true,  // enable cookies to allow the server to access
                         // the session
     xfbml      : true,  // parse social plugins on this page
@@ -180,7 +180,6 @@
     var change_post_width = post_width;
 		//var post_width = (($(document).width()-60)/d_flag);
 		//var change_post_width = post_width < 280 ? 280 : post_width > 400 ? 400 : post_width;
-		console.log('this is CONTAINER:' + $('.OldNews_container').width() + 'this is box: ' + post_width);
 		$('.post_container').each(function () {
 				var self = $(this);
         if(d_flag == 1){
@@ -248,20 +247,26 @@
   the JavaScript SDK to present a graphical Login button that triggers
   the FB.login() function when clicked.
 -->
-
+<!-- <div class="fb_btn_costum">
+  <div id="status" style="display:none"></div>
+  <div class="fb-login-button" data-max-rows="5" data-size="medium" data-show-faces="true" data-auto-logout-link="true" scope="public_profile,user_posts,user_photos,email" onlogin="checkLoginState();"></div>
+</div> -->
 <div class="OldNews_title">
   <div>OldNews</div>
   <span>connect your FB post with latest news!</span>
-  <div class="FB_btn">
-    <div class="fb_btn_costum">
-      FB-Login
-    </div>
-    <div id="status"></div>
-    <!-- <div class="fb_btn_costum">
+  <div class="btn_group">
+    <div class="btn FB_btn">
+      <a href="#">FB-login</a>
       <div id="status" style="display:none"></div>
-      <div class="fb-login-button" data-max-rows="5" data-size="medium" data-show-faces="true" data-auto-logout-link="true" scope="public_profile,user_posts,user_photos,email" onlogin="checkLoginState();"></div>
-    </div> -->
+    </div>
+    <div class="btn BLOG_btn">
+      <a href="https://lichin.me">BLOG</a>
+    </div>
+    <div class="btn CODEPEN_btn">
+      <a href="https://codepen.io/lichin-lin/">CODEPEN</a>
+    </div>
   </div>
+
 </div>
 <div class="pseudo-scroller">
 </div>
