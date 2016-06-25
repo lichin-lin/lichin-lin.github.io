@@ -45,6 +45,7 @@ body {
   justify-content: center;
   align-items: center;
   color: white;
+  z-index: 0;
 }
 .OldNews_title div {
   font-size: 10em;
@@ -124,6 +125,7 @@ body {
   left: 0;
   -webkit-transform-origin: 50% 100%;
   transform-origin: 50% 100%;
+  z-index:999;
 }
 .OldNews_container {
   overflow: hidden;
@@ -364,21 +366,23 @@ body {
     padding: 10px;
   }
   .OldNews_title {
+    top: 10px;
     left: 0;
     right: 0;
   }
   .OldNews_title div{
-    font-size:  5em;
+    font-size:  4em;
     transition: all .35s ease;
   }
   .OldNews_title span {
     font-size: .75em;
   }
   .OldNews_title .btn{
+    margin: -25px 3px 0 3px;
     padding: 5px 5px 5px 10px;
   }
   .OldNews_title .btn, .OldNews_title .btn a{
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 5px;
   }
   .News_title p{
