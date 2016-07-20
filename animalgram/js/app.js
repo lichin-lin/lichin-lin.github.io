@@ -7,7 +7,7 @@ $(document).ready(function(){
 });
 
 var Feed2 = new Instafeed({
-        clientId: '97ae5f4c024c4a91804f959f43f2635f',
+        clientId: 'e7012e22f4b04ec5881b8bb64561930b',
         target: 'instafeed2',
         get: 'user',
         userId: 13514211,
