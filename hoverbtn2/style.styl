@@ -49,7 +49,10 @@ body
       
       .btn-info
         color black
-        
+      .btn-mention
+        color black
+        span
+          color black
       .btn-group
         .Inside
           button
@@ -209,7 +212,9 @@ body
       
       .btn-info
         color lighten(Lgreen,15%)
-        
+      .btn-mention
+        span
+          color lighten(Lgreen,15%)
       .btn-group
         .character
           button
@@ -507,7 +512,7 @@ body
             a
               color black
               font-weight 600
-              font-size 1.25em
+              font-size 1.5em
               transition color 0.5s 0.25s
               overflow hidden
               display inline-block
@@ -574,14 +579,25 @@ body
   margin 0 30px 30px 30px
   display block
 .btn-info
-  margin-bottom 50px
+  margin-bottom 10px
   text-align center  
   font-family 'Lato'
   text-transform uppercase
   letter-spacing 0.1em 
   font-weight 600
-  font-size 1.5em
+  font-size 3.5em
   color white
+.btn-mention
+  margin-bottom 70px
+  text-align center  
+  font-family 'Lato'
+  letter-spacing 0.1em 
+  font-size 1.1em
+  color white
+  span
+    // text-transform uppercase
+    font-size 1.2em
+    font-weight 600
 button 
   cursor pointer
   overflow visible
@@ -595,6 +611,6 @@ button
   font-family "Lato"
   font-size 1.5em
   @media screen and (max-width: 480px)
-  	font-size 1em
+    font-size 1em
   a
     text-decoration none
