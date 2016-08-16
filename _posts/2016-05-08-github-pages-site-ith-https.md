@@ -1,11 +1,15 @@
 ---
+title: github pages-site with HTTPS
+date: 2016-05-08 00:00:00 Z
+categories:
+- Blog
+tags:
+- web-tech
 layout: post
-title: "github pages-site with HTTPS"
-description: "make your site more safety"
-category: Blog
-tags: [web-tech]
-img: "img/HTTPS.png"
+description: make your site more safety
+img: img/HTTPS.png
 ---
+
 >### # HTTPS intro
 > HTTPS是超文字傳輸安全協定（英語：Hypertext Transfer Protocol Secure)，利用SSL/TLS來對封包進行加密，比起 HTTP 更安全。
 > 以下幾點優點(來自[google 說明](https://support.google.com/webmasters/answer/6073543?hl=zh-Hant "Title"))，簡而言之就是，使用 ```HTTPS``` 更能保障隱私及安全性:

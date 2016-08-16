@@ -1,10 +1,13 @@
 ---
+title: Jekyll-path 架設網站問題
+date: 2016-02-18 00:00:00 Z
+categories:
+- Blog
+tags:
+- Jekyll
 layout: post
-title: "Jekyll-path 架設網站問題"
-description: "relative paths don’t work on GitHub-Pages"
-category: Blog
-tags: [Jekyll]
-img: "img/confused.png"
+description: relative paths don’t work on GitHub-Pages
+img: img/confused.png
 ---
 
 ## 在首頁以及進入post頁面時，因為資料夾深度不同，css-link 並不能成功載入。以下是我讀過的相關資料，希望讀者在遇到類似的問題時，也可以找到解決方法。 

@@ -1,11 +1,15 @@
 ---
+title: OldNews design
+date: 2016-06-25 00:00:00 Z
+categories:
+- Blog
+tags:
+- design
 layout: post
-title: "OldNews design"
-description: "connect your FB post with latest news!"
-category: Blog
-tags: [design]
-img: "img/OldNews/OldNews-desktop.png"
+description: connect your FB post with latest news!
+img: img/OldNews/OldNews-desktop.png
 ---
+
 >### # Demo page
 > [OldNews](https://lichin.me/OldNews "Title")
 

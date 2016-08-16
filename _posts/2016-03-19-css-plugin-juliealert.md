@@ -1,10 +1,15 @@
 ---
-layout: post
 title: "開發css套件-JulieAlert"
-description: "customized for better alert"
-category: css
-tags: [CSS,jquery,template]
-img: "img/juliealert.png"
+date: 2016-03-19 00:00:00 Z
+categories:
+- css
+tags:
+- CSS
+- jquery
+- template
+layout: post
+description: customized for better alert
+img: img/juliealert.png
 ---
 
 >### # 起因
