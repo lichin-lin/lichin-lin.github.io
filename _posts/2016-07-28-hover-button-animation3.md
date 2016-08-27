@@ -1,11 +1,16 @@
 ---
+title: Hover! button animation#3
+date: 2016-07-28 00:00:00 Z
+categories:
+- css
+tags:
+- design
+- CSS
 layout: post
-title: "Hover! button animation#3"
-description: "cool animation about overflow:hidden."
-category: css
-tags: [design,CSS]
-img: "img/hoverbtn2/hover_effect.png"
+description: cool animation about overflow:hidden.
+img: img/hoverbtn2/hover_effect.png
 ---
+
 >### # Demo page
 > [hover button](https://lichin.me/hoverbtn2/ "Title")
 

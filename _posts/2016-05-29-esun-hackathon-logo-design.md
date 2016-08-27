@@ -1,11 +1,15 @@
 ---
+title: E.SUN Hackathon-logo design
+date: 2016-05-29 00:00:00 Z
+categories:
+- Blog
+tags:
+- design
 layout: post
-title: "E.SUN Hackathon-logo design"
-description: "Venus payment plugin!"
-category: Blog
-tags: [design]
-img: "img/VENUS/Venus-bg.png"
+description: Venus payment plugin!
+img: img/VENUS/Venus-bg.png
 ---
+
 >### # Design 由來
 > 為了5/21號的玉山黑客松，我得在兩個禮拜中生出一個符合我們作品的logo。在賽後我整理出幾個點來說明這個logo創作時的重點，順帶一提這次黑客松的主題是數位金融相關的應用。
 >

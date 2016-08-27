@@ -1,10 +1,15 @@
 ---
-layout: post
 title: "開發css套件-Davidmenu"
-description: "full-screen animation menu"
-category: css
-tags: [CSS,jquery,template]
-img: "img/davidmenu.png"
+date: 2016-03-31 00:00:00 Z
+categories:
+- css
+tags:
+- CSS
+- jquery
+- template
+layout: post
+description: full-screen animation menu
+img: img/davidmenu.png
 ---
 
 >### # 起因

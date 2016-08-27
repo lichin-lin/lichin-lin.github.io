@@ -1,10 +1,13 @@
 ---
-layout: post
 title: "第一次寫Blog-Github Pages"
-description: "try somthing new"
-category: Blog
-tags: [Jekyll]
-img: "img/jekyll.jpg"
+date: 2016-02-15 00:00:00 Z
+categories:
+- Blog
+tags:
+- Jekyll
+layout: post
+description: try somthing new
+img: img/jekyll.jpg
 ---
 
 ## 本站使用GitHub Pages 以及 Jekyll 打造而成，我也在此分享一些製作的過程。  

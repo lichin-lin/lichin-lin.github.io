@@ -1,11 +1,16 @@
 ---
+title: css practice-Brick form
+date: 2016-04-16 00:00:00 Z
+categories:
+- CSS
+tags:
+- css
+- Animation
 layout: post
-title: "css practice-Brick form"
-description: "inspire from Dribbble!"
-category: CSS
-tags: [css,Animation]
-img: "img/BrickForm.png"
+description: inspire from Dribbble!
+img: img/BrickForm.png
 ---
+
 {% include JB/setup %}
 >### # 起因
 >   設計師常常會在Dribbble上發布讓人為之驚豔的設計理念，

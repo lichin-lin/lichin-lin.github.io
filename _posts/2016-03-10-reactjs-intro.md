@@ -1,11 +1,16 @@
 ---
+title: React.js intro
+date: 2016-03-10 00:00:00 Z
+categories:
+- React
+tags:
+- css
+- react
 layout: post
-title: "React.js intro"
-description: "Javascript library with totally new view"
-category: React
-tags: [css,react]
-img: "img/reactjs.png"
+description: Javascript library with totally new view
+img: img/reactjs.png
 ---
+
 ## 這個三月我去找了實習，在只會html/css的能力下所能找到的機會實在有限。正好這時看到有家新創公司正在徵 React.js 相關技能的實習生，就趁著這個機會來學習一下新技術。
 ---
 
