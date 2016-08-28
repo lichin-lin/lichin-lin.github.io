@@ -1,10 +1,14 @@
 ---
+title: IE8! the miserable monster
+date: 2016-08-27 00:00:00 Z
+categories:
+- Blog
+tags:
+- html
+- css
 layout: post
-title: "IE8! the miserable monster"
-description: "People still using IE8 to browse your website today."
-category: Blog
-tags: [html,css]
-img: "img/IE8/IE-suck.jpg"
+description: People still using IE8 to browse your website today.
+img: img/IE8/IE-suck.jpg
 ---
 
 >### # IE8 的洗禮
