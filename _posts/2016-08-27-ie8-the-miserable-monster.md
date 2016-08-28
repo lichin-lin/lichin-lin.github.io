@@ -8,7 +8,7 @@ tags:
 - css
 layout: post
 description: People still using IE8 to browse your website today.
-img: img/IE8/IE-suck.jpg
+img: img/IE8/IE-suck.png
 ---
 
 >### # IE8 的洗禮
