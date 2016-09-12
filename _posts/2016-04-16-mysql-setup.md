@@ -10,7 +10,6 @@ description: Try to install you first database!
 img: img/mysql.jpg
 ---
 
-{% include JB/setup %}
 >### # 起因
 >大二下修了系上一門 Database 的課，主要使用的是利用MySQL，來對飛機航班資料做query。以下是我在Mac OSX從安裝到實作的一些紀錄。
 >
