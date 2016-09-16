@@ -8,13 +8,13 @@ img: "img/typhoon/rabbit.png"
 ---
 
 >### # Demo page
-> 1.[Mr.typhoon](https://quote-b781f.firebaseapp.com/ "Title")<br/>
-> 2.[Github](https://github.com/lichin-lin/typhoonPWA "Title")
+> 1.[Mr.typhoon](https://quote-b781f.firebaseapp.com/ "Title"){:target="_blank"}<br/>
+> 2.[Github](https://github.com/lichin-lin/typhoonPWA "Title"){:target="_blank"}
 
 <br>
 
 >### # app 由來
-> ```Progressive Web App (PWA)``` 第一次聽到是偶然在 google developer 的文件上看到的。稍微看過之後發現，這不就是用網頁在實作app的一項觀念嗎？好奇之下就跟著[教學文件](https://developers.google.com/web/fundamentals/getting-started/your-first-progressive-web-app/?hl=en "title")的步驟一步步去實作，以下會簡略說明這三天我的一些收穫，更詳細的介紹可以參考官方文件。(因為在製作app時候也稍微考慮了設計的問題，於是將文章拆成上下兩篇，上篇主要會介紹PWA的技術)
+> ```Progressive Web App (PWA)``` 第一次聽到是偶然在 google developer 的文件上看到的。稍微看過之後發現，這不就是用網頁在實作app的一項觀念嗎？好奇之下就跟著[教學文件](https://developers.google.com/web/fundamentals/getting-started/your-first-progressive-web-app/?hl=en "title"){:target="_blank"}的步驟一步步去實作，以下會簡略說明這三天我的一些收穫，更詳細的介紹可以參考官方文件。(因為在製作app時候也稍微考慮了設計的問題，於是將文章拆成上下兩篇，上篇主要會介紹PWA的技術)
 
 <br>
 
@@ -41,7 +41,7 @@ img: "img/typhoon/rabbit.png"
 > <br>
 >
 >### #3 新的理念？
->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我想這個PWA的想法並不會跟現在的前端架構(react.js, vue.js...)相衝突，相對的，某些Github上的專案也慢慢引入在網頁加上這個存取 ```Cache``` 的概念，讓網頁的功能更強大。所以要是有多餘時間，真的可以去學習一下 on/off line的概念，其實呢，在2014年時也已經有類似的[概念](https://jakearchibald.com/2014/offline-cookbook/ "title")應用在網頁上了。
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我想這個PWA的想法並不會跟現在的前端架構(react.js, vue.js...)相衝突，相對的，某些Github上的專案也慢慢引入在網頁加上這個存取 ```Cache``` 的概念，讓網頁的功能更強大。所以要是有多餘時間，真的可以去學習一下 on/off line的概念，其實呢，在2014年時也已經有類似的[概念](https://jakearchibald.com/2014/offline-cookbook/ "title"){:target="_blank"}應用在網頁上了。
 >
 > <br>
 >
@@ -60,7 +60,7 @@ img: "img/typhoon/rabbit.png"
 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;當我們告訴整個Shell 要存下哪些東西時，就換到整個 Service worker 來發會功用了，SW有自己的生命週期，而且跟網頁是完全分開的
 。
 >通常 SW 會有 ```install```、```activate```、```fetch```。首先有關於install，我們必須先去註冊(register)，當你成功註冊一個 SW 之後，瀏覽器就會在背景執行一個 Service Worker。需要注意的是，install這個階段會把需要Cache的檔案存取來，只要一有任何檔案存取失敗，就不會進入```activate```。如果成功install，會進入 ```activate``` 的狀態，這邊會去等待舊的 worker 被 kill掉或是清除舊的Cache。最後是 ```fetch``` 的部分，這裡就有關於資料取得的部分， 
->礙於篇幅長度，以及準確的例子，更詳細的部分可以查閱[Mozilla-Using Service Workers](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers "title")。
+>礙於篇幅長度，以及準確的例子，更詳細的部分可以查閱[Mozilla-Using Service Workers](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers "title"){:target="_blank"}。
 > <br><br><img src="/img/typhoon/pic-2.png"/><br><br>
 > <br>
 >
@@ -83,8 +83,8 @@ img: "img/typhoon/rabbit.png"
 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;這次主要運用在獲得颱風的距離，由於還沒很熟悉整體框架，思考上可能會有很多問題，需要再多加改善(或是加入推播通知)。下面附上一些更大的應用以及學習資源，希望大家也能打造出自己的簡單app!
 > 對了，要是喜歡這篇文章，也請持續關心下一篇文章 ```Mr.typhoon``` 設計篇！
 >
->1.    [web-telegram](https://web.telegram.org/#/login "Title")
->2.    [web-flipkart](http://www.flipkart.com "Title")
->3.    [web-pokedex](https://www.pokedex.org "Title")
->4.    [github-learing PWA](https://github.com/ragingwind/learning-pwa "Title")
->5.    [google web start kit](https://github.com/google/web-starter-kit "Title")
+>1.    [web-telegram](https://web.telegram.org/#/login "Title"){:target="_blank"}
+>2.    [web-flipkart](http://www.flipkart.com "Title"){:target="_blank"}
+>3.    [web-pokedex](https://www.pokedex.org "Title"){:target="_blank"}
+>4.    [github-learing PWA](https://github.com/ragingwind/learning-pwa "Title"){:target="_blank"}
+>5.    [google web start kit](https://github.com/google/web-starter-kit "Title"){:target="_blank"}
