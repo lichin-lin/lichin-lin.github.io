@@ -13,7 +13,7 @@ img: img/typhoon/rabbit-2.png
 >### # Demo page
 > 1.[Mr.typhoon](https://quote-b781f.firebaseapp.com/ "Title"){:target="_blank"}<br/>
 > 2.[design on Behance](https://www.behance.net/gallery/42925577/Mrtyphoon "Title"){:target="_blank"}<br>
-> 2.[Repo on GitHub](https://github.com/lichin-lin/typhoonPWA "Title"){:target="_blank"}
+> 3.[Repo on GitHub](https://github.com/lichin-lin/typhoonPWA "Title"){:target="_blank"}
 
 <br>
 
