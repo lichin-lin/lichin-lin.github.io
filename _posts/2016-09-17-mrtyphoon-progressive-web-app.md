@@ -4,12 +4,13 @@ title: "Mr.Typhoon-progressive web app(下篇)"
 description: "web that work like an app."
 category: Blog
 tags: [web app]
-img: "img/typhoon/rabbit.png"
+img: "img/typhoon/rabbit-2.png"
 ---
 
 >### # Demo page
 > 1.[Mr.typhoon](https://quote-b781f.firebaseapp.com/ "Title"){:target="_blank"}<br/>
-> 2.[Github](https://github.com/lichin-lin/typhoonPWA "Title"){:target="_blank"}
+> 2.[design on Behance](https://www.behance.net/gallery/42925577/Mrtyphoon "Title"){:target="_blank"}<br>
+> 2.[Repo on GitHub](https://github.com/lichin-lin/typhoonPWA "Title"){:target="_blank"}
 
 <br>
 
@@ -45,9 +46,9 @@ img: "img/typhoon/rabbit.png"
 > * • 主要資訊(main content)裡不同字體 ```大小``` 代表的用途：越大的字代表越重要的資訊。
 > * • 將時間、距離、說明以及注意用最大字呈現，來凸顯各段落文字。
 > * • 用細小的字來補充較不必要的資訊或是簡短說明。
-> * • 若對於距離較無概念，也可以透過上方圓形image來知道目前颱風嚴重程度。
 > * • 在配色方面，選用藍色為底/黃色為主色，製造出差異配色。
->
+> * • 若對於距離較無概念，也可以透過圓形image來知道目前颱風嚴重程度。
+> <br><br><img src="/img/typhoon/3state.png"/><br><br>
 
 >### # UI 的五個狀態(1) 理想/失敗 Ideal/Error
 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;這個 app 其實目的非常明確，不是成功載入資訊就是失敗。首先這是 ```離線``` 畫面，
@@ -75,7 +76,7 @@ img: "img/typhoon/rabbit.png"
 
 >### # 小結
 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;透過這篇文章裡的例子，真的獲得很多新知，
-> 其實從使用者的角度去思考，或是把自己想得沒那麼聰明，往往就可以再多發現自己 app 的盲點，這個 ```Mr.typhoon``` 當然還有很多待改進、討論的地方。希望能慢慢導入良好UX，讓不只這個 web app，以及往後的作品有更棒的使用者體驗！
+> 其實從使用者的角度去思考，或是把自己想得沒那麼聰明，往往就可以再多發現自己 app 的盲點，這個 ```Mr.typhoon``` 當然還有很多待改進、討論的地方(更多錯誤的handler、更豐富的功能又能平衡畫面...)。希望能慢慢導入良好UX，讓不只這個 web app，以及往後的作品有更棒的使用者體驗！
 >
 >1.    [How to fix a bad user interface](http://scotthurff.com/posts/why-your-user-interface-is-awkward-youre-ignoring-the-ui-stack "Title"){:target="_blank"}
 >2.    [How to write a great error message](https://medium.com/@thomasfuchs/how-to-write-an-error-message-883718173322#.nzfz1q374 "Title"){:target="_blank"}
