@@ -1,10 +1,13 @@
 ---
+title: Mr.Typhoon-progressive web app(下篇)
+date: 2016-09-17 00:00:00 Z
+categories:
+- Blog
+tags:
+- web app
 layout: post
-title: "Mr.Typhoon-progressive web app(下篇)"
-description: "web that work like an app."
-category: Blog
-tags: [web app]
-img: "img/typhoon/rabbit-2.png"
+description: web that work like an app.
+img: img/typhoon/rabbit-2.png
 ---
 
 >### # Demo page
