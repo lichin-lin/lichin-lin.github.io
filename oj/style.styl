@@ -1,0 +1,552 @@
+$blue = #1CA6F3
+$orange = #FFB465
+$black = #50514F
+$gray = #999999
+$footer = #12374B
+$footer_bottom = #122B39
+$white = #F0F0F0
+
+$content_size = 16px
+$Brandon_subtitle_size = 24px
+$Brandon_title_size = 36px
+$Lato_subtitle_size = 20px
+$Lato_title_size = 40px
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,700)
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700)
+@font-face
+    font-family 'Brandon'
+    src url('Brandon_blk.otf')
+    src url('Brandon_blk.otf') format('embedded-opentype'),
+        url('Brandon_blk.otf') format('woff2'),
+        url('Brandon_blk.otf') format('woff'),
+        url('Brandon_blk.otf')  format('truetype'),
+        url('Brandon_blk.otf') format('svg')
+    font-weight: bold
+
+@font-face
+    font-family 'Brandon'
+    src url('Brandon_med.otf')
+    src url('Brandon_med.otf') format('embedded-opentype'),
+        url('Brandon_med.otf') format('woff2'),
+        url('Brandon_med.otf') format('woff'),
+        url('Brandon_med.otf')  format('truetype'),
+        url('Brandon_med.otf') format('svg')
+    font-weight: normal
+
+@font-face
+    font-family 'Brandon'
+    src url('Brandon_light.otf')
+    src url('Brandon_light.otf') format('embedded-opentype'),
+        url('Brandon_light.otf') format('woff2'),
+        url('Brandon_light.otf') format('woff'),
+        url('Brandon_light.otf')  format('truetype'),
+        url('Brandon_light.otf') format('svg')
+    font-weight: lighter
+
+flexStyle(a, b, c)
+    display: flex
+    flex-direction: a
+    justify-content: b
+    align-items: c
+
+*
+    padding: 0
+    margin: 0
+    font-family: 'Brandon', cursive;
+    transition: all 0.3s ease
+body
+    width: 100%
+    height: 100%
+    .intro
+        width: 100vw
+        height: 100vh
+        min-height: 500px
+        flexStyle(column, flex-start, center)
+        background: linear-gradient(135deg, lighten($blue, 10%), darken($blue,10%))
+
+        .info
+            // border: 1px solid pink
+            margin: 150px 0 0 0;
+            flexStyle(row, flex-start, center)
+            .fox
+                margin-left: 5%
+                width: 50%
+                img
+                    width: 120%
+                    height: auto
+            .signbox
+                width: 50%
+                margin-right: 5%
+                flexStyle(column, center, flex-start)
+                .welcome
+                    // border: 1px solid pink
+                    margin-left: 15px
+                    flexStyle(column, flex-start, flex-start)
+                    span
+                        color: white
+                        font-size: 2.5em
+                        font-weight: bold
+                        letter-spacing: 2px
+                        margin: 10px 0
+                .signup
+                    margin: 10px 0 0 15px
+        @media screen and (max-width: 768px)
+            flexStyle(column, center, center)
+            .info
+                .fox
+                    display: none
+                .signbox
+                    width: 100%
+                    .signup
+                        margin: 10px 0 0 15px
+    >div.section
+        width: auto
+        height: auto
+        // margin-top: 100px
+        padding: 50px 0
+        min-height: 400px
+        flexStyle(column, flex-start, center)
+        .info
+            text-align: center
+            color: $black
+            position: relative
+            font-size: $Lato_title_size
+            font-weight: bold
+            letter-spacing: 5px
+            .subtitle
+                margin-top: 20px
+                color: $black
+                position: relative
+                font-size: $Lato_subtitle_size
+                font-weight: normal;
+                font-family: "Lato"
+                letter-spacing: 3px
+                span
+                    position: absolute
+                    content: ''
+                    left: calc(50% - 100px)
+                    top: -20px
+                    width: 200px
+                    height: 8px
+                    background: $orange
+        .sectionContent
+            width: auto
+            height: auto
+            margin-top: 50px
+            // border: 1px solid pink
+        &.reverse
+            background: $blue
+            .info
+                color: $white
+                .subtitle
+                    color: $white
+        @media screen and (max-width: 768px)
+            padding: 50px 25px
+    .Upcoming
+        .sectionContent
+            flexStyle(row, flex-start, center)
+            padding: 0 50px
+            .mention,
+            .fox
+                width: 50%
+                height: auto
+            .mention
+                flexStyle(column, space-around, center)
+                .FutureContent
+                    width: 80%
+                    color: $black
+                    text-align: center
+                    font-family: "Lato"
+                    font-size: $Brandon_subtitle_size
+                .FutureFeature
+                    span
+                        margin: 0 10px
+                        color: $black
+                        font-family: "Lato"
+                        font-weight: bold
+                        font-size: $Lato_subtitle_size
+                .FutureBtn
+                    margin: 0
+                >div
+                    margin-bottom: 30px
+            .fox
+                flexStyle(row, center, center)
+                img
+                    width: 60%
+                    height: auto
+            @media screen and (max-width:768px)
+                flex-direction: column-reverse
+                padding: 0 25px
+                .mention,
+                .fox
+                    width: 100%
+                    margin-bottom: 30px
+                    height: auto
+            @media screen and (max-width:480px)
+                .mention
+                    .FutureFeature
+                        span
+                            margin: 0 5px
+                            font-size: 16px
+    // .feature
+    //     width: 100vw
+    //     height: 100vh
+    //     min-height: 600px
+    //     // padding-top: 100px
+    //     flexStyle(row, center, center)
+    //     .info
+    //         width: 50%
+    //         height: 200px
+    //         margin-left: 5%
+    //         .Skill
+    //             flexStyle(column, flex-start, flex-start)
+    //             position: relative
+    //             span
+    //                 color: $black
+    //                 font-size: 2.75em
+    //                 font-weight: bold
+    //                 letter-spacing: 3px
+    //                 font-family: 'Brandon', cursive;
+    //                 margin: 10px 0
+    //             &::after
+    //                 position: absolute
+    //                 content: ''
+    //                 width: 30%
+    //                 height: 8px
+    //                 background: $orange
+    //                 bottom: 0
+    //                 left: 0
+    //
+    //     .property
+    //         width: 50%
+    //         margin-top: 30px
+    //         margin-right: 5%
+    //         ul
+    //             flexStyle(column, flex-start, center)
+    //             li
+    //                 list-style: none
+    //                 margin-bottom: 45px
+    //                 div
+    //                     flexStyle(row, flex-start, flex-start)
+    //                     .propsImg
+    //                         width: 100px
+    //                         height: 100px
+    //                         margin-right: 50px
+    //                         img
+    //                             width: auto
+    //                             height: auto
+    //                     .propsInfo
+    //                         color: $black
+    //                         flexStyle(column, flex-start, flex-start)
+    //                         h2
+    //                             letter-spacing: 1.5px
+    //                             font-size: 1.75em
+    //                         p
+    //                             font-weight: normal
+    //                             font-size: 1.25em
+    //                             color: $gray
+    //
+    //
+    // .record
+    //     width: 100vw
+    //     height: auto
+    //     min-height: 600px
+    //     border-top: 8px solid darken($blue, 10%)
+    //     border-bottom: 8px solid darken($blue, 10%)
+    //     ul
+    //         flexStyle(column, flex-start, flex-start)
+    //         li
+    //             width: 100%
+    //             height: 500px
+    //             display: block;
+    //             .section
+    //                 // height: 500px
+    //                 flexStyle(column, flex-start, flex-start)
+    //                 .blue, .white
+    //                     width: 50%
+    //                     height: 500px
+    //                     flexStyle(row, center, center)
+    //                 .blue
+    //                     background: darken($blue, 10%)
+    //                     position: relative;
+    //                     .recordImg
+    //                         border: 1px solid transparent
+    //                         border-radius: 10px
+    //                         width: 80%
+    //                         height: auto
+    //                         overflow: hidden
+    //                         position: relative
+    //                         flexStyle(row, flex-start, flex-start)
+    //                         img
+    //                             width: 130%
+    //                             height: auto
+    //                         &::after
+    //                             position: absolute
+    //                             content: ''
+    //                             width: 200%
+    //                             height: 100%
+    //                             background: rgba(#FFFFFF,0.5)
+    //                             top: 0
+    //                             left: 0
+    //                             transform-origin: 50% 50%
+    //                             transform: rotate(135deg);
+    //                     .recordinfo
+    //                         position: absolute
+    //                         content: ''
+    //                         width: 50%
+    //                         margin: 0 auto
+    //                         overflow: auto
+    //                         top: 0; left: 0; bottom: 0; right: 0;
+    //                         flexStyle(column, center, center)
+    //                         h2
+    //                             letter-spacing: 2px
+    //                             position: relative
+    //                             margin-bottom: 15px
+    //                             &::after
+    //                                 position: absolute
+    //                                 content: ''
+    //                                 bottom: -5px
+    //                                 left: calc(50% - 15%)
+    //                                 width: 25%
+    //                                 height: 6px
+    //                                 background: $orange
+    //                         p
+    //                             letter-spacing: 3px
+    //                             color: white
+    //                 .white
+    //                     background: white
+    //                     .info
+    //                         flexStyle(column, flex-start, flex-start)
+    //                         position: relative;
+    //                         span
+    //                             color: $black
+    //                             font-size: 2.75em
+    //                             font-weight: bold
+    //                             letter-spacing: 3px
+    //                             font-family: 'Brandon', cursive;
+    //                             margin: 10px 0
+    //                         &::after
+    //                             position: absolute
+    //                             content: ''
+    //                             width: 50%
+    //                             height: 8px
+    //                             background: $orange
+    //                             bottom: 0
+    //                             left: 0
+    //             .normal
+    //                 flexStyle(row, flex-start, flex-start)
+    //             .reverse
+    //                 flexStyle(row-reverse,flex-start, flex-start)
+    // .partner
+    //     width: 100vw
+    //     height: auto
+    //     margin-top: 100px
+    //     min-height: 600px
+    //     flexStyle(column, flex-start, center)
+    //     .info
+    //         text-align: center
+    //         color: $black
+    //         position: relative
+    //         font-size: $Lato_title_size
+    //         font-weight: bold
+    //         .subtitle
+    //             margin-top: 20px
+    //             color: $black
+    //             position: relative
+    //             font-size: $Lato_subtitle_size
+    //             font-weight: normal;
+    //             font-family: "Lato"
+    //             span
+    //                 position: absolute
+    //                 content: ''
+    //                 left: calc(50% - 100px)
+    //                 top: -20px
+    //                 width: 200px
+    //                 height: 8px
+    //                 background: $orange
+    //     .partnerContainer
+    //         margin-top: 100px
+    //         width: 85%
+    //         flexStyle(row, space-around, center)
+    //         flex-wrap: wrap
+    //         .part
+    //             width: 20%
+    //             height: auto
+    //             margin: 20px 40px
+    //             img
+    //                 stroke: $gray
+    //                 width: 100%
+    //                 height: auto
+
+    .footer
+        width: auto
+        height: auto
+        min-height: 250px
+        background: $footer
+        padding: 0 50px
+        flexStyle(column, flex-start, center)
+        .info
+            max-width: 1200px
+            width: 100%
+            height: auto
+            color: white
+            margin-top: 50px
+            flexStyle(row, space-between, flex-start)
+            @media screen and (max-width: 768px)
+                flex-direction: column
+                align-items: center
+            .NCTUOJ
+                width: 300px
+                flexStyle(column, flex-start, flex-start)
+                @media screen and (max-width: 768px)
+                    align-items: center
+                    width: 100%
+                .logo
+                    width: 50px
+                    height: 50px
+                    img
+                        width: 100%
+                        height: 100%
+                .mention
+                    margin-top: 10px
+                    p
+                        letter-spacing: 1px
+                        font-size: $content_size
+                        opacity: 0.8
+            .contactus
+                @media screen and (max-width: 768px)
+                    width: 100%
+                    margin-top: 60px
+                    flexStyle(row, space-around, flex-start)
+                    .developer
+                        h2,
+                        span
+                            text-align: center
+                @media screen and (max-width: 480px)
+                    flex-direction: column
+                    .developer
+                        h2,
+                        span
+                            text-align: left
+                .developer, .contact
+                    font-family: 'Brandon'
+                    margin-bottom: 30px
+                    h2
+                        font-weight: 600
+                        font-size: $Brandon_subtitle_size
+                        letter-spacing: 3px
+                        margin-bottom: 15px
+                    span
+                        opacity: 0.8
+                        font-size: $content_size
+                        letter-spacing: 1px
+                        line-height: 2
+        @media screen and (max-width: 768px)
+            padding: 0 25px
+
+        .thank
+            width: 100vw
+            min-height: 50px
+            height: auto
+            color: $white
+            background: $footer_bottom
+            flexStyle(row, center, center)
+            .reserve
+                margin: 20px 20px 10px
+                font-size: 14px
+                font-weight: normal
+                letter-spacing: 2.5px
+                font-family: 'Lato'
+                opacity: 0.8
+            @media screen and (max-width: 768px)
+                .reserve
+                    margin: 0 25px
+.menu
+    position: fixed
+    z-index: 9999
+    width: 100%
+    height: auto
+    padding: 15px 0
+    flexStyle(row, space-between, center)
+    transition: all 0.3s ease
+    border-bottom: 2px solid transparent
+    .title
+        color: white
+        font-size: 2em
+        font-weight: bold
+        letter-spacing: 2px
+        cursor: pointer
+        margin-left: 50px
+    .nav
+        margin-right: 50px
+        flexStyle(row, space-around, center)
+        .language
+            width: 30px
+            height: 30px
+            color: white
+            font-size: 0.9em
+            font-weight: bold
+            border: 2px solid white
+            border-radius: 3px
+            position: relative
+            flexStyle(row, center, center)
+            transform: translateX(-10px);
+            &::after
+                position: absolute
+                content: ''
+                width: 2px
+                height: 20px
+                background: white
+                top 5px
+                left: 40px
+        ul
+            flexStyle(row, space-around, center)
+            li
+                font-family: 'Raleway'
+                color white
+                margin: 0 0 0 20px
+                font-size: 1em
+                font-weight: bold
+                letter-spacing: 1px
+                cursor: pointer
+                list-style: none
+    &.active
+        background: #FFF
+        border-color: $black
+        .title
+            color: $black
+        .nav
+            .language
+                color: $black
+                border-color: $black
+                &::after
+                    background: $black
+            ul
+                li
+                    color: $black
+
+    @media screen and (max-width:768px)
+        flexStyle(row, center, center)
+        .title
+            margin-left: 0
+        .nav
+            display: none
+.orangeBtn
+    width: inherit
+    max-width: 500px
+    height: auto
+    display: block
+    color: white
+    padding: 7.5px 0px
+    margin: 0
+    font-size: 1.25em
+    font-weight: bold
+    letter-spacing: 1.75px
+    cursor: pointer
+    background: linear-gradient(135deg, #EBDB3A, #F7942D)
+    // border: 1px solid transparent
+    border-radius: 5px
+    flexStyle(row, center, center)
+svg path
+    fill: $gray
