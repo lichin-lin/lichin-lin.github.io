@@ -26,7 +26,7 @@ function moveRandom(obj) {
         left: newX
         }, 500
     );
-    scaleSize = randomFromToFloat(1, 5);
+    scaleSize = randomFromToFloat(1, 3);
     obj.css({
         '-webkit-transform' : 'scale(' + scaleSize + ') rotate('+ (scaleSize) * 30 +'deg)',
         '-moz-transform'    : 'scale(' + scaleSize + ') rotate('+ (scaleSize) * 30 +'deg)',
