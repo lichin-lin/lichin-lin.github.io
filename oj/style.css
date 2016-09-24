@@ -31,7 +31,7 @@ body {
 body .intro {
   width: 100vw;
   height: 100vh;
-  min-height: 500px;
+  min-height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -109,7 +109,7 @@ body >div.section .info {
   text-align: center;
   color: #50514f;
   position: relative;
-  font-size: 40px;
+  font-size: 36px;
   font-weight: bold;
   letter-spacing: 5px;
 }
@@ -117,7 +117,7 @@ body >div.section .info .subtitle {
   margin-top: 20px;
   color: #50514f;
   position: relative;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   font-family: "Lato";
   letter-spacing: 3px;
@@ -173,14 +173,14 @@ body .Upcoming .sectionContent .mention .FutureContent {
   color: #50514f;
   text-align: center;
   font-family: "Lato";
-  font-size: 24px;
+  font-size: 20px;
 }
 body .Upcoming .sectionContent .mention .FutureFeature span {
   margin: 0 10px;
   color: #50514f;
   font-family: "Lato";
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
 }
 body .Upcoming .sectionContent .mention .FutureBtn {
   margin: 0;
@@ -304,7 +304,7 @@ body .footer .info .contactus .contact {
 body .footer .info .contactus .developer h2,
 body .footer .info .contactus .contact h2 {
   font-weight: 600;
-  font-size: 24px;
+  font-size: 20px;
   letter-spacing: 3px;
   margin-bottom: 15px;
 }
