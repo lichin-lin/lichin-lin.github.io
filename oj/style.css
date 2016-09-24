@@ -31,7 +31,7 @@ body {
 body .intro {
   width: 100vw;
   height: 100vh;
-  min-height: 600px;
+  min-height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -109,7 +109,7 @@ body >div.section .info {
   text-align: center;
   color: #50514f;
   position: relative;
-  font-size: 36px;
+  font-size: 2.5em;
   font-weight: bold;
   letter-spacing: 5px;
 }
@@ -117,7 +117,7 @@ body >div.section .info .subtitle {
   margin-top: 20px;
   color: #50514f;
   position: relative;
-  font-size: 18px;
+  font-size: 0.5em;
   font-weight: normal;
   font-family: "Lato";
   letter-spacing: 3px;
@@ -150,6 +150,188 @@ body >div.section.reverse .info .subtitle {
     padding: 50px 25px;
   }
 }
+body .Judge {
+  position: relative;
+}
+body .Judge .sectionContent {
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body .Judge .sectionContent .desktopJudge,
+body .Judge .sectionContent .mobileJudge {
+  width: 90%;
+  display: none;
+}
+body .Judge .sectionContent .desktopJudge img,
+body .Judge .sectionContent .mobileJudge img {
+  width: 100%;
+  height: auto;
+}
+body .Judge .sectionContent .desktopJudge {
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  body .Judge .sectionContent .desktopJudge {
+    display: none;
+  }
+  body .Judge .sectionContent .mobileJudge {
+    display: block;
+  }
+}
+body .Judge .cubeContent {
+  z-index: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+body .Judge .cubeContent ul {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+body .Judge .cubeContent ul .cube0 {
+  opacity: 0;
+  position: absolute;
+  list-style: none;
+  animation: breath 3s ease infinite;
+  animation-delay: 0s;
+}
+body .Judge .cubeContent ul .cube1 {
+  opacity: 0;
+  position: absolute;
+  list-style: none;
+  animation: breath 3s ease infinite;
+  animation-delay: 0.1s;
+}
+body .Judge .cubeContent ul .cube2 {
+  opacity: 0;
+  position: absolute;
+  list-style: none;
+  animation: breath 3s ease infinite;
+  animation-delay: 0.2s;
+}
+body .Judge .cubeContent ul .cube3 {
+  opacity: 0;
+  position: absolute;
+  list-style: none;
+  animation: breath 3s ease infinite;
+  animation-delay: 0.3s;
+}
+body .Judge .cubeContent ul .cube4 {
+  opacity: 0;
+  position: absolute;
+  list-style: none;
+  animation: breath 3s ease infinite;
+  animation-delay: 0.4s;
+}
+body .Judge .cubeContent ul .cube5 {
+  opacity: 0;
+  position: absolute;
+  list-style: none;
+  animation: breath 3s ease infinite;
+  animation-delay: 0.5s;
+}
+body .Judge .cubeContent ul .cube6 {
+  opacity: 0;
+  position: absolute;
+  list-style: none;
+  animation: breath 3s ease infinite;
+  animation-delay: 0.6s;
+}
+body .Judge .cubeContent ul .cube7 {
+  opacity: 0;
+  position: absolute;
+  list-style: none;
+  animation: breath 3s ease infinite;
+  animation-delay: 0.7s;
+}
+body .Judge .cubeContent ul .cube8 {
+  opacity: 0;
+  position: absolute;
+  list-style: none;
+  animation: breath 3s ease infinite;
+  animation-delay: 0.8s;
+}
+body .Judge .cubeContent ul .cube9 {
+  opacity: 0;
+  position: absolute;
+  list-style: none;
+  animation: breath 3s ease infinite;
+  animation-delay: 0.9s;
+}
+body .Judge .cubeContent ul .cube10 {
+  opacity: 0;
+  position: absolute;
+  list-style: none;
+  animation: breath 3s ease infinite;
+  animation-delay: 1s;
+}
+body .Judge .cubeContent ul .cube11 {
+  opacity: 0;
+  position: absolute;
+  list-style: none;
+  animation: breath 3s ease infinite;
+  animation-delay: 1.1s;
+}
+body .Judge .cubeContent ul .cube12 {
+  opacity: 0;
+  position: absolute;
+  list-style: none;
+  animation: breath 3s ease infinite;
+  animation-delay: 1.2s;
+}
+body .Judge .cubeContent ul .cube13 {
+  opacity: 0;
+  position: absolute;
+  list-style: none;
+  animation: breath 3s ease infinite;
+  animation-delay: 1.3s;
+}
+body .Judge .cubeContent ul .cube14 {
+  opacity: 0;
+  position: absolute;
+  list-style: none;
+  animation: breath 3s ease infinite;
+  animation-delay: 1.4s;
+}
+body .Judge .cubeContent ul .cube15 {
+  opacity: 0;
+  position: absolute;
+  list-style: none;
+  animation: breath 3s ease infinite;
+  animation-delay: 1.5s;
+}
+body .Judge .cubeContent ul .cube16 {
+  opacity: 0;
+  position: absolute;
+  list-style: none;
+  animation: breath 3s ease infinite;
+  animation-delay: 1.6s;
+}
+body .Judge .cubeContent ul .cube17 {
+  opacity: 0;
+  position: absolute;
+  list-style: none;
+  animation: breath 3s ease infinite;
+  animation-delay: 1.7s;
+}
+body .Judge .cubeContent ul .cube18 {
+  opacity: 0;
+  position: absolute;
+  list-style: none;
+  animation: breath 3s ease infinite;
+  animation-delay: 1.8s;
+}
+body .Judge .cubeContent ul .cube19 {
+  opacity: 0;
+  position: absolute;
+  list-style: none;
+  animation: breath 3s ease infinite;
+  animation-delay: 1.9s;
+}
 body .Upcoming .sectionContent {
   display: flex;
   flex-direction: row;
@@ -173,14 +355,14 @@ body .Upcoming .sectionContent .mention .FutureContent {
   color: #50514f;
   text-align: center;
   font-family: "Lato";
-  font-size: 20px;
+  font-size: 1.5em;
 }
 body .Upcoming .sectionContent .mention .FutureFeature span {
   margin: 0 10px;
   color: #50514f;
   font-family: "Lato";
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1.5em;
 }
 body .Upcoming .sectionContent .mention .FutureBtn {
   margin: 0;
@@ -201,7 +383,7 @@ body .Upcoming .sectionContent .fox img {
 @media screen and (max-width: 768px) {
   body .Upcoming .sectionContent {
     flex-direction: column-reverse;
-    padding: 0 25px;
+    padding: 0;
   }
   body .Upcoming .sectionContent .mention,
   body .Upcoming .sectionContent .fox {
@@ -270,7 +452,7 @@ body .footer .info .NCTUOJ .mention {
 }
 body .footer .info .NCTUOJ .mention p {
   letter-spacing: 1px;
-  font-size: 16px;
+  font-size: 1em;
   opacity: 0.8;
 }
 @media screen and (max-width: 768px) {
@@ -304,14 +486,14 @@ body .footer .info .contactus .contact {
 body .footer .info .contactus .developer h2,
 body .footer .info .contactus .contact h2 {
   font-weight: 600;
-  font-size: 20px;
+  font-size: 1.5em;
   letter-spacing: 3px;
   margin-bottom: 15px;
 }
 body .footer .info .contactus .developer span,
 body .footer .info .contactus .contact span {
   opacity: 0.8;
-  font-size: 16px;
+  font-size: 1em;
   letter-spacing: 1px;
   line-height: 2;
 }
@@ -471,4 +653,48 @@ body .footer .thank .reserve {
 }
 svg path {
   fill: #999;
+}
+@-moz-keyframes breath {
+  0% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.35;
+  }
+}
+@-webkit-keyframes breath {
+  0% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.35;
+  }
+}
+@-o-keyframes breath {
+  0% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.35;
+  }
+}
+@keyframes breath {
+  0% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.35;
+  }
 }

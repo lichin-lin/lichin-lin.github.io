@@ -6,11 +6,11 @@ $footer = #12374B
 $footer_bottom = #122B39
 $white = #F0F0F0
 
-$content_size = 16px
-$Brandon_subtitle_size = 20px
-$Brandon_title_size = 32px
-$Lato_subtitle_size = 18px
-$Lato_title_size = 36px
+$content_size = 1em //16px
+$Brandon_subtitle_size = 1.5em //24px
+$Brandon_title_size = 1.75em
+$Lato_subtitle_size = 1.5em
+$Lato_title_size = 2.5em //40px
 
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,700)
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700)
@@ -61,7 +61,7 @@ body
     .intro
         width: 100vw
         height: 100vh
-        min-height: 600px
+        min-height: 500px
         flexStyle(column, flex-start, center)
         background: linear-gradient(135deg, lighten($blue, 10%), darken($blue,10%))
 
@@ -118,7 +118,7 @@ body
                 margin-top: 20px
                 color: $black
                 position: relative
-                font-size: $Lato_subtitle_size
+                font-size: 0.5em
                 font-weight: normal;
                 font-family: "Lato"
                 letter-spacing: 3px
@@ -143,6 +143,43 @@ body
                     color: $white
         @media screen and (max-width: 768px)
             padding: 50px 25px
+    .Judge
+        position: relative
+        .sectionContent
+            z-index: 1
+            flexStyle(row, center, center)
+            .desktopJudge,
+            .mobileJudge
+                width: 90%
+                display: none
+                img
+                    width: 100%
+                    height: auto
+            .desktopJudge
+                display: block
+            @media screen and (max-width: 768px)
+                .desktopJudge
+                    display: none
+                .mobileJudge
+                    display: block
+        .cubeContent
+            z-index: 0
+            position: absolute
+            width: 100%
+            height: 100%
+            ul
+                position: relative
+                width: 100%
+                height: 100%
+                for i in (0...20)
+                    .cube{i}
+                        opacity: 0
+                        position: absolute
+                        list-style: none
+                        animation: breath 3s ease infinite
+                        animation-delay: .1s*i
+
+
     .Upcoming
         .sectionContent
             flexStyle(row, flex-start, center)
@@ -177,7 +214,7 @@ body
                     height: auto
             @media screen and (max-width:768px)
                 flex-direction: column-reverse
-                padding: 0 25px
+                padding: 0
                 .mention,
                 .fox
                     width: 100%
@@ -189,6 +226,193 @@ body
                         span
                             margin: 0 5px
                             font-size: 16px
+
+    .footer
+        width: auto
+        height: auto
+        min-height: 250px
+        background: $footer
+        padding: 0 50px
+        flexStyle(column, flex-start, center)
+        .info
+            max-width: 1200px
+            width: 100%
+            height: auto
+            color: white
+            margin-top: 50px
+            flexStyle(row, space-between, flex-start)
+            @media screen and (max-width: 768px)
+                flex-direction: column
+                align-items: center
+            .NCTUOJ
+                width: 300px
+                flexStyle(column, flex-start, flex-start)
+                @media screen and (max-width: 768px)
+                    align-items: center
+                    width: 100%
+                .logo
+                    width: 50px
+                    height: 50px
+                    img
+                        width: 100%
+                        height: 100%
+                .mention
+                    margin-top: 10px
+                    p
+                        letter-spacing: 1px
+                        font-size: $content_size
+                        opacity: 0.8
+            .contactus
+                @media screen and (max-width: 768px)
+                    width: 100%
+                    margin-top: 60px
+                    flexStyle(row, space-around, flex-start)
+                    .developer
+                        h2,
+                        span
+                            text-align: center
+                @media screen and (max-width: 480px)
+                    flex-direction: column
+                    .developer
+                        h2,
+                        span
+                            text-align: left
+                .developer, .contact
+                    font-family: 'Brandon'
+                    margin-bottom: 30px
+                    h2
+                        font-weight: 600
+                        font-size: $Brandon_subtitle_size
+                        letter-spacing: 3px
+                        margin-bottom: 15px
+                    span
+                        opacity: 0.8
+                        font-size: $content_size
+                        letter-spacing: 1px
+                        line-height: 2
+        @media screen and (max-width: 768px)
+            padding: 0 25px
+
+        .thank
+            width: 100vw
+            min-height: 50px
+            height: auto
+            color: $white
+            background: $footer_bottom
+            flexStyle(row, center, center)
+            .reserve
+                margin: 20px 20px 10px
+                font-size: 14px
+                font-weight: normal
+                letter-spacing: 2.5px
+                font-family: 'Lato'
+                opacity: 0.8
+            @media screen and (max-width: 768px)
+                .reserve
+                    margin: 0 25px
+.menu
+    position: fixed
+    z-index: 9999
+    width: 100%
+    height: auto
+    padding: 15px 0
+    flexStyle(row, space-between, center)
+    transition: all 0.3s ease
+    border-bottom: 2px solid transparent
+    .title
+        color: white
+        font-size: 2em
+        font-weight: bold
+        letter-spacing: 2px
+        cursor: pointer
+        margin-left: 50px
+    .nav
+        margin-right: 50px
+        flexStyle(row, space-around, center)
+        .language
+            width: 30px
+            height: 30px
+            color: white
+            font-size: 0.9em
+            font-weight: bold
+            border: 2px solid white
+            border-radius: 3px
+            position: relative
+            flexStyle(row, center, center)
+            transform: translateX(-10px);
+            &::after
+                position: absolute
+                content: ''
+                width: 2px
+                height: 20px
+                background: white
+                top 5px
+                left: 40px
+        ul
+            flexStyle(row, space-around, center)
+            li
+                font-family: 'Raleway'
+                color white
+                margin: 0 0 0 20px
+                font-size: 1em
+                font-weight: bold
+                letter-spacing: 1px
+                cursor: pointer
+                list-style: none
+    &.active
+        background: #FFF
+        border-color: $black
+        .title
+            color: $black
+        .nav
+            .language
+                color: $black
+                border-color: $black
+                &::after
+                    background: $black
+            ul
+                li
+                    color: $black
+
+    @media screen and (max-width:768px)
+        flexStyle(row, center, center)
+        .title
+            margin-left: 0
+        .nav
+            display: none
+.orangeBtn
+    width: inherit
+    max-width: 500px
+    height: auto
+    display: block
+    color: white
+    padding: 7.5px 0px
+    margin: 0
+    font-size: 1.25em
+    font-weight: bold
+    letter-spacing: 1.75px
+    cursor: pointer
+    background: linear-gradient(135deg, #EBDB3A, #F7942D)
+    // border: 1px solid transparent
+    border-radius: 5px
+    flexStyle(row, center, center)
+    a
+        text-decoration: none
+        color: $white
+        p
+            color: $white
+
+@keyframes breath
+  0%
+    opacity: 0.35
+  50%
+    opacity: 0.8
+  100%
+    opacity: 0.35
+
+svg path
+    fill: $gray
+
     // .feature
     //     width: 100vw
     //     height: 100vh
@@ -378,181 +602,3 @@ body
     //                 stroke: $gray
     //                 width: 100%
     //                 height: auto
-
-    .footer
-        width: auto
-        height: auto
-        min-height: 250px
-        background: $footer
-        padding: 0 50px
-        flexStyle(column, flex-start, center)
-        .info
-            max-width: 1200px
-            width: 100%
-            height: auto
-            color: white
-            margin-top: 50px
-            flexStyle(row, space-between, flex-start)
-            @media screen and (max-width: 768px)
-                flex-direction: column
-                align-items: center
-            .NCTUOJ
-                width: 300px
-                flexStyle(column, flex-start, flex-start)
-                @media screen and (max-width: 768px)
-                    align-items: center
-                    width: 100%
-                .logo
-                    width: 50px
-                    height: 50px
-                    img
-                        width: 100%
-                        height: 100%
-                .mention
-                    margin-top: 10px
-                    p
-                        letter-spacing: 1px
-                        font-size: $content_size
-                        opacity: 0.8
-            .contactus
-                @media screen and (max-width: 768px)
-                    width: 100%
-                    margin-top: 60px
-                    flexStyle(row, space-around, flex-start)
-                    .developer
-                        h2,
-                        span
-                            text-align: center
-                @media screen and (max-width: 480px)
-                    flex-direction: column
-                    .developer
-                        h2,
-                        span
-                            text-align: left
-                .developer, .contact
-                    font-family: 'Brandon'
-                    margin-bottom: 30px
-                    h2
-                        font-weight: 600
-                        font-size: $Brandon_subtitle_size
-                        letter-spacing: 3px
-                        margin-bottom: 15px
-                    span
-                        opacity: 0.8
-                        font-size: $content_size
-                        letter-spacing: 1px
-                        line-height: 2
-        @media screen and (max-width: 768px)
-            padding: 0 25px
-
-        .thank
-            width: 100vw
-            min-height: 50px
-            height: auto
-            color: $white
-            background: $footer_bottom
-            flexStyle(row, center, center)
-            .reserve
-                margin: 20px 20px 10px
-                font-size: 14px
-                font-weight: normal
-                letter-spacing: 2.5px
-                font-family: 'Lato'
-                opacity: 0.8
-            @media screen and (max-width: 768px)
-                .reserve
-                    margin: 0 25px
-.menu
-    position: fixed
-    z-index: 9999
-    width: 100%
-    height: auto
-    padding: 15px 0
-    flexStyle(row, space-between, center)
-    transition: all 0.3s ease
-    border-bottom: 2px solid transparent
-    .title
-        color: white
-        font-size: 2em
-        font-weight: bold
-        letter-spacing: 2px
-        cursor: pointer
-        margin-left: 50px
-    .nav
-        margin-right: 50px
-        flexStyle(row, space-around, center)
-        .language
-            width: 30px
-            height: 30px
-            color: white
-            font-size: 0.9em
-            font-weight: bold
-            border: 2px solid white
-            border-radius: 3px
-            position: relative
-            flexStyle(row, center, center)
-            transform: translateX(-10px);
-            &::after
-                position: absolute
-                content: ''
-                width: 2px
-                height: 20px
-                background: white
-                top 5px
-                left: 40px
-        ul
-            flexStyle(row, space-around, center)
-            li
-                font-family: 'Raleway'
-                color white
-                margin: 0 0 0 20px
-                font-size: 1em
-                font-weight: bold
-                letter-spacing: 1px
-                cursor: pointer
-                list-style: none
-    &.active
-        background: #FFF
-        border-color: $black
-        .title
-            color: $black
-        .nav
-            .language
-                color: $black
-                border-color: $black
-                &::after
-                    background: $black
-            ul
-                li
-                    color: $black
-
-    @media screen and (max-width:768px)
-        flexStyle(row, center, center)
-        .title
-            margin-left: 0
-        .nav
-            display: none
-.orangeBtn
-    width: inherit
-    max-width: 500px
-    height: auto
-    display: block
-    color: white
-    padding: 7.5px 0px
-    margin: 0
-    font-size: 1.25em
-    font-weight: bold
-    letter-spacing: 1.75px
-    cursor: pointer
-    background: linear-gradient(135deg, #EBDB3A, #F7942D)
-    // border: 1px solid transparent
-    border-radius: 5px
-    flexStyle(row, center, center)
-    a
-        text-decoration: none
-        color: $white
-        p
-            color: $white
-
-svg path
-    fill: $gray

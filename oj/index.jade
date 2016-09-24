@@ -39,20 +39,29 @@ html(lang='en')
                         a(href="https://oj.nctu.me/" target="blank")
                             p
                                 | SIGN UP
-        //- div.featuree.section
-        //-     .info
-        //-         | WHAT ARE <br>THE FEATURE
-        //-         div.subtitle
-        //-             span
-        //-             | By providing such features, we let you enjoy to code<br>without anything more, try it, you will like it! 
-        //-             
-        //- div.Judge.section.reverse
-        //-     .info
-        //-         | JUDGE INTRO.
-        //-         div.subtitle
-        //-             span
-        //-             | simple, but powerful.<br>we bring you to a totally brand new era.
+        div.featuree.section
+            .info
+                | WHAT ARE <br>THE FEATURE
+                div.subtitle
+                    span
+                    | By providing such features, we let you enjoy to code<br>without anything more, try it, you will like it! 
                     
+        div.Judge.section.reverse
+            .info
+                | JUDGE INTRO.
+                div.subtitle
+                    span
+                    | simple, but powerful.<br>we bring you to a totally brand new era.
+            .sectionContent
+                .desktopJudge
+                    img(src="desktopJudge.png", alt="desktopJudge")
+                .mobileJudge
+                    img(src="mobileJudge.png", alt="mobileJudge")
+            .cubeContent
+                ul
+                    - for (var x = 1; x <= 20; x++)
+                        li.cube(class='cube' + x)
+                            img(src="cube.svg", alt="alt")
         div.Upcoming.section
             .info
                 | UP COMING
