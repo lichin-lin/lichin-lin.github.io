@@ -15,37 +15,17 @@ function randomFromToFloat(from, to){
 }
 
 function moveRandom(obj) {
-    /* get container position and size
-     * -- access method : cPos.top and cPos.left */
-    var cPos = $('.cubeContent ul ').offset();
     var cHeight = $('.cubeContent ul').height();
     var cWidth = $('.cubeContent ul').width();
-    // get box padding (assume all padding have same value)
-    var pad = parseInt($('.cubeContent ul').css('padding-top').replace('px', ''));
-
-    console.log(cPos + ", " + cHeight + ", " + cWidth + ", " + pad) ;
-    // get movable box size
-    var bHeight = obj.height();
-    var bWidth = obj.width();
-
-    // set maximum position
-    maxY = cPos.top + cHeight - bHeight - pad;
-    maxX = cPos.left + cWidth - bWidth - pad;
-
-    // set minimum position
-    minY = cPos.top + pad;
-    minX = cPos.left + pad;
-    console.log(maxX + ", " + maxY + ", " + minX + ", " + minY) ;
     // set new position
-    newY = randomFromTo(0, maxY - cHeight);
-    newX = randomFromTo(0, maxX);
+    newY = randomFromTo(0, cHeight);
+    newX = randomFromTo(0, cWidth);
 
     obj.animate({
         top: newY,
         left: newX
         }, 500
     );
-
     scaleSize = randomFromToFloat(1, 5);
     obj.css({
         '-webkit-transform' : 'scale(' + scaleSize + ')',

@@ -109,7 +109,7 @@ body >div.section .info {
   text-align: center;
   color: #50514f;
   position: relative;
-  font-size: 2.5em;
+  font-size: 2.25em;
   font-weight: bold;
   letter-spacing: 5px;
 }
@@ -133,6 +133,7 @@ body >div.section .info .subtitle span {
 }
 body >div.section .sectionContent {
   width: auto;
+  max-width: 1200px;
   height: auto;
   margin-top: 50px;
 }
@@ -149,9 +150,85 @@ body >div.section.reverse .info .subtitle {
   body >div.section {
     padding: 50px 25px;
   }
+  body >div.section .sectionContent {
+    width: 100%;
+  }
+}
+body .Feature .sectionContent {
+  width: 100%;
+}
+body .Feature .sectionContent ul {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+body .Feature .sectionContent ul li {
+  list-style: none;
+  margin: 30px 0;
+  width: 100%;
+}
+body .Feature .sectionContent ul li .featureContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body .Feature .sectionContent ul li .featureContainer .featureImg {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+body .Feature .sectionContent ul li .featureContainer .featureImg img {
+  width: 80%;
+  height: auto;
+}
+body .Feature .sectionContent ul li .featureContainer .featureMention {
+  width: 50%;
+  max-width: 350px;
+  color: #50514f;
+}
+body .Feature .sectionContent ul li .featureContainer .featureMention .title {
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-family: "Brandon";
+  font-size: 1.75em;
+}
+body .Feature .sectionContent ul li .featureContainer .featureMention .content {
+  letter-spacing: 5px;
+  font-family: "Lato";
+  font-size: 1.25em;
+}
+body .Feature .sectionContent ul li:nth-child(2) .featureContainer {
+  flex-direction: row-reverse;
+}
+body .Feature .sectionContent ul li:nth-child(2) .featureContainer .featureMention {
+  text-align: right;
+}
+@media screen and (max-width: 768px) {
+  body .Feature .sectionContent ul li .featureContainer,
+  body .Feature .sectionContent ul li:nth-child(2) .featureContainer {
+    flex-direction: column !important;
+  }
+  body .Feature .sectionContent ul li .featureContainer .featureImg,
+  body .Feature .sectionContent ul li:nth-child(2) .featureContainer .featureImg {
+    width: 50%;
+    min-width: 200px;
+  }
+  body .Feature .sectionContent ul li .featureContainer .featureMention,
+  body .Feature .sectionContent ul li:nth-child(2) .featureContainer .featureMention {
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+  }
 }
 body .Judge {
   position: relative;
+  overflow: hidden;
 }
 body .Judge .sectionContent {
   z-index: 1;
@@ -332,6 +409,13 @@ body .Judge .cubeContent ul .cube19 {
   animation: breath 3s ease infinite;
   animation-delay: 1.9s;
 }
+body .Judge .cubeContent ul .cube20 {
+  opacity: 0;
+  position: absolute;
+  list-style: none;
+  animation: breath 3s ease infinite;
+  animation-delay: 2s;
+}
 body .Upcoming .sectionContent {
   display: flex;
   flex-direction: row;
@@ -355,14 +439,14 @@ body .Upcoming .sectionContent .mention .FutureContent {
   color: #50514f;
   text-align: center;
   font-family: "Lato";
-  font-size: 1.5em;
+  font-size: 1.25em;
 }
 body .Upcoming .sectionContent .mention .FutureFeature span {
   margin: 0 10px;
   color: #50514f;
   font-family: "Lato";
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.25em;
 }
 body .Upcoming .sectionContent .mention .FutureBtn {
   margin: 0;
@@ -486,7 +570,7 @@ body .footer .info .contactus .contact {
 body .footer .info .contactus .developer h2,
 body .footer .info .contactus .contact h2 {
   font-weight: 600;
-  font-size: 1.5em;
+  font-size: 1.25em;
   letter-spacing: 3px;
   margin-bottom: 15px;
 }

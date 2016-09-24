@@ -39,12 +39,42 @@ html(lang='en')
                         a(href="https://oj.nctu.me/" target="blank")
                             p
                                 | SIGN UP
-        div.featuree.section
+        div.Feature.section
             .info
                 | WHAT ARE <br>THE FEATURE
                 div.subtitle
                     span
                     | By providing such features, we let you enjoy to code<br>without anything more, try it, you will like it! 
+            .sectionContent
+                ul
+                    li
+                        .featureContainer
+                            .featureImg
+                                img(src="f1.svg", alt="alt")
+                            .featureMention
+                                .title
+                                    | High Scalability
+                                .content
+                                    | Use docker to seperate database and server, We will hold Nginx to the backward analysis.
+                    li
+                        .featureContainer
+                            .featureImg
+                                img(src="f2.svg", alt="alt")
+                            .featureMention
+                                .title
+                                    | High Security
+                                .content
+                                    | Cover Judge`s core with sandbox, and use docker at the outside to make sure the security.
+                            
+                    li
+                        .featureContainer
+                            .featureImg
+                                img(src="f3.svg", alt="alt")
+                            .featureMention
+                                .title
+                                    | High Speed
+                                .content
+                                    | We make sure that each query`s running time will less than 100ms.
                     
         div.Judge.section.reverse
             .info
@@ -59,7 +89,7 @@ html(lang='en')
                     img(src="mobileJudge.png", alt="mobileJudge")
             .cubeContent
                 ul
-                    - for (var x = 1; x <= 20; x++)
+                    - for (var x = 1; x <= 16; x++)
                         li.cube(class='cube' + x)
                             img(src="cube.svg", alt="alt")
         div.Upcoming.section
