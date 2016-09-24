@@ -28,12 +28,11 @@ function moveRandom(obj) {
     );
     scaleSize = randomFromToFloat(1, 5);
     obj.css({
-        '-webkit-transform' : 'scale(' + scaleSize + ')',
-        '-moz-transform'    : 'scale(' + scaleSize + ')',
-        '-ms-transform'     : 'scale(' + scaleSize + ')',
-        '-o-transform'      : 'scale(' + scaleSize + ')',
-        'transform'         : 'scale(' + scaleSize + ')',
-        'transform'         : 'rotate('+ (scaleSize) * 30 +'deg)',
+        '-webkit-transform' : 'scale(' + scaleSize + ') rotate('+ (scaleSize) * 30 +'deg)',
+        '-moz-transform'    : 'scale(' + scaleSize + ') rotate('+ (scaleSize) * 30 +'deg)',
+        '-ms-transform'     : 'scale(' + scaleSize + ') rotate('+ (scaleSize) * 30 +'deg)',
+        '-o-transform'      : 'scale(' + scaleSize + ') rotate('+ (scaleSize) * 30 +'deg)',
+        'transform'         : 'scale(' + scaleSize + ') rotate('+ (scaleSize) * 30 +'deg)',
     });
 }
 
