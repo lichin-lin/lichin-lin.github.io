@@ -1,3 +1,8 @@
+// @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700)
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,700)
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700)
+
+
 $blue = #1CA6F3
 $orange = #FFB465
 $black = #50514F
@@ -6,14 +11,15 @@ $footer = #12374B
 $footer_bottom = #122B39
 $white = #F0F0F0
 
+$title_font = "Brandon"
+$sub_font = "Open Sans"
+
 $content_size = 1em //16px
 $Brandon_subtitle_size = 1.25em //24px
 $Brandon_title_size = 1.75em
 $Lato_subtitle_size = 1.75em
 $Lato_title_size = 2.25em //40px
 
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,700)
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700)
 @font-face
     font-family 'Brandon'
     src url('Brandon_blk.otf')
@@ -50,18 +56,23 @@ flexStyle(a, b, c)
     justify-content: b
     align-items: c
 
+a
+    text-decoration: none
+    color: $white
+
 *
     padding: 0
     margin: 0
-    font-family: 'Brandon', cursive;
+    font-family: $title_font, cursive;
     transition: all 0.3s ease
 body
     width: 100%
     height: 100%
     .intro
-        width: 100vw
+        width: auto
         height: 100vh
         min-height: 500px
+        padding: 0 25px
         flexStyle(column, flex-start, center)
         background: linear-gradient(135deg, lighten($blue, 10%), darken($blue,10%))
 
@@ -98,8 +109,12 @@ body
                     display: none
                 .signbox
                     width: 100%
+                    margin: 0
+                    .welcome
+                        span
+                            font-size: 2em
                     .signup
-                        margin: 10px 0 0 15px
+                        margin: 0
     >div.section
         width: auto
         height: auto
@@ -120,8 +135,8 @@ body
                 position: relative
                 font-size: 0.5em
                 font-weight: normal;
-                font-family: "Lato"
-                letter-spacing: 3px
+                font-family: $sub_font
+                letter-spacing: 1px
                 span
                     position: absolute
                     content: ''
@@ -147,7 +162,7 @@ body
             .sectionContent
                 width: 100%
 
-    .Feature
+    #Feature
         .sectionContent
             width: 100%
             ul
@@ -156,7 +171,7 @@ body
                 flexStyle(column, center, flex-start)
                 li
                     list-style: none
-                    margin: 30px 0
+                    margin: 50px 0
                     width: 100%
                     .featureContainer
                         flexStyle(row, center, center)
@@ -173,12 +188,12 @@ body
                             .title
                                 letter-spacing: 3px
                                 font-weight: bold;
-                                font-family: "Brandon"
+                                font-family: $title_font
                                 font-size: $Lato_subtitle_size
                             .content
-                                letter-spacing: 5px
-                                font-family: "Lato"
-                                font-size: $Brandon_subtitle_size
+                                letter-spacing: 1px
+                                font-family: $sub_font
+                                font-size: $content_size
                 li:nth-child(2)
                     .featureContainer
                         flex-direction: row-reverse
@@ -196,7 +211,7 @@ body
                                 text-align: center;
                                 width: 100%
                                 max-width: 100%
-    .Judge
+    #Judge
         // display: none !important
         position: relative
         overflow: hidden
@@ -228,14 +243,16 @@ body
                 height: 100%
                 for i in (0...21)
                     .cube{i}
-                        opacity: 0
+                        opacity: 1
                         position: absolute
                         list-style: none
-                        animation: breath 3s ease infinite
-                        animation-delay: .1s*i
+                        img
+                            opacity: 0
+                            animation: breath 3s linear infinite
+                            animation-delay: .1s*i
 
 
-    .Upcoming
+    #Upcoming
         .sectionContent
             flexStyle(row, flex-start, center)
             padding: 0 50px
@@ -249,13 +266,13 @@ body
                     width: 80%
                     color: $black
                     text-align: center
-                    font-family: "Lato"
+                    font-family: $sub_font
                     font-size: $Brandon_subtitle_size
                 .FutureFeature
                     span
                         margin: 0 10px
                         color: $black
-                        font-family: "Lato"
+                        font-family: $sub_font
                         font-weight: bold
                         font-size: $Brandon_subtitle_size
                 .FutureBtn
@@ -333,7 +350,7 @@ body
                         span
                             text-align: left
                 .developer, .contact
-                    font-family: 'Brandon'
+                    font-family: $title_font
                     margin-bottom: 30px
                     h2
                         font-weight: 600
@@ -406,14 +423,16 @@ body
         ul
             flexStyle(row, space-around, center)
             li
-                font-family: 'Raleway'
-                color white
-                margin: 0 0 0 20px
-                font-size: 1em
-                font-weight: bold
-                letter-spacing: 1px
-                cursor: pointer
                 list-style: none
+                a
+                    font-family: 'Raleway'
+                    color white
+                    margin: 0 0 0 20px
+                    font-size: 1em
+                    font-weight: bold
+                    letter-spacing: 1px
+                    cursor: pointer
+
     &.active
         background: #FFF
         border-color: $black
@@ -427,7 +446,8 @@ body
                     background: $black
             ul
                 li
-                    color: $black
+                    a
+                        color: $black
 
     @media screen and (max-width:768px)
         flexStyle(row, center, center)
@@ -459,11 +479,14 @@ body
 
 @keyframes breath
   0%
+    // transform: translateY(-3px);
     opacity: 0.35
   50%
     opacity: 0.8
+    // transform: translateY(3px);
   100%
     opacity: 0.35
+    // transform: translateY(-3px);
 
 svg path
     fill: $gray
@@ -486,7 +509,7 @@ svg path
     //                 font-size: 2.75em
     //                 font-weight: bold
     //                 letter-spacing: 3px
-    //                 font-family: 'Brandon', cursive;
+    //                 font-family: $title_font, cursive;
     //                 margin: 10px 0
     //             &::after
     //                 position: absolute
@@ -603,7 +626,7 @@ svg path
     //                             font-size: 2.75em
     //                             font-weight: bold
     //                             letter-spacing: 3px
-    //                             font-family: 'Brandon', cursive;
+    //                             font-family: $title_font, cursive;
     //                             margin: 10px 0
     //                         &::after
     //                             position: absolute
@@ -635,7 +658,7 @@ svg path
     //             position: relative
     //             font-size: $Lato_subtitle_size
     //             font-weight: normal;
-    //             font-family: "Lato"
+    //             font-family: $sub_font
     //             span
     //                 position: absolute
     //                 content: ''

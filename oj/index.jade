@@ -5,6 +5,7 @@ html(lang='en')
         meta(name='viewport', content='width=device-width, initial-scale=1.0')
         title Document
         link(rel="stylesheet" type="text/css" href="style.css")
+        link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js")
     body
         .menu
@@ -15,13 +16,17 @@ html(lang='en')
                     | EN
                 ul
                     li
-                        | feature
+                        a(href="#Feature")
+                            | feature
                     li
-                        | Contest
+                        a(href="#Judge")
+                            | Judge
                     li
-                        | Partner
+                        a(href="#Upcoming")
+                            | Upcoming
                     li
-                        | Contact Us
+                        a(href="#Contact")
+                            | Contact Us
         div.intro
 
             .info
@@ -39,7 +44,7 @@ html(lang='en')
                         a(href="https://oj.nctu.me/" target="blank")
                             p
                                 | SIGN UP
-        div.Feature.section
+        #Feature.section
             .info
                 | WHAT ARE <br>THE FEATURE
                 div.subtitle
@@ -76,7 +81,7 @@ html(lang='en')
                                 .content
                                     | We make sure that each query`s running time will less than 100ms.
                     
-        div.Judge.section.reverse
+        #Judge.section.reverse
             .info
                 | JUDGE INTRO.
                 div.subtitle
@@ -89,10 +94,10 @@ html(lang='en')
                     img(src="mobileJudge.png", alt="mobileJudge")
             .cubeContent
                 ul
-                    - for (var x = 1; x <= 16; x++)
+                    - for (var x = 1; x <= 8; x++)
                         li.cube(class='cube' + x)
                             img(src="cube.svg", alt="alt")
-        div.Upcoming.section
+        #Upcoming.section
             .info
                 | UP COMING
                 div.subtitle
@@ -104,11 +109,11 @@ html(lang='en')
                             | We received a slew of new features in the past few months and is set to get many more in the near future…
                     .FutureFeature
                         span
-                            | Community
+                            | Friend
                         span
                             | |
                         span
-                            | Friend
+                            | Community
                         span
                             | |
                         span
@@ -218,7 +223,7 @@ html(lang='en')
         //-             img(src="dropbox.svg")
         //-         .part 
         //-             img(src="amazon.svg")
-        div.footer
+        div.footer#Contact
             .info
                 .NCTUOJ
                     .logo

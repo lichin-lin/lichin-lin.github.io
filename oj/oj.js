@@ -6,6 +6,14 @@ $(window).scroll(function() {
   }
 });
 
+$(document).on('click', 'a', function(event){
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top - 70
+    }, 750);
+});
+
 function randomFromTo(from, to){
     return Math.floor(Math.random() * (to - from + 1) + from);
 }

@@ -18,10 +18,14 @@
   src: url("Brandon_light.otf") format('embedded-opentype'), url("Brandon_light.otf") format('woff2'), url("Brandon_light.otf") format('woff'), url("Brandon_light.otf") format('truetype'), url("Brandon_light.otf") format('svg');
   font-weight: lighter;
 }
+a {
+  text-decoration: none;
+  color: #f0f0f0;
+}
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Brandon', cursive;
+  font-family: "Brandon", cursive;
   transition: all 0.3s ease;
 }
 body {
@@ -29,9 +33,10 @@ body {
   height: 100%;
 }
 body .intro {
-  width: 100vw;
+  width: auto;
   height: 100vh;
   min-height: 500px;
+  padding: 0 25px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -90,9 +95,13 @@ body .intro .info .signbox .signup {
   }
   body .intro .info .signbox {
     width: 100%;
+    margin: 0;
+  }
+  body .intro .info .signbox .welcome span {
+    font-size: 2em;
   }
   body .intro .info .signbox .signup {
-    margin: 10px 0 0 15px;
+    margin: 0;
   }
 }
 body >div.section {
@@ -119,8 +128,8 @@ body >div.section .info .subtitle {
   position: relative;
   font-size: 0.5em;
   font-weight: normal;
-  font-family: "Lato";
-  letter-spacing: 3px;
+  font-family: "Open Sans";
+  letter-spacing: 1px;
 }
 body >div.section .info .subtitle span {
   position: absolute;
@@ -154,10 +163,10 @@ body >div.section.reverse .info .subtitle {
     width: 100%;
   }
 }
-body .Feature .sectionContent {
+body #Feature .sectionContent {
   width: 100%;
 }
-body .Feature .sectionContent ul {
+body #Feature .sectionContent ul {
   width: 100%;
   height: auto;
   display: flex;
@@ -165,321 +174,382 @@ body .Feature .sectionContent ul {
   justify-content: center;
   align-items: flex-start;
 }
-body .Feature .sectionContent ul li {
+body #Feature .sectionContent ul li {
   list-style: none;
-  margin: 30px 0;
+  margin: 50px 0;
   width: 100%;
 }
-body .Feature .sectionContent ul li .featureContainer {
+body #Feature .sectionContent ul li .featureContainer {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-body .Feature .sectionContent ul li .featureContainer .featureImg {
+body #Feature .sectionContent ul li .featureContainer .featureImg {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 50%;
 }
-body .Feature .sectionContent ul li .featureContainer .featureImg img {
+body #Feature .sectionContent ul li .featureContainer .featureImg img {
   width: 80%;
   height: auto;
 }
-body .Feature .sectionContent ul li .featureContainer .featureMention {
+body #Feature .sectionContent ul li .featureContainer .featureMention {
   width: 50%;
   max-width: 350px;
   color: #50514f;
 }
-body .Feature .sectionContent ul li .featureContainer .featureMention .title {
+body #Feature .sectionContent ul li .featureContainer .featureMention .title {
   letter-spacing: 3px;
   font-weight: bold;
   font-family: "Brandon";
   font-size: 1.75em;
 }
-body .Feature .sectionContent ul li .featureContainer .featureMention .content {
-  letter-spacing: 5px;
-  font-family: "Lato";
-  font-size: 1.25em;
+body #Feature .sectionContent ul li .featureContainer .featureMention .content {
+  letter-spacing: 1px;
+  font-family: "Open Sans";
+  font-size: 1em;
 }
-body .Feature .sectionContent ul li:nth-child(2) .featureContainer {
+body #Feature .sectionContent ul li:nth-child(2) .featureContainer {
   flex-direction: row-reverse;
 }
-body .Feature .sectionContent ul li:nth-child(2) .featureContainer .featureMention {
+body #Feature .sectionContent ul li:nth-child(2) .featureContainer .featureMention {
   text-align: right;
 }
 @media screen and (max-width: 768px) {
-  body .Feature .sectionContent ul li .featureContainer,
-  body .Feature .sectionContent ul li:nth-child(2) .featureContainer {
+  body #Feature .sectionContent ul li .featureContainer,
+  body #Feature .sectionContent ul li:nth-child(2) .featureContainer {
     flex-direction: column !important;
   }
-  body .Feature .sectionContent ul li .featureContainer .featureImg,
-  body .Feature .sectionContent ul li:nth-child(2) .featureContainer .featureImg {
+  body #Feature .sectionContent ul li .featureContainer .featureImg,
+  body #Feature .sectionContent ul li:nth-child(2) .featureContainer .featureImg {
     width: 50%;
     min-width: 200px;
   }
-  body .Feature .sectionContent ul li .featureContainer .featureMention,
-  body .Feature .sectionContent ul li:nth-child(2) .featureContainer .featureMention {
+  body #Feature .sectionContent ul li .featureContainer .featureMention,
+  body #Feature .sectionContent ul li:nth-child(2) .featureContainer .featureMention {
     text-align: center;
     width: 100%;
     max-width: 100%;
   }
 }
-body .Judge {
+body #Judge {
   position: relative;
   overflow: hidden;
 }
-body .Judge .sectionContent {
+body #Judge .sectionContent {
   z-index: 1;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-body .Judge .sectionContent .desktopJudge,
-body .Judge .sectionContent .mobileJudge {
+body #Judge .sectionContent .desktopJudge,
+body #Judge .sectionContent .mobileJudge {
   width: 90%;
   display: none;
 }
-body .Judge .sectionContent .desktopJudge img,
-body .Judge .sectionContent .mobileJudge img {
+body #Judge .sectionContent .desktopJudge img,
+body #Judge .sectionContent .mobileJudge img {
   width: 100%;
   height: auto;
 }
-body .Judge .sectionContent .desktopJudge {
+body #Judge .sectionContent .desktopJudge {
   display: block;
 }
 @media screen and (max-width: 768px) {
-  body .Judge .sectionContent .desktopJudge {
+  body #Judge .sectionContent .desktopJudge {
     display: none;
   }
-  body .Judge .sectionContent .mobileJudge {
+  body #Judge .sectionContent .mobileJudge {
     display: block;
   }
 }
-body .Judge .cubeContent {
+body #Judge .cubeContent {
   z-index: 0;
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
 }
-body .Judge .cubeContent ul {
+body #Judge .cubeContent ul {
   position: relative;
   width: 100%;
   height: 100%;
 }
-body .Judge .cubeContent ul .cube0 {
-  opacity: 0;
+body #Judge .cubeContent ul .cube0 {
+  opacity: 1;
   position: absolute;
   list-style: none;
-  animation: breath 3s ease infinite;
+}
+body #Judge .cubeContent ul .cube0 img {
+  opacity: 0;
+  animation: breath 3s linear infinite;
   animation-delay: 0s;
 }
-body .Judge .cubeContent ul .cube1 {
-  opacity: 0;
+body #Judge .cubeContent ul .cube1 {
+  opacity: 1;
   position: absolute;
   list-style: none;
-  animation: breath 3s ease infinite;
+}
+body #Judge .cubeContent ul .cube1 img {
+  opacity: 0;
+  animation: breath 3s linear infinite;
   animation-delay: 0.1s;
 }
-body .Judge .cubeContent ul .cube2 {
-  opacity: 0;
+body #Judge .cubeContent ul .cube2 {
+  opacity: 1;
   position: absolute;
   list-style: none;
-  animation: breath 3s ease infinite;
+}
+body #Judge .cubeContent ul .cube2 img {
+  opacity: 0;
+  animation: breath 3s linear infinite;
   animation-delay: 0.2s;
 }
-body .Judge .cubeContent ul .cube3 {
-  opacity: 0;
+body #Judge .cubeContent ul .cube3 {
+  opacity: 1;
   position: absolute;
   list-style: none;
-  animation: breath 3s ease infinite;
+}
+body #Judge .cubeContent ul .cube3 img {
+  opacity: 0;
+  animation: breath 3s linear infinite;
   animation-delay: 0.3s;
 }
-body .Judge .cubeContent ul .cube4 {
-  opacity: 0;
+body #Judge .cubeContent ul .cube4 {
+  opacity: 1;
   position: absolute;
   list-style: none;
-  animation: breath 3s ease infinite;
+}
+body #Judge .cubeContent ul .cube4 img {
+  opacity: 0;
+  animation: breath 3s linear infinite;
   animation-delay: 0.4s;
 }
-body .Judge .cubeContent ul .cube5 {
-  opacity: 0;
+body #Judge .cubeContent ul .cube5 {
+  opacity: 1;
   position: absolute;
   list-style: none;
-  animation: breath 3s ease infinite;
+}
+body #Judge .cubeContent ul .cube5 img {
+  opacity: 0;
+  animation: breath 3s linear infinite;
   animation-delay: 0.5s;
 }
-body .Judge .cubeContent ul .cube6 {
-  opacity: 0;
+body #Judge .cubeContent ul .cube6 {
+  opacity: 1;
   position: absolute;
   list-style: none;
-  animation: breath 3s ease infinite;
+}
+body #Judge .cubeContent ul .cube6 img {
+  opacity: 0;
+  animation: breath 3s linear infinite;
   animation-delay: 0.6s;
 }
-body .Judge .cubeContent ul .cube7 {
-  opacity: 0;
+body #Judge .cubeContent ul .cube7 {
+  opacity: 1;
   position: absolute;
   list-style: none;
-  animation: breath 3s ease infinite;
+}
+body #Judge .cubeContent ul .cube7 img {
+  opacity: 0;
+  animation: breath 3s linear infinite;
   animation-delay: 0.7s;
 }
-body .Judge .cubeContent ul .cube8 {
-  opacity: 0;
+body #Judge .cubeContent ul .cube8 {
+  opacity: 1;
   position: absolute;
   list-style: none;
-  animation: breath 3s ease infinite;
+}
+body #Judge .cubeContent ul .cube8 img {
+  opacity: 0;
+  animation: breath 3s linear infinite;
   animation-delay: 0.8s;
 }
-body .Judge .cubeContent ul .cube9 {
-  opacity: 0;
+body #Judge .cubeContent ul .cube9 {
+  opacity: 1;
   position: absolute;
   list-style: none;
-  animation: breath 3s ease infinite;
+}
+body #Judge .cubeContent ul .cube9 img {
+  opacity: 0;
+  animation: breath 3s linear infinite;
   animation-delay: 0.9s;
 }
-body .Judge .cubeContent ul .cube10 {
-  opacity: 0;
+body #Judge .cubeContent ul .cube10 {
+  opacity: 1;
   position: absolute;
   list-style: none;
-  animation: breath 3s ease infinite;
+}
+body #Judge .cubeContent ul .cube10 img {
+  opacity: 0;
+  animation: breath 3s linear infinite;
   animation-delay: 1s;
 }
-body .Judge .cubeContent ul .cube11 {
-  opacity: 0;
+body #Judge .cubeContent ul .cube11 {
+  opacity: 1;
   position: absolute;
   list-style: none;
-  animation: breath 3s ease infinite;
+}
+body #Judge .cubeContent ul .cube11 img {
+  opacity: 0;
+  animation: breath 3s linear infinite;
   animation-delay: 1.1s;
 }
-body .Judge .cubeContent ul .cube12 {
-  opacity: 0;
+body #Judge .cubeContent ul .cube12 {
+  opacity: 1;
   position: absolute;
   list-style: none;
-  animation: breath 3s ease infinite;
+}
+body #Judge .cubeContent ul .cube12 img {
+  opacity: 0;
+  animation: breath 3s linear infinite;
   animation-delay: 1.2s;
 }
-body .Judge .cubeContent ul .cube13 {
-  opacity: 0;
+body #Judge .cubeContent ul .cube13 {
+  opacity: 1;
   position: absolute;
   list-style: none;
-  animation: breath 3s ease infinite;
+}
+body #Judge .cubeContent ul .cube13 img {
+  opacity: 0;
+  animation: breath 3s linear infinite;
   animation-delay: 1.3s;
 }
-body .Judge .cubeContent ul .cube14 {
-  opacity: 0;
+body #Judge .cubeContent ul .cube14 {
+  opacity: 1;
   position: absolute;
   list-style: none;
-  animation: breath 3s ease infinite;
+}
+body #Judge .cubeContent ul .cube14 img {
+  opacity: 0;
+  animation: breath 3s linear infinite;
   animation-delay: 1.4s;
 }
-body .Judge .cubeContent ul .cube15 {
-  opacity: 0;
+body #Judge .cubeContent ul .cube15 {
+  opacity: 1;
   position: absolute;
   list-style: none;
-  animation: breath 3s ease infinite;
+}
+body #Judge .cubeContent ul .cube15 img {
+  opacity: 0;
+  animation: breath 3s linear infinite;
   animation-delay: 1.5s;
 }
-body .Judge .cubeContent ul .cube16 {
-  opacity: 0;
+body #Judge .cubeContent ul .cube16 {
+  opacity: 1;
   position: absolute;
   list-style: none;
-  animation: breath 3s ease infinite;
+}
+body #Judge .cubeContent ul .cube16 img {
+  opacity: 0;
+  animation: breath 3s linear infinite;
   animation-delay: 1.6s;
 }
-body .Judge .cubeContent ul .cube17 {
-  opacity: 0;
+body #Judge .cubeContent ul .cube17 {
+  opacity: 1;
   position: absolute;
   list-style: none;
-  animation: breath 3s ease infinite;
+}
+body #Judge .cubeContent ul .cube17 img {
+  opacity: 0;
+  animation: breath 3s linear infinite;
   animation-delay: 1.7s;
 }
-body .Judge .cubeContent ul .cube18 {
-  opacity: 0;
+body #Judge .cubeContent ul .cube18 {
+  opacity: 1;
   position: absolute;
   list-style: none;
-  animation: breath 3s ease infinite;
+}
+body #Judge .cubeContent ul .cube18 img {
+  opacity: 0;
+  animation: breath 3s linear infinite;
   animation-delay: 1.8s;
 }
-body .Judge .cubeContent ul .cube19 {
-  opacity: 0;
+body #Judge .cubeContent ul .cube19 {
+  opacity: 1;
   position: absolute;
   list-style: none;
-  animation: breath 3s ease infinite;
+}
+body #Judge .cubeContent ul .cube19 img {
+  opacity: 0;
+  animation: breath 3s linear infinite;
   animation-delay: 1.9s;
 }
-body .Judge .cubeContent ul .cube20 {
-  opacity: 0;
+body #Judge .cubeContent ul .cube20 {
+  opacity: 1;
   position: absolute;
   list-style: none;
-  animation: breath 3s ease infinite;
+}
+body #Judge .cubeContent ul .cube20 img {
+  opacity: 0;
+  animation: breath 3s linear infinite;
   animation-delay: 2s;
 }
-body .Upcoming .sectionContent {
+body #Upcoming .sectionContent {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   padding: 0 50px;
 }
-body .Upcoming .sectionContent .mention,
-body .Upcoming .sectionContent .fox {
+body #Upcoming .sectionContent .mention,
+body #Upcoming .sectionContent .fox {
   width: 50%;
   height: auto;
 }
-body .Upcoming .sectionContent .mention {
+body #Upcoming .sectionContent .mention {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
-body .Upcoming .sectionContent .mention .FutureContent {
+body #Upcoming .sectionContent .mention .FutureContent {
   width: 80%;
   color: #50514f;
   text-align: center;
-  font-family: "Lato";
+  font-family: "Open Sans";
   font-size: 1.25em;
 }
-body .Upcoming .sectionContent .mention .FutureFeature span {
+body #Upcoming .sectionContent .mention .FutureFeature span {
   margin: 0 10px;
   color: #50514f;
-  font-family: "Lato";
+  font-family: "Open Sans";
   font-weight: bold;
   font-size: 1.25em;
 }
-body .Upcoming .sectionContent .mention .FutureBtn {
+body #Upcoming .sectionContent .mention .FutureBtn {
   margin: 0;
 }
-body .Upcoming .sectionContent .mention >div {
+body #Upcoming .sectionContent .mention >div {
   margin-bottom: 30px;
 }
-body .Upcoming .sectionContent .fox {
+body #Upcoming .sectionContent .fox {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-body .Upcoming .sectionContent .fox img {
+body #Upcoming .sectionContent .fox img {
   width: 60%;
   height: auto;
 }
 @media screen and (max-width: 768px) {
-  body .Upcoming .sectionContent {
+  body #Upcoming .sectionContent {
     flex-direction: column-reverse;
     padding: 0;
   }
-  body .Upcoming .sectionContent .mention,
-  body .Upcoming .sectionContent .fox {
+  body #Upcoming .sectionContent .mention,
+  body #Upcoming .sectionContent .fox {
     width: 100%;
     margin-bottom: 30px;
     height: auto;
   }
 }
 @media screen and (max-width: 480px) {
-  body .Upcoming .sectionContent .mention .FutureFeature span {
+  body #Upcoming .sectionContent .mention .FutureFeature span {
     margin: 0 5px;
     font-size: 16px;
   }
@@ -566,7 +636,7 @@ body .footer .info .NCTUOJ .mention p {
 }
 body .footer .info .contactus .developer,
 body .footer .info .contactus .contact {
-  font-family: 'Brandon';
+  font-family: "Brandon";
   margin-bottom: 30px;
 }
 body .footer .info .contactus .developer h2,
@@ -671,6 +741,9 @@ body .footer .thank .reserve {
   align-items: center;
 }
 .menu .nav ul li {
+  list-style: none;
+}
+.menu .nav ul li a {
   font-family: 'Raleway';
   color: #fff;
   margin: 0 0 0 20px;
@@ -678,7 +751,6 @@ body .footer .thank .reserve {
   font-weight: bold;
   letter-spacing: 1px;
   cursor: pointer;
-  list-style: none;
 }
 .menu.active {
   background: #fff;
@@ -694,7 +766,7 @@ body .footer .thank .reserve {
 .menu.active .nav .language::after {
   background: #50514f;
 }
-.menu.active .nav ul li {
+.menu.active .nav ul li a {
   color: #50514f;
 }
 @media screen and (max-width: 768px) {
