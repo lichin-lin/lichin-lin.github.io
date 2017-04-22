@@ -1,4 +1,4 @@
-@import url("/assets/font/Fenton-Medium.otf");
+@import url("/assets/font/Brandon_med.otf");
 @font-face {
   font-family: Lobster;
   src: url("/assets/font/Lobster.otf");
@@ -13,14 +13,17 @@ body {
   margin: 0px;
 }
 @font-face {
-  font-family: 'Fenton-Medium';
-  src: url("/assets/font/Fenton-Medium.otf");
-  src: url("/assets/font/Fenton-Medium.otf") format('embedded-opentype'), url("/assets/font/Fenton-Medium.otf") format('woff2'), url("/assets/font/Fenton-Medium.otf") format('woff'), url("/assets/font/Fenton-Medium.otf") format('truetype'), url("/assets/font/Fenton-Medium.otf") format('svg');
+  font-family: 'Brandon_med';
+  src: url("/assets/font/Brandon_med.otf");
+  src: url("/assets/font/Brandon_med.otf") format('embedded-opentype'), url("/assets/font/Brandon_med.otf") format('woff2'), url("/assets/font/Brandon_med.otf") format('woff'), url("/assets/font/Brandon_med.otf") format('truetype'), url("/assets/font/Brandon_med.otf") format('svg');
 }
 h1,
 h3,
 span {
-  font-family: 'Fenton-Medium', sans-serif;
+  font-family: 'Brandon_med', sans-serif;
+}
+.gist span {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 p {
   line-height: 25px;
@@ -34,7 +37,7 @@ code {
 }
 ul{
   list-style: none;
-	margin:0 0 10px 0;
+    margin:0 0 10px 0;
 }
 .js-line-number,.js-file-line{
   font-size:14px !important;
@@ -143,7 +146,7 @@ footer{
   border:3px solid transparent;
   padding:5px;
   position: relative;
-  font-family:"Fenton-Medium";
+  font-family:"Brandon_med";
 }
 .logo-header .nav a:after{
   position: absolute;
@@ -177,12 +180,12 @@ footer{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family:"Fenton-Medium";
+  font-family:"Brandon_med";
   min-height: 350px;
 }
 .back-img h1{
   font-size: 64px;
-  font-family:"Fenton-Medium";
+  font-family:"Brandon_med";
 }
 .back-img p{
   font-size: 24px;
@@ -199,7 +202,7 @@ footer{
   margin-bottom: 10px;
 }
 .Typing span{
-  font-family: "Fenton-Medium";
+  font-family: "Brandon_med";
 }
 .about-me{
   border:3px solid #50514f;
@@ -213,7 +216,7 @@ footer{
   margin:0;
 }
 .Julie-Alert{
-  font-family: "Fenton-Medium";
+  font-family: "Brandon_med";
 }
 .Julie-Alert h2,button{
   font-family: "Lobster" !important;
@@ -257,7 +260,7 @@ footer{
 .topbar .topbar-topic h1{
   display: inline-block;
   position: relative;
-  font-family: "Fenton-Medium";
+  font-family: "Brandon_med";
   color: #e45d5a;
   font-size: 24px;
   text-align: center;
@@ -527,7 +530,7 @@ blockquote p {
   margin: 20px 0 0 0;
   padding: 0;
   position: relative;
-  font-family: 'Fenton-Medium';
+  font-family: 'Brandon_med';
   font-size: 24px;
 }
 .info-content .intro-box .title:after {
