@@ -1,4 +1,3 @@
-# 林立秦<br />Li-Chin Lin's Resume 
 # Resume 
 
 ## 基本資料<br>Basic Information
@@ -24,6 +23,7 @@
 		</tr>
 	</tbody>
 </table>
+<br /><br /><br />
 
 ## 經驗概敘<br>Experience Summary
 ### 程式語言 <br/> Programming Language
@@ -33,7 +33,7 @@
 * HTML / CSS / javascript (Frontend development)
 * 前端開發以 React / Webpack 為主
 * 後端開發以 Python / Flask 為主，前後端分離
-
+<br /><br />
 
 ### 介面設計 <br/> UI/UX Design
 清單為過去曾接觸過的設計工具
@@ -41,6 +41,7 @@
 * InVision / Marvel App (Prototyping tool)
 * Plantapp (Verson control)
 * Maze (Usability testing)
+<br /><br />
 
 ### 經歷<br />Experiences
 
@@ -48,7 +49,7 @@
 * 
 #### Frontend
 * 
-
+<br /><br /><br />
 ## 個人作品 <br/> Personal Works
 本人的大多數個人／參與之第三方專案皆放置於 Github 上:  
 [https://github.com/lichin-lin](https://github.com/lichin-lin)
