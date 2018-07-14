@@ -80,6 +80,9 @@
 	* React / Redux / Firebase as api server
 	* Website: http://internlens.com/
 	* Github repo: https://github.com/internlens-tw/InternLens
+	
+* 前端以 React / Redux 為主，接觸過圖表、dashboard 等等開發經驗， 介面使用過 antd、material-ui 也能獨立完成客製化內容
+<br /><br />
 
 #### Backend
 * 2018/04 - present: <b>Minuku web dashboard</b>
@@ -93,6 +96,14 @@
 	* Python / Flask as api server / Sqlite
 	* 部署於 Google cloud platform
 	* Github repo: https://github.com/lichin-lin/graduation_voting_backend
+	
+* 後端以 Python / Flask 為主，使用 blueprint 做架構分割，基本上都作為 api server 使用
+<br /><br />
+
+#### DevOps
+* 基本 Git flow, issue, pull request, Kanban board 使用
+* 使用 CI 查看每次 commit 部署狀況: [Minuku](https://travis-ci.org/minuku/minuku-web-dashboard/branches)
+* 使用 Docker 建立開發環境
 
 <br /><br /><br />
 
