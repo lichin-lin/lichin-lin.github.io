@@ -51,12 +51,10 @@
 	* Wireframe with Material theme: https://marvelapp.com/580fg99
 	* Usability test: https://maze.design/t/358660
 	* Design tool used: Sketch, Marvelapp, Maze
-<br />
 
 * 2018/06: <b>Version control for Designer</b>
 	* Event link: https://www.accupass.com/event/1806090344061926505093
 	* Chrome extension: [Diff.plantapp](https://chrome.google.com/webstore/detail/diffplantapp/chkmjhlijopjcnfnljcjjklgdbnfljen?hl=zh-TW)
-	<br />
 
 * 在 UI/UX 領域有基本的認識，能規劃所需之介面和適當的操作流程
 <br /><br />
