@@ -68,21 +68,18 @@
 	* 搭配 es6 / Redux-thunk / eslint 方便開發
 	* Website (account: mobagel, password: mobagel): [Minuku dashboard](https://ui-data-preview-branch-minuku-web-dashboard-minuku.surge.sh/dashboard/data)
 	* Github repo: https://github.com/minuku/minuku-web-dashboard
-<br />
 
 * 2018/01 - 2018/02: <b>NCTU graduation voting 交大畢業歌投票</b>
 	* 畢聯會合作專案: 交大畢業歌曲投票網站，串連學校 NCTU Oauth
 	* React / Styled-Component / Firebase as api server
 	* Website: https://107songs.nctu.me/
 	* Github repo: https://github.com/lichin-lin/graduation_voting_frontend
-<br />
 
 * 2017/03 - 2017/04: <b>InternLens 實習透視鏡</b>
 	* 合作專案: 台灣大學實習心得交流平台
 	* React / Redux / Firebase as api server
 	* Website: http://internlens.com/
 	* Github repo: https://github.com/internlens-tw/InternLens
-<br />
 
 #### Backend
 * 2018/04 - present: <b>Minuku web dashboard</b>
@@ -90,14 +87,12 @@
 	* Python / Flask as api server / mongoDB
 	* 使用 docker image 易於部署
 	* Github repo: https://github.com/minuku/minuku_backend/tree/docker
-<br />
 
 * 2018/01 - 2018/02: <b>NCTU graduation voting 交大畢業歌投票</b>
 	* 畢聯會合作專案
 	* Python / Flask as api server / Sqlite
 	* 部署於 Google cloud platform
 	* Github repo: https://github.com/lichin-lin/graduation_voting_backend
-<br />
 
 <br /><br /><br />
 
